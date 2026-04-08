@@ -20,8 +20,8 @@ export function CatechismIndex() {
     <div className="space-y-8">
       {/* En-tête */}
       <header className="space-y-4">
-        <h1 className="text-3xl md:text-4xl font-serif font-bold text-ink-900">Catéchismes</h1>
-        <p className="text-ink-600 max-w-2xl">
+        <h1 className="text-3xl md:text-4xl font-serif font-bold text-ink-900 dark:text-parchment-50">Catéchismes</h1>
+        <p className="text-ink-600 dark:text-ink-400 max-w-2xl">
           Les principaux catéchismes de la tradition catholique pour l'instruction fidèle et la
           formation doctrinale.
         </p>
@@ -35,8 +35,8 @@ export function CatechismIndex() {
       </div>
 
       {/* Statistiques globales */}
-      <section className="bg-parchment-50 rounded-lg p-6 border border-parchment-200">
-        <h2 className="font-serif font-bold text-xl text-ink-900 mb-4">En bref</h2>
+      <section className="bg-parchment-50 dark:bg-stone-800/50 rounded-lg p-6 border border-parchment-200 dark:border-stone-700">
+        <h2 className="font-serif font-bold text-xl text-ink-900 dark:text-parchment-50 mb-4">En bref</h2>
         <div className="grid gap-4 sm:grid-cols-3">
           <StatCard number={catechisms.length} label="Catéchismes" icon="📖" />
           <StatCard
@@ -54,7 +54,7 @@ export function CatechismIndex() {
 
       {/* Recherche rapide */}
       <section>
-        <h2 className="font-serif font-bold text-xl text-ink-900 mb-4">Recherche rapide</h2>
+        <h2 className="font-serif font-bold text-xl text-ink-900 dark:text-parchment-50 mb-4">Recherche rapide</h2>
         <QuickSearch catechisms={catechisms} />
       </section>
     </div>
@@ -71,25 +71,25 @@ function CatechismCard({ catechism }: CatechismCardProps) {
   return (
     <Link
       href={`/catechism/${catechism.id}`}
-      className="block p-6 rounded-lg border-2 border-parchment-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all group"
+      className="block p-6 rounded-lg border-2 border-parchment-200 dark:border-stone-700 bg-white dark:bg-stone-800 hover:border-gold-300 dark:hover:border-gold-500 hover:shadow-lg transition-all group"
     >
       <div className="flex items-start justify-between mb-4">
         <span className="text-4xl">{config.icon}</span>
-        <span className="text-sm text-ink-500">{catechism.year}</span>
+        <span className="text-sm text-ink-500 dark:text-ink-500">{catechism.year}</span>
       </div>
 
-      <h3 className="text-xl font-serif font-bold text-ink-900 mb-1 group-hover:text-gold-600 transition-colors">
+      <h3 className="text-xl font-serif font-bold text-ink-900 dark:text-parchment-50 mb-1 group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
         {catechism.name}
       </h3>
       {catechism.nameLatin && (
-        <p className="text-sm text-ink-500 italic mb-3">{catechism.nameLatin}</p>
+        <p className="text-sm text-ink-500 dark:text-ink-500 italic mb-3">{catechism.nameLatin}</p>
       )}
 
-      <p className="text-sm text-ink-600 mb-4 line-clamp-2">{catechism.description}</p>
+      <p className="text-sm text-ink-600 dark:text-ink-400 mb-4 line-clamp-2">{catechism.description}</p>
 
       <div className="flex items-center justify-between text-sm">
-        <span className="text-ink-500">{catechism.questions.length} questions</span>
-        {catechism.author && <span className="text-ink-600">{catechism.author}</span>}
+        <span className="text-ink-500 dark:text-ink-500">{catechism.questions.length} questions</span>
+        {catechism.author && <span className="text-ink-600 dark:text-ink-400">{catechism.author}</span>}
       </div>
     </Link>
   );
@@ -106,8 +106,8 @@ function StatCard({ number, label, icon }: StatCardProps) {
     <div className="flex items-center gap-4">
       <span className="text-3xl">{icon}</span>
       <div>
-        <p className="text-2xl font-bold text-ink-900">{number}</p>
-        <p className="text-sm text-ink-600">{label}</p>
+        <p className="text-2xl font-bold text-ink-900 dark:text-parchment-50">{number}</p>
+        <p className="text-sm text-ink-600 dark:text-ink-400">{label}</p>
       </div>
     </div>
   );
@@ -124,26 +124,26 @@ function QuickSearch({ catechisms }: QuickSearchProps) {
   );
 
   return (
-    <div className="bg-white rounded-lg border border-parchment-200 overflow-hidden">
-      <div className="p-4 border-b border-parchment-200">
+    <div className="bg-white dark:bg-stone-800 rounded-lg border border-parchment-200 dark:border-stone-700 overflow-hidden">
+      <div className="p-4 border-b border-parchment-200 dark:border-stone-700">
         <input
           type="text"
           placeholder="Rechercher une question ou un sujet..."
-          className="w-full px-4 py-2 rounded-lg border border-parchment-300 focus:border-gold-400 focus:ring-2 focus:ring-gold-200 outline-none"
+          className="w-full px-4 py-2 rounded-lg border border-parchment-300 dark:border-stone-600 focus:border-gold-400 focus:ring-2 focus:ring-gold-200 outline-none text-ink-800 dark:text-ink-200 placeholder:text-ink-400 dark:placeholder:text-ink-500 dark:bg-stone-700"
         />
       </div>
 
       <div className="p-4">
-        <p className="text-sm text-ink-500 mb-3">Questions populaires</p>
+        <p className="text-sm text-ink-500 dark:text-ink-500 mb-3">Questions populaires</p>
         <div className="space-y-2">
           {popularQuestions.slice(0, 6).map(q => (
             <Link
               key={q.id}
               href={`/catechism/${q.catechism.id}/${q.number}`}
-              className="block px-3 py-2 rounded hover:bg-parchment-100 transition-colors"
+              className="block px-3 py-2 rounded hover:bg-parchment-100 dark:hover:bg-stone-700 transition-colors"
             >
-              <p className="text-sm font-medium text-ink-800">{q.question.french}</p>
-              <p className="text-xs text-ink-500">
+              <p className="text-sm font-medium text-ink-800 dark:text-ink-200">{q.question.french}</p>
+              <p className="text-xs text-ink-500 dark:text-ink-500">
                 {q.catechism.name} • Q{q.number}
               </p>
             </Link>
@@ -164,7 +164,7 @@ interface CompactCatechismNavProps {
 export function CompactCatechismNav({ currentCatechismId }: CompactCatechismNavProps) {
   return (
     <nav className="space-y-4">
-      <h3 className="text-sm font-semibold text-ink-700 uppercase tracking-wider">Catéchismes</h3>
+      <h3 className="text-sm font-semibold text-ink-700 dark:text-ink-300 uppercase tracking-wider">Catéchismes</h3>
       <ul className="space-y-1">
         {catechisms.map(c => (
           <li key={c.id}>
@@ -173,8 +173,8 @@ export function CompactCatechismNav({ currentCatechismId }: CompactCatechismNavP
               className={cn(
                 "flex items-center gap-2 px-3 py-2 rounded transition-colors",
                 currentCatechismId === c.id
-                  ? "bg-gold-100 text-gold-800 font-medium"
-                  : "hover:bg-parchment-100 text-ink-700"
+                  ? "bg-gold-100 dark:bg-gold-500/20 text-gold-800 dark:text-gold-400 font-medium"
+                  : "hover:bg-parchment-100 dark:hover:bg-stone-700 text-ink-700 dark:text-ink-300"
               )}
             >
               <span className="text-lg">{catechismDescriptions[c.id]?.icon || "📖"}</span>
@@ -207,13 +207,13 @@ export function CategoryList({ catechismId, categories }: CategoryListProps) {
         <Link
           key={cat.id}
           href={`/catechism/${catechismId}?category=${cat.id}`}
-          className="flex items-center justify-between p-3 rounded-lg border border-parchment-200 bg-white hover:shadow-md transition-all group"
+          className="flex items-center justify-between p-3 rounded-lg border border-parchment-200 dark:border-stone-700 bg-white dark:bg-stone-800 hover:shadow-md transition-all group"
         >
           <div className="flex items-center gap-3">
             <span className="text-2xl">{cat.icon}</span>
-            <span className="font-medium text-ink-800 group-hover:text-gold-600">{cat.label}</span>
+            <span className="font-medium text-ink-800 dark:text-ink-200 group-hover:text-gold-600 dark:group-hover:text-gold-400">{cat.label}</span>
           </div>
-          <span className="text-sm text-ink-500 bg-parchment-100 px-2 py-1 rounded-full">
+          <span className="text-sm text-ink-500 dark:text-ink-500 bg-parchment-100 dark:bg-stone-700 px-2 py-1 rounded-full">
             {cat.count}
           </span>
         </Link>

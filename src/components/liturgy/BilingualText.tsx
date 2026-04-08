@@ -105,7 +105,7 @@ export function BilingualText({
               "flex items-center gap-2 px-3 py-1.5 rounded-full text-sm transition-colors",
               showLatin
                 ? "bg-liturgical-purple text-white"
-                : "bg-parchment-100 text-ink-600 hover:bg-gold-400/40"
+                : "bg-parchment-100 dark:bg-stone-700 text-ink-600 dark:text-ink-400 hover:bg-gold-400/40"
             )}
           >
             <span>🇻🇦</span>
@@ -117,19 +117,22 @@ export function BilingualText({
       {/* Contenu bilingue */}
       <div
         className={cn(
-          "grid gap-4 rounded-lg border border-gold-400/40 bg-white overflow-hidden",
+          "grid gap-0 rounded-lg overflow-hidden",
           showLatin ? "grid-cols-2" : "grid-cols-1"
         )}
       >
         {/* Colonne Latine */}
         {showLatin && (
-          <div className="border-r border-gold-400/40">
-            <div className="bg-parchment-50 px-4 py-2 border-b border-gold-400/40">
-              <p className="text-sm font-semibold text-ink-700">Latina</p>
+          <div className="border border-gold-400/40 dark:border-gold-400/30 rounded-l-lg bg-white dark:bg-stone-800">
+            <div className="bg-liturgical-purple/10 px-4 py-2.5 border-b border-gold-400/40 dark:border-gold-400/30">
+              <p className="text-sm font-bold text-ink-800 dark:text-ink-200 flex items-center gap-2">
+                <span className="text-xs bg-liturgical-purple/20 text-ink-800 dark:text-ink-200 px-2 py-0.5 rounded font-semibold">LATIN</span>
+                Latina
+              </p>
             </div>
             <div ref={latinContainerRef} className="p-4 space-y-3 max-h-[500px] overflow-y-auto">
               {latinLines.map((line, i) => (
-                <p key={i} className="font-serif text-ink-800 leading-relaxed" data-verse-index={i}>
+                <p key={i} className="font-serif text-ink-800 dark:text-ink-200 leading-relaxed" data-verse-index={i}>
                   {line}
                 </p>
               ))}
@@ -138,13 +141,16 @@ export function BilingualText({
         )}
 
         {/* Colonne Française */}
-        <div>
-          <div className="bg-parchment-50 px-4 py-2 border-b border-gold-400/40">
-            <p className="text-sm font-semibold text-ink-700">Français</p>
+        <div className={cn("border border-gold-400/40 dark:border-gold-400/30 bg-white dark:bg-stone-800", showLatin ? "rounded-r-lg border-l-0" : "rounded-lg")}>
+          <div className="bg-gold-500/10 px-4 py-2.5 border-b border-gold-400/40 dark:border-gold-400/30">
+            <p className="text-sm font-bold text-ink-800 dark:text-ink-200 flex items-center gap-2">
+              <span className="text-xs bg-gold-500/20 text-ink-800 dark:text-ink-200 px-2 py-0.5 rounded font-semibold">FR</span>
+              Français
+            </p>
           </div>
           <div ref={frenchContainerRef} className="p-4 space-y-3 max-h-[500px] overflow-y-auto">
             {frenchLines.map((line, i) => (
-              <p key={i} className="font-serif text-ink-800 leading-relaxed" data-verse-index={i}>
+              <p key={i} className="font-serif text-ink-800 dark:text-ink-200 leading-relaxed" data-verse-index={i}>
                 {line}
               </p>
             ))}
@@ -154,7 +160,7 @@ export function BilingualText({
 
       {/* Note sur le scroll synchronisé */}
       {showLatin && (
-        <p className="text-xs text-ink-500 text-center">Les colonnes défilent ensemble</p>
+        <p className="text-xs text-ink-500 dark:text-ink-500 text-center">Les colonnes défilent ensemble</p>
       )}
     </div>
   );
@@ -171,12 +177,12 @@ interface VersePairProps {
 
 export function VersePair({ latin, french, verseNumber }: VersePairProps) {
   return (
-    <div className="grid grid-cols-2 gap-4 py-2 border-b border-parchment-100 last:border-0">
+    <div className="grid grid-cols-2 gap-4 py-2 border-b border-parchment-100 dark:border-stone-700 last:border-0">
       {verseNumber && (
-        <span className="col-span-2 text-xs text-ink-400 font-medium">{verseNumber}</span>
+        <span className="col-span-2 text-xs text-ink-600 dark:text-ink-400 font-medium">{verseNumber}</span>
       )}
-      <p className="font-serif text-ink-800 italic text-sm leading-relaxed">{latin}</p>
-      <p className="font-serif text-ink-800 text-sm leading-relaxed">{french}</p>
+      <p className="font-serif text-ink-800 dark:text-ink-200 italic text-sm leading-relaxed">{latin}</p>
+      <p className="font-serif text-ink-800 dark:text-ink-200 text-sm leading-relaxed">{french}</p>
     </div>
   );
 }
@@ -201,24 +207,27 @@ export function ParallelText({ sections, showLatin = true }: ParallelTextProps) 
       {sections.map((section, i) => (
         <div key={i} className="space-y-2">
           {section.title && (
-            <h4 className="text-sm font-semibold text-ink-700 uppercase tracking-wider">
+            <h4 className="text-sm font-semibold text-ink-700 dark:text-ink-300 uppercase tracking-wider">
               {section.title}
             </h4>
           )}
 
           <div
             className={cn(
-              "bg-white rounded-lg border border-gold-400/40 overflow-hidden",
+              "rounded-lg overflow-hidden",
               showLatin ? "grid grid-cols-2" : "grid-cols-1"
             )}
           >
             {/* Latin */}
             {showLatin && (
-              <div className="border-r border-gold-400/40 p-4">
-                <p className="text-xs text-ink-500 uppercase mb-3">Latina</p>
+              <div className="border border-gold-400/40 dark:border-gold-400/30 rounded-l-lg bg-white dark:bg-stone-800 p-4">
+                <p className="text-xs text-ink-600 dark:text-ink-400 uppercase mb-3 font-bold flex items-center gap-2">
+                  <span className="bg-liturgical-purple/20 text-ink-700 dark:text-ink-300 px-1.5 py-0.5 rounded text-[10px] font-semibold">LATIN</span>
+                  Latina
+                </p>
                 <div className="space-y-2">
                   {section.latin.map((line, j) => (
-                    <p key={j} className="font-serif text-ink-800 italic leading-relaxed">
+                    <p key={j} className="font-serif text-ink-800 dark:text-ink-200 italic leading-relaxed">
                       {line}
                     </p>
                   ))}
@@ -227,11 +236,14 @@ export function ParallelText({ sections, showLatin = true }: ParallelTextProps) 
             )}
 
             {/* Français */}
-            <div className="p-4">
-              <p className="text-xs text-ink-500 uppercase mb-3">Français</p>
+            <div className={cn("border border-gold-400/40 dark:border-gold-400/30 bg-white dark:bg-stone-800 p-4", showLatin ? "rounded-r-lg border-l-0" : "rounded-lg")}>
+              <p className="text-xs text-ink-600 dark:text-ink-400 uppercase mb-3 font-bold flex items-center gap-2">
+                <span className="bg-gold-500/20 text-ink-700 dark:text-ink-300 px-1.5 py-0.5 rounded text-[10px] font-semibold">FR</span>
+                Français
+              </p>
               <div className="space-y-2">
                 {section.french.map((line, j) => (
-                  <p key={j} className="font-serif text-ink-800 leading-relaxed">
+                  <p key={j} className="font-serif text-ink-800 dark:text-ink-200 leading-relaxed">
                     {line}
                   </p>
                 ))}
@@ -266,9 +278,9 @@ export function PrayerLayout({ title, titleLatin, sections, rubrics }: PrayerLay
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       {/* Titre */}
-      <header className="text-center space-y-2 pb-4 border-b border-parchment-300">
-        <h1 className="text-2xl md:text-3xl font-serif font-bold text-ink-900">{title}</h1>
-        {titleLatin && <p className="text-lg text-ink-600 italic">{titleLatin}</p>}
+      <header className="text-center space-y-2 pb-4 border-b border-parchment-300 dark:border-stone-600">
+        <h1 className="text-2xl md:text-3xl font-serif font-bold text-ink-900 dark:text-parchment-50">{title}</h1>
+        {titleLatin && <p className="text-lg text-ink-600 dark:text-ink-400 italic">{titleLatin}</p>}
       </header>
 
       {/* Sections de la prière */}
@@ -276,16 +288,16 @@ export function PrayerLayout({ title, titleLatin, sections, rubrics }: PrayerLay
         {sections.map((section, i) => (
           <div key={i} className="text-center space-y-2">
             {/* Texte principal */}
-            <p className="text-lg md:text-xl font-serif text-ink-900 leading-relaxed">
-              {section.latin && <span className="italic text-ink-700">{section.latin}</span>}
+            <p className="text-lg md:text-xl font-serif text-ink-900 dark:text-parchment-50 leading-relaxed">
+              {section.latin && <span className="italic text-ink-700 dark:text-ink-300">{section.latin}</span>}
               {section.latin && <br />}
               <span>{section.french}</span>
             </p>
 
             {/* Réponse (si présente) */}
             {(section.responseLatin || section.responseFrench) && (
-              <p className="text-base font-serif text-ink-700 leading-relaxed">
-                <span className="italic text-ink-600">{section.responseLatin} </span>
+              <p className="text-base font-serif text-ink-700 dark:text-ink-300 leading-relaxed">
+                <span className="italic text-ink-600 dark:text-ink-400">{section.responseLatin} </span>
                 {section.responseLatin && <span>R. </span>}
                 {section.responseFrench}
               </p>
@@ -296,9 +308,9 @@ export function PrayerLayout({ title, titleLatin, sections, rubrics }: PrayerLay
 
       {/* Rubriques */}
       {rubrics && (
-        <div className="bg-parchment-50 rounded-lg p-4 border border-gold-400/40">
-          <p className="text-sm text-ink-600 italic">
-            {rubrics.latin && <span className="text-ink-500">{rubrics.latin} — </span>}
+        <div className="bg-parchment-50 dark:bg-stone-800/50 rounded-lg p-4 border border-gold-400/40 dark:border-gold-400/30">
+          <p className="text-sm text-ink-600 dark:text-ink-400 italic">
+            {rubrics.latin && <span className="text-ink-500 dark:text-ink-500">{rubrics.latin} — </span>}
             {rubrics.french}
           </p>
         </div>

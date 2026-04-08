@@ -17,7 +17,7 @@ export function Header({ compact = false }: { compact?: boolean }) {
 
   return (
     <header
-      className={`border-b-2 border-gold-500/50 px-6 bg-stone-50/90 backdrop-blur-sm sticky top-0 z-50 ${compact ? "py-3" : "py-6"}`}
+      className={`border-b-2 border-gold-500/50 px-6 bg-stone-50/90 dark:bg-stone-900/95 backdrop-blur-sm sticky top-0 z-50 ${compact ? "py-3" : "py-6"}`}
     >
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between">
@@ -28,12 +28,12 @@ export function Header({ compact = false }: { compact?: boolean }) {
             />
             <div>
               <h1
-                className={`font-serif text-ink-900 leading-tight ${compact ? "text-base" : "text-xl"}`}
+                className={`font-serif text-ink-900 dark:text-parchment-50 leading-tight ${compact ? "text-base" : "text-xl"}`}
               >
                 Catena
               </h1>
               <p
-                className={`text-ink-600 uppercase tracking-widest ${compact ? "text-[10px]" : "text-xs"}`}
+                className={`text-ink-600 dark:text-ink-400 uppercase tracking-widest ${compact ? "text-[10px]" : "text-xs"}`}
               >
                 Tradition
               </p>
@@ -46,7 +46,7 @@ export function Header({ compact = false }: { compact?: boolean }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-ink-700 hover:text-gold-700 transition-colors relative group ${compact ? "px-3 py-1.5 text-xs" : "px-4 py-2 text-sm"}`}
+                className={`text-ink-700 dark:text-ink-400 hover:text-gold-700 dark:hover:text-gold-500 transition-colors relative group ${compact ? "px-3 py-1.5 text-xs" : "px-4 py-2 text-sm"}`}
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold-500 group-hover:w-full transition-all duration-300" />
@@ -56,7 +56,7 @@ export function Header({ compact = false }: { compact?: boolean }) {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-ink-700 hover:text-gold-700"
+            className="lg:hidden p-2 text-ink-700 dark:text-ink-400 hover:text-gold-700"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={mobileOpen}
@@ -87,7 +87,7 @@ export function Header({ compact = false }: { compact?: boolean }) {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="px-4 py-2.5 text-ink-700 hover:text-gold-700 hover:bg-parchment-50 rounded-xs transition-colors text-sm"
+                  className="px-4 py-2.5 text-ink-700 dark:text-ink-400 hover:text-gold-700 hover:bg-parchment-50 dark:hover:bg-stone-800 rounded-xs transition-colors text-sm"
                 >
                   {item.name}
                 </Link>

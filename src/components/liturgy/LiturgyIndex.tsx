@@ -159,10 +159,10 @@ export function LiturgyIndex({ initialCategory = "all" }: LiturgyIndexProps) {
     <div className="space-y-8">
       {/* En-tête */}
       <header className="space-y-4">
-        <h1 className="text-3xl md:text-4xl font-serif font-bold text-ink-900">
+        <h1 className="text-3xl md:text-4xl font-serif font-bold text-ink-900 dark:text-parchment-50">
           Prières & Liturgie
         </h1>
-        <p className="text-ink-600 max-w-2xl">
+        <p className="text-ink-600 dark:text-ink-400 max-w-2xl">
           Collection de prières catholiques en latin et français pour la dévotion privée et la
           liturgie.
         </p>
@@ -175,13 +175,13 @@ export function LiturgyIndex({ initialCategory = "all" }: LiturgyIndexProps) {
           placeholder="Rechercher une prière..."
           value={searchQuery}
           onChange={e => setSearchQuery(e.target.value)}
-          className="w-full px-4 py-3 rounded-lg border border-parchment-300 focus:border-gold-400 focus:ring-2 focus:ring-gold-200 outline-none text-lg"
+          className="w-full px-4 py-3 rounded-lg border border-parchment-300 dark:border-stone-600 focus:border-gold-400 focus:ring-2 focus:ring-gold-200 outline-none text-lg text-ink-800 dark:text-ink-200 dark:bg-stone-800 placeholder:text-ink-400 dark:placeholder:text-ink-500"
         />
       </div>
 
       {/* Filtres par catégorie */}
       <div>
-        <p className="text-sm font-semibold text-ink-700 mb-3">Par catégorie</p>
+        <p className="text-sm font-semibold text-ink-700 dark:text-ink-300 mb-3">Par catégorie</p>
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setSelectedCategory("all")}
@@ -189,7 +189,7 @@ export function LiturgyIndex({ initialCategory = "all" }: LiturgyIndexProps) {
               "px-4 py-2 rounded-lg transition-colors",
               selectedCategory === "all"
                 ? "bg-gold-500 text-white"
-                : "bg-parchment-100 text-ink-700 hover:bg-parchment-200"
+                : "bg-parchment-100 dark:bg-stone-700 text-ink-700 dark:text-ink-300 hover:bg-parchment-200 dark:hover:bg-stone-600"
             )}
           >
             Toutes ({prayers.length})
@@ -202,7 +202,7 @@ export function LiturgyIndex({ initialCategory = "all" }: LiturgyIndexProps) {
                 "flex items-center gap-2 px-4 py-2 rounded-lg transition-colors",
                 selectedCategory === key
                   ? `bg-${config.color}-600 text-white`
-                  : "bg-parchment-100 text-ink-700 hover:bg-parchment-200"
+                  : "bg-parchment-100 dark:bg-stone-700 text-ink-700 dark:text-ink-300 hover:bg-parchment-200 dark:hover:bg-stone-600"
               )}
             >
               <span>{config.icon}</span>
@@ -215,7 +215,7 @@ export function LiturgyIndex({ initialCategory = "all" }: LiturgyIndexProps) {
 
       {/* Résultats */}
       <div>
-        <p className="text-sm text-ink-500 mb-4">
+        <p className="text-sm text-ink-500 dark:text-ink-500 mb-4">
           {filteredPrayers.length} prière{filteredPrayers.length > 1 ? "s" : ""}
         </p>
 
@@ -227,7 +227,7 @@ export function LiturgyIndex({ initialCategory = "all" }: LiturgyIndexProps) {
 
         {filteredPrayers.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-ink-600 font-serif text-lg">
+            <p className="text-ink-600 dark:text-ink-400 font-serif text-lg">
               Aucune prière ne correspond à votre recherche.
             </p>
           </div>
@@ -248,32 +248,32 @@ function PrayerListItem({ prayer }: PrayerListItemProps) {
   return (
     <Link
       href={`/liturgy/${prayer.slug}`}
-      className="block p-4 rounded-lg border border-parchment-200 bg-white hover:shadow-lg transition-all group"
+      className="block p-4 rounded-lg border border-parchment-200 dark:border-stone-700 bg-white dark:bg-stone-800 hover:shadow-lg transition-all group"
     >
       <div className="flex items-start gap-3 mb-3">
         <span className="text-2xl">{config.icon}</span>
         <div className="flex-1">
-          <h3 className="font-serif font-bold text-ink-900 group-hover:text-gold-600 transition-colors">
+          <h3 className="font-serif font-bold text-ink-900 dark:text-parchment-50 group-hover:text-gold-600 transition-colors">
             {prayer.name}
           </h3>
-          {prayer.nameLatin && <p className="text-sm text-ink-500 italic">{prayer.nameLatin}</p>}
+          {prayer.nameLatin && <p className="text-sm text-ink-500 dark:text-ink-500 italic">{prayer.nameLatin}</p>}
         </div>
       </div>
 
       {excerpt && (
-        <div className="bg-parchment-50 rounded p-2 mb-2">
-          <p className="text-sm text-ink-700 line-clamp-2">{excerpt.french}</p>
+        <div className="bg-parchment-50 dark:bg-stone-800/50 rounded p-2 mb-2">
+          <p className="text-sm text-ink-700 dark:text-ink-300 line-clamp-2">{excerpt.french}</p>
         </div>
       )}
 
       <div className="flex items-center justify-between">
-        <span className="text-xs px-2 py-1 bg-parchment-100 text-ink-600 rounded-full">
+        <span className="text-xs px-2 py-1 bg-parchment-100 dark:bg-stone-700 text-ink-600 dark:text-ink-400 rounded-full">
           {config.label}
         </span>
         {prayer.tags && prayer.tags.length > 0 && (
           <div className="flex gap-1">
             {prayer.tags.slice(0, 2).map(tag => (
-              <span key={tag} className="text-xs text-ink-500 bg-parchment-50 px-2 py-0.5 rounded">
+              <span key={tag} className="text-xs text-ink-500 dark:text-ink-500 bg-parchment-50 dark:bg-stone-800/50 px-2 py-0.5 rounded">
                 #{tag}
               </span>
             ))}
@@ -304,10 +304,10 @@ export function CompactPrayerList({
         <li key={prayer.slug}>
           <Link
             href={`/liturgy/${prayer.slug}`}
-            className="flex items-center gap-2 px-3 py-2 rounded hover:bg-parchment-100 transition-colors group"
+            className="flex items-center gap-2 px-3 py-2 rounded hover:bg-parchment-100 dark:hover:bg-stone-700 transition-colors group"
           >
             <span className="text-lg">{categoryConfig[prayer.category].icon}</span>
-            <span className="text-sm text-ink-700 group-hover:text-gold-600">{prayer.name}</span>
+            <span className="text-sm text-ink-700 dark:text-ink-300 group-hover:text-gold-600">{prayer.name}</span>
           </Link>
         </li>
       ))}
@@ -315,7 +315,7 @@ export function CompactPrayerList({
         <li>
           <Link
             href="/liturgy"
-            className="block px-3 py-2 text-sm text-gold-600 hover:text-gold-700"
+            className="block px-3 py-2 text-sm text-gold-600 hover:text-gold-700 dark:text-gold-500"
           >
             Voir toutes les prières →
           </Link>
@@ -338,16 +338,16 @@ export function DailyPrayers() {
 
   return (
     <section className="space-y-4">
-      <h2 className="text-xl font-serif font-bold text-ink-900">Prières quotidiennes</h2>
+      <h2 className="text-xl font-serif font-bold text-ink-900 dark:text-parchment-50">Prières quotidiennes</h2>
       <div className="grid gap-3 md:grid-cols-3">
         {dailyPrayers.map(prayer => (
           <Link
             key={prayer.slug}
             href={`/liturgy/${prayer.slug}`}
-            className="flex items-center gap-3 p-3 rounded-lg border border-parchment-200 bg-white hover:shadow-md transition-all"
+            className="flex items-center gap-3 p-3 rounded-lg border border-parchment-200 dark:border-stone-700 bg-white dark:bg-stone-800 hover:shadow-md transition-all"
           >
             <span className="text-xl">{categoryConfig[prayer.category].icon}</span>
-            <span className="font-medium text-ink-800">{prayer.name}</span>
+            <span className="font-medium text-ink-800 dark:text-ink-200">{prayer.name}</span>
           </Link>
         ))}
       </div>
@@ -371,19 +371,19 @@ export function EssentialPrayers() {
 
   return (
     <section className="space-y-4">
-      <h2 className="text-xl font-serif font-bold text-ink-900">Prières essentielles</h2>
+      <h2 className="text-xl font-serif font-bold text-ink-900 dark:text-parchment-50">Prières essentielles</h2>
       <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
         {essentialPrayers.map(prayer => (
           <Link
             key={prayer.slug}
             href={`/liturgy/${prayer.slug}`}
-            className="flex items-center gap-3 p-4 rounded-lg border-2 border-parchment-200 bg-white hover:border-gold-300 hover:shadow-md transition-all"
+            className="flex items-center gap-3 p-4 rounded-lg border-2 border-parchment-200 dark:border-stone-700 bg-white dark:bg-stone-800 hover:border-gold-300 hover:shadow-md transition-all"
           >
             <span className="text-2xl">{categoryConfig[prayer.category].icon}</span>
             <div>
-              <p className="font-medium text-ink-800">{prayer.name}</p>
+              <p className="font-medium text-ink-800 dark:text-ink-200">{prayer.name}</p>
               {prayer.nameLatin && (
-                <p className="text-xs text-ink-500 italic truncate">{prayer.nameLatin}</p>
+                <p className="text-xs text-ink-500 dark:text-ink-500 italic truncate">{prayer.nameLatin}</p>
               )}
             </div>
           </Link>

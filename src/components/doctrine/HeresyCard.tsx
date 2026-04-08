@@ -58,13 +58,13 @@ interface HeresyCardProps {
 }
 
 const categoryColors: Record<HeresyCategory, string> = {
-  [HeresyCategory.CHRISTOLOGICAL]: "border-l-rose-600 bg-rose-50",
-  [HeresyCategory.TRINITARIAN]: "border-l-violet-600 bg-violet-50",
-  [HeresyCategory.ANTHROPOLOGICAL]: "border-l-amber-600 bg-amber-50",
-  [HeresyCategory.ECCLESIOLOGICAL]: "border-l-emerald-600 bg-emerald-50",
-  [HeresyCategory.ESCHATOLOGICAL]: "border-l-slate-600 bg-slate-50",
-  [HeresyCategory.SCRIPTURAL]: "border-l-cyan-600 bg-cyan-50",
-  [HeresyCategory.SACRAMENTAL]: "border-l-orange-600 bg-orange-50",
+  [HeresyCategory.CHRISTOLOGICAL]: "border-l-rose-600 bg-rose-50 dark:bg-stone-800",
+  [HeresyCategory.TRINITARIAN]: "border-l-violet-600 bg-violet-50 dark:bg-stone-800",
+  [HeresyCategory.ANTHROPOLOGICAL]: "border-l-amber-600 bg-amber-50 dark:bg-stone-800",
+  [HeresyCategory.ECCLESIOLOGICAL]: "border-l-emerald-600 bg-emerald-50 dark:bg-stone-800",
+  [HeresyCategory.ESCHATOLOGICAL]: "border-l-slate-600 bg-slate-50 dark:bg-stone-800",
+  [HeresyCategory.SCRIPTURAL]: "border-l-cyan-600 bg-cyan-50 dark:bg-stone-800",
+  [HeresyCategory.SACRAMENTAL]: "border-l-orange-600 bg-orange-50 dark:bg-stone-800",
 };
 
 const categoryLabels: Record<HeresyCategory, string> = {
@@ -104,7 +104,7 @@ export function HeresyCard({
       <Link
         href={`/doctrine/${slug}`}
         className={cn(
-          "block p-4 rounded-lg border border-parchment-200 bg-white",
+          "block p-4 rounded-lg border border-parchment-200 dark:border-stone-700 bg-white dark:bg-stone-800",
           "hover:shadow-md transition-shadow",
           "border-l-4",
           category
@@ -112,13 +112,13 @@ export function HeresyCard({
       >
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1 min-w-0">
-            <h3 className="font-serif font-bold text-ink-900">{name}</h3>
-            <p className="text-sm text-ink-500">
+            <h3 className="font-serif font-bold text-ink-900 dark:text-parchment-50">{name}</h3>
+            <p className="text-sm text-ink-500 dark:text-ink-500">
               {century}
               <sup>e</sup> siècle • {promoter}
             </p>
           </div>
-          <span className="text-xs px-2 py-1 rounded-full bg-parchment-100 text-ink-600 whitespace-nowrap">
+          <span className="text-xs px-2 py-1 rounded-full bg-parchment-100 dark:bg-stone-700 text-ink-600 dark:text-ink-400 whitespace-nowrap">
             {categoryLabels[category]}
           </span>
         </div>
@@ -129,7 +129,7 @@ export function HeresyCard({
   return (
     <article
       className={cn(
-        "overflow-hidden rounded-lg border border-parchment-200 bg-white",
+        "overflow-hidden rounded-lg border border-parchment-200 dark:border-stone-700 bg-white dark:bg-stone-800",
         "hover:shadow-lg transition-shadow",
         "border-l-4",
         cardClass
@@ -139,17 +139,17 @@ export function HeresyCard({
         {/* En-tête */}
         <div className="flex items-start justify-between gap-4">
           <div>
-            <h3 className="text-xl font-serif font-bold text-ink-900">{name}</h3>
-            {nameLatin && <p className="text-sm text-ink-500 italic mt-1">{nameLatin}</p>}
+            <h3 className="text-xl font-serif font-bold text-ink-900 dark:text-parchment-50">{name}</h3>
+            {nameLatin && <p className="text-sm text-ink-500 dark:text-ink-500 italic mt-1">{nameLatin}</p>}
           </div>
-          <span className="text-xs px-3 py-1 rounded-full bg-white border border-parchment-300 text-ink-700 whitespace-nowrap">
+          <span className="text-xs px-3 py-1 rounded-full bg-white dark:bg-stone-700 border border-parchment-300 dark:border-stone-600 text-ink-700 dark:text-ink-300 whitespace-nowrap">
             {categoryLabels[category]}
           </span>
         </div>
 
         {/* Métadonnées */}
         <div className="flex flex-wrap gap-3 text-sm">
-          <span className="flex items-center gap-1 text-ink-600">
+          <span className="flex items-center gap-1 text-ink-600 dark:text-ink-400">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
@@ -161,7 +161,7 @@ export function HeresyCard({
             {century}
             <sup>e</sup> siècle
           </span>
-          <span className="flex items-center gap-1 text-ink-600">
+          <span className="flex items-center gap-1 text-ink-600 dark:text-ink-400">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
@@ -178,7 +178,7 @@ export function HeresyCard({
             </svg>
             {origin}
           </span>
-          <span className="flex items-center gap-1 text-ink-600">
+          <span className="flex items-center gap-1 text-ink-600 dark:text-ink-400">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
@@ -192,21 +192,21 @@ export function HeresyCard({
         </div>
 
         {/* Description */}
-        <p className="text-ink-700 leading-relaxed">{description}</p>
+        <p className="text-ink-700 dark:text-ink-300 leading-relaxed">{description}</p>
 
         {/* Erreur principale */}
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-          <p className="text-sm font-semibold text-red-800 mb-1">Erreur condamnée</p>
-          <p className="text-red-700">{error}</p>
+        <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-900/30 rounded-lg p-4">
+          <p className="text-sm font-semibold text-red-800 dark:text-red-300 mb-1">Erreur condamnée</p>
+          <p className="text-red-700 dark:text-red-300">{error}</p>
         </div>
 
         {/* Condamnations */}
         {variant === "detailed" && condemnations.length > 0 && (
           <div className="space-y-2">
-            <p className="text-sm font-semibold text-ink-700">Condamnations :</p>
+            <p className="text-sm font-semibold text-ink-700 dark:text-ink-300">Condamnations :</p>
             <ul className="space-y-1">
               {condemnations.map((c, i) => (
-                <li key={i} className="flex items-center gap-2 text-sm text-ink-600">
+                <li key={i} className="flex items-center gap-2 text-sm text-ink-600 dark:text-ink-400">
                   <span className="text-red-500">✝</span>
                   <span>
                     {condemnationTypeLabels[c.type]} de {c.authority} ({c.year})
@@ -236,7 +236,7 @@ export function HeresySummary({ slug, name, category, century, promoter }: Heres
   return (
     <Link
       href={`/doctrine/${slug}`}
-      className="flex items-center gap-3 px-3 py-2 rounded hover:bg-parchment-100 transition-colors group"
+      className="flex items-center gap-3 px-3 py-2 rounded hover:bg-parchment-100 dark:hover:bg-stone-700 transition-colors group"
     >
       <span
         className={cn(
@@ -251,10 +251,10 @@ export function HeresySummary({ slug, name, category, century, promoter }: Heres
         )}
       />
       <div className="flex-1 min-w-0">
-        <p className="text-sm font-medium text-ink-800 group-hover:text-gold-700 transition-colors">
+        <p className="text-sm font-medium text-ink-800 dark:text-ink-200 group-hover:text-gold-700 transition-colors">
           {name}
         </p>
-        <p className="text-xs text-ink-500">
+        <p className="text-xs text-ink-500 dark:text-ink-500">
           {century}
           <sup>e</sup> s. • {promoter}
         </p>

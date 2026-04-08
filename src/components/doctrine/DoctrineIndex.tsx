@@ -105,10 +105,10 @@ export function DoctrineIndex({
     <div className="space-y-8">
       {/* En-tête */}
       <header className="space-y-4">
-        <h1 className="text-3xl md:text-4xl font-serif font-bold text-ink-900">
+        <h1 className="text-3xl md:text-4xl font-serif font-bold text-ink-900 dark:text-parchment-50">
           Hérésies & Condamnations
         </h1>
-        <p className="text-ink-600 max-w-2xl">
+        <p className="text-ink-600 dark:text-ink-400 max-w-2xl">
           Index des principales hérésies condamnées par l'Église catholique, avec leurs promoteurs,
           leurs erreurs, et les condamnations conciliaires.
         </p>
@@ -123,13 +123,13 @@ export function DoctrineIndex({
             placeholder="Rechercher une hérésie, un promoteur..."
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-2 rounded-lg border border-parchment-300 focus:border-gold-400 focus:ring-2 focus:ring-gold-200 outline-none"
+            className="w-full px-4 py-2 rounded-lg border border-parchment-300 dark:border-stone-600 focus:border-gold-400 focus:ring-2 focus:ring-gold-200 outline-none text-ink-800 dark:text-ink-200 placeholder:text-ink-400 dark:placeholder:text-ink-500 dark:bg-stone-700"
           />
         </div>
 
         {/* Filtres par catégorie */}
         <div>
-          <p className="text-sm font-semibold text-ink-700 mb-2">Par catégorie doctrinale</p>
+          <p className="text-sm font-semibold text-ink-700 dark:text-ink-300 mb-2">Par catégorie doctrinale</p>
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setSelectedCategory("all")}
@@ -137,7 +137,7 @@ export function DoctrineIndex({
                 "px-4 py-2 rounded-lg transition-colors",
                 selectedCategory === "all"
                   ? "bg-gold-500 text-white"
-                  : "bg-parchment-100 text-ink-700 hover:bg-parchment-200"
+                  : "bg-parchment-100 dark:bg-stone-700 text-ink-700 dark:text-ink-300 hover:bg-parchment-200 dark:hover:bg-stone-600"
               )}
             >
               Toutes ({heresies.length})
@@ -150,7 +150,7 @@ export function DoctrineIndex({
                   "px-4 py-2 rounded-lg transition-colors",
                   selectedCategory === key
                     ? `bg-${config.color}-600 text-white`
-                    : "bg-parchment-100 text-ink-700 hover:bg-parchment-200"
+                    : "bg-parchment-100 dark:bg-stone-700 text-ink-700 dark:text-ink-300 hover:bg-parchment-200 dark:hover:bg-stone-600"
                 )}
               >
                 {config.label} ({categoryCounts[key as HeresyCategory]})
@@ -161,7 +161,7 @@ export function DoctrineIndex({
 
         {/* Filtre par siècle */}
         <div>
-          <p className="text-sm font-semibold text-ink-700 mb-2">Par siècle d'apparition</p>
+          <p className="text-sm font-semibold text-ink-700 dark:text-ink-300 mb-2">Par siècle d'apparition</p>
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setSelectedCentury("all")}
@@ -169,7 +169,7 @@ export function DoctrineIndex({
                 "px-3 py-1 rounded-full text-sm transition-colors",
                 selectedCentury === "all"
                   ? "bg-gold-500 text-white"
-                  : "bg-parchment-100 text-ink-700 hover:bg-parchment-200"
+                  : "bg-parchment-100 dark:bg-stone-700 text-ink-700 dark:text-ink-300 hover:bg-parchment-200 dark:hover:bg-stone-600"
               )}
             >
               Tous les siècles
@@ -182,7 +182,7 @@ export function DoctrineIndex({
                   "px-3 py-1 rounded-full text-sm transition-colors",
                   selectedCentury === century
                     ? "bg-gold-500 text-white"
-                    : "bg-parchment-100 text-ink-700 hover:bg-parchment-200"
+                    : "bg-parchment-100 dark:bg-stone-700 text-ink-700 dark:text-ink-300 hover:bg-parchment-200 dark:hover:bg-stone-600"
                 )}
               >
                 {century}
@@ -195,7 +195,7 @@ export function DoctrineIndex({
 
       {/* Résultats */}
       <div>
-        <p className="text-sm text-ink-500 mb-4">
+        <p className="text-sm text-ink-500 dark:text-ink-500 mb-4">
           {filteredHeresies.length} hérésie{filteredHeresies.length > 1 ? "s" : ""}
         </p>
 
@@ -207,7 +207,7 @@ export function DoctrineIndex({
 
         {filteredHeresies.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-ink-600 font-serif">Aucune hérésie ne correspond à vos critères.</p>
+            <p className="text-ink-600 dark:text-ink-400 font-serif">Aucune hérésie ne correspond à vos critères.</p>
           </div>
         )}
       </div>
@@ -225,13 +225,13 @@ function HeresyListItem({ heresy }: HeresyListItemProps) {
   return (
     <Link
       href={`/doctrine/${heresy.slug}`}
-      className="block p-4 rounded-lg border border-parchment-200 bg-white hover:shadow-lg transition-shadow"
+      className="block p-4 rounded-lg border border-parchment-200 dark:border-stone-700 bg-white dark:bg-stone-800 hover:shadow-lg transition-shadow"
     >
       <div className="flex items-start justify-between gap-3 mb-2">
-        <h3 className="font-serif font-bold text-ink-900">{heresy.name}</h3>
+        <h3 className="font-serif font-bold text-ink-900 dark:text-parchment-50">{heresy.name}</h3>
         <span
           className={cn(
-            "text-xs px-2 py-0.5 rounded-full bg-{}-100 text-{}-700",
+            "text-xs px-2 py-0.5 rounded-full",
             `bg-${config.color}-100`,
             `text-${config.color}-700`
           )}
@@ -240,9 +240,9 @@ function HeresyListItem({ heresy }: HeresyListItemProps) {
         </span>
       </div>
 
-      <p className="text-sm text-ink-600 mb-2">{heresy.promoter}</p>
+      <p className="text-sm text-ink-600 dark:text-ink-400 mb-2">{heresy.promoter}</p>
 
-      <div className="flex items-center gap-3 text-xs text-ink-500">
+      <div className="flex items-center gap-3 text-xs text-ink-500 dark:text-ink-500">
         <span>
           {heresy.century}
           <sup>e</sup> siècle
@@ -274,12 +274,12 @@ export function CompactHeresyList({
         <li key={heresy.slug}>
           <Link
             href={`/doctrine/${heresy.slug}`}
-            className="block px-3 py-2 rounded hover:bg-parchment-100 transition-colors group"
+            className="block px-3 py-2 rounded hover:bg-parchment-100 dark:hover:bg-stone-700 transition-colors group"
           >
-            <p className="text-sm font-medium text-ink-800 group-hover:text-gold-700">
+            <p className="text-sm font-medium text-ink-800 dark:text-ink-200 group-hover:text-gold-700 dark:group-hover:text-gold-400">
               {heresy.name}
             </p>
-            <p className="text-xs text-ink-500">
+            <p className="text-xs text-ink-500 dark:text-ink-500">
               {heresy.century}
               <sup>e</sup> s. • {heresy.promoter}
             </p>
@@ -290,7 +290,7 @@ export function CompactHeresyList({
         <li>
           <Link
             href="/doctrine"
-            className="block px-3 py-2 text-sm text-gold-600 hover:text-gold-700"
+            className="block px-3 py-2 text-sm text-gold-600 dark:text-gold-400 hover:text-gold-700 dark:hover:text-gold-300"
           >
             Voir toutes les hérésies →
           </Link>
@@ -314,13 +314,13 @@ export function CategoryCard({ category }: CategoryCardProps) {
   return (
     <Link
       href={`/doctrine?category=${category}`}
-      className="block p-6 rounded-lg border-2 border-parchment-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all"
+      className="block p-6 rounded-lg border-2 border-parchment-200 dark:border-stone-700 bg-white dark:bg-stone-800 hover:border-gold-300 dark:hover:border-gold-500 hover:shadow-lg transition-all"
     >
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-lg font-serif font-bold text-ink-900">{config.label}</h3>
+        <h3 className="text-lg font-serif font-bold text-ink-900 dark:text-parchment-50">{config.label}</h3>
         <span className="text-2xl font-bold text-gold-500">{count}</span>
       </div>
-      <p className="text-sm text-ink-600">{config.description}</p>
+      <p className="text-sm text-ink-600 dark:text-ink-400">{config.description}</p>
     </Link>
   );
 }

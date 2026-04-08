@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.1.1] — 2026-04-08
+
+### Fixes
+
+- **Text colors**: Fix invisible text (white/beige/gray) on light backgrounds across liturgy, catechism, and doctrine pages
+- **Dark mode**: Add missing `dark:` variants to all section layouts and components (20 files)
+- **Ink palette**: Warm up ink colors from cold gray to warm brown for better contrast on parchment backgrounds
+- **DoctrineIndex**: Fix broken dynamic Tailwind class interpolation (`bg-{}-100`)
+- **BilingualText**: Redesign grid layout with LATIN/FR badge labels and synchronized scroll
+- **Search inputs**: Add explicit `text-ink-800` and `placeholder:text-ink-400` classes
+
+### Files Modified
+
+`tailwind.config.ts`, layouts (liturgy, doctrine, catechism), Header, Footer, BilingualText, LiturgyIndex, PrayerCard, DoctrineIndex, HeresyCard, Card, CatechismIndex, CatechismNode, QuestionAccordion, page files
+
 ## [0.1.0] — 2026-04-08
 
 ### SEO
