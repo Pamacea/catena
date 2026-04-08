@@ -63,8 +63,8 @@ export default async function CatechismQuestionsPage({ params }: CatechismPagePr
       </nav>
 
       {/* Header */}
-      <header className="mb-12 pb-8 border-b border-gold-400/40/50">
-        <h1 className="font-serif text-4xl font-bold text-ink-900 dark:text-parchment-100 mb-3">
+      <header className="mb-12 pb-8 border-b border-gold-400/40 dark:border-gold-400/30">
+        <h1 className="font-serif text-4xl font-bold text-ink-900 dark:text-parchment-50 mb-3">
           {catechism.name}
         </h1>
         {catechism.nameLatin && (
@@ -114,14 +114,14 @@ export default async function CatechismQuestionsPage({ params }: CatechismPagePr
                   {question.number}
                 </span>
                 <div className="flex-1">
-                  <h3 className="font-serif text-lg font-semibold text-ink-900 dark:text-parchment-100 group-hover:text-ink-700 dark:group-hover:text-ink-300">
+                  <h3 className="font-serif text-lg font-semibold text-ink-900 dark:text-parchment-50 group-hover:text-ink-700 dark:group-hover:text-ink-300">
                     {question.question.french}
                   </h3>
                   <p className="text-sm text-ink-600 dark:text-ink-400 mt-2 line-clamp-2">
                     {question.answer.french}
                   </p>
                 </div>
-                <span className="text-parchment-500 group-hover:translate-x-1 transition-transform flex-shrink-0">
+                <span className="text-gold-600 group-hover:translate-x-1 transition-transform flex-shrink-0">
                   →
                 </span>
               </div>
@@ -131,7 +131,7 @@ export default async function CatechismQuestionsPage({ params }: CatechismPagePr
       </section>
 
       {/* Footer navigation */}
-      <footer className="mt-16 pt-8 border-t border-gold-400/40/50">
+      <footer className="mt-16 pt-8 border-t border-gold-400/40 dark:border-gold-400/30">
         <Link
           href="/catechism"
           className="inline-flex items-center gap-2 text-ink-600 dark:text-ink-400 hover:underline"

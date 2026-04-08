@@ -90,7 +90,7 @@ export default function LiturgyPage() {
     <div className="space-y-12">
       {/* Prières essentielles */}
       <section className="space-y-4">
-        <h2 className="font-serif text-2xl font-bold text-ink-900">Prières essentielles</h2>
+        <h2 className="font-serif text-2xl font-bold text-ink-900 dark:text-parchment-50">Prières essentielles</h2>
         <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
           {essentialPrayers.map(prayer => (
             <PrayerLink key={prayer.slug} prayer={prayer} />
@@ -100,7 +100,7 @@ export default function LiturgyPage() {
 
       {/* Prières quotidiennes */}
       <section className="space-y-4">
-        <h2 className="font-serif text-2xl font-bold text-ink-900">Prières quotidiennes</h2>
+        <h2 className="font-serif text-2xl font-bold text-ink-900 dark:text-parchment-50">Prières quotidiennes</h2>
         <div className="grid gap-3 md:grid-cols-3">
           {dailyPrayers.map(prayer => (
             <PrayerLink key={prayer.slug} prayer={prayer} />
@@ -110,7 +110,7 @@ export default function LiturgyPage() {
 
       {/* Toutes les prières par catégorie */}
       <section className="space-y-8">
-        <h2 className="font-serif text-2xl font-bold text-ink-900">Toutes les prières</h2>
+        <h2 className="font-serif text-2xl font-bold text-ink-900 dark:text-parchment-50">Toutes les prières</h2>
 
         <div className="space-y-6">
           {Object.entries(categoryConfig).map(([key, config]) => {
@@ -121,10 +121,10 @@ export default function LiturgyPage() {
               <div key={key} className="space-y-3">
                 <div className="flex items-center gap-2">
                   <div>
-                    <h3 className="font-serif text-lg font-semibold text-ink-900">
+                    <h3 className="font-serif text-lg font-semibold text-ink-900 dark:text-parchment-50">
                       {config.label}
                     </h3>
-                    <p className="text-sm text-ink-600">{config.description}</p>
+                    <p className="text-sm text-ink-600 dark:text-ink-400">{config.description}</p>
                   </div>
                   <span className="ml-auto text-sm text-gold-600">{categoryPrayers.length}</span>
                 </div>
@@ -151,16 +151,16 @@ function PrayerLink({ prayer }: { prayer: (typeof prayers)[0] }) {
   return (
     <Link
       href={`/liturgy/${prayer.slug}`}
-      className="block p-4 border-l-2 border-gold-400/40 hover:border-gold-400/40 hover:bg-parchment-100 transition-all group"
+      className="block p-4 border-l-2 border-gold-400/40 dark:border-gold-400/30 hover:border-gold-400/40 hover:bg-parchment-100 dark:hover:bg-stone-700 transition-all group"
     >
       <div className="flex-1 min-w-0">
-        <h4 className="font-serif font-semibold text-ink-900 group-hover:text-ink-700 transition-colors">
+        <h4 className="font-serif font-semibold text-ink-900 dark:text-parchment-50 group-hover:text-ink-700 dark:group-hover:text-ink-300 transition-colors">
           {prayer.name}
         </h4>
         {prayer.nameLatin && (
-          <p className="text-sm text-ink-600 italic truncate">{prayer.nameLatin}</p>
+          <p className="text-sm text-ink-600 dark:text-ink-400 italic truncate">{prayer.nameLatin}</p>
         )}
-        {excerpt && <p className="text-sm text-ink-700 line-clamp-2 mt-2">{excerpt.french}</p>}
+        {excerpt && <p className="text-sm text-ink-700 dark:text-ink-300 line-clamp-2 mt-2">{excerpt.french}</p>}
       </div>
     </Link>
   );

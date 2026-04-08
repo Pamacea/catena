@@ -23,14 +23,14 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const variantStyles: Record<NonNullable<CardProps["variant"]>, string> = {
-  default: "bg-parchment-50 border-gold-400/40/20",
-  parchment: "bg-parchment-100 border-gold-400/40 shadow-md",
+  default: "bg-parchment-50 border-gold-400/40/20 dark:bg-stone-800 dark:border-stone-700",
+  parchment: "bg-parchment-100 border-gold-400/40 shadow-md dark:bg-stone-800 dark:border-stone-700",
   ink: "bg-ink-900 text-parchment-50 border-gold-400/40",
-  gold: "bg-gradient-to-br from-parchment-50 to-parchment-200 border-gold-500/30 shadow-lg",
+  gold: "bg-gradient-to-br from-parchment-50 to-parchment-200 border-gold-500/30 shadow-lg dark:from-stone-800 dark:to-stone-700",
   divine:
-    "bg-gradient-to-br from-parchment-50 via-gold-500/10 to-parchment-100 border-2 border-gold-500/40 shadow-xl relative overflow-hidden",
+    "bg-gradient-to-br from-parchment-50 via-gold-500/10 to-parchment-100 border-2 border-gold-500/40 shadow-xl relative overflow-hidden dark:from-stone-800 dark:via-gold-500/5 dark:to-stone-700",
   manuscrit:
-    "bg-parchment-100/90 border-l-4 border-liturgical-red border-y border-r border-gold-400/40 shadow-inner font-serif",
+    "bg-parchment-100/90 border-l-4 border-liturgical-red border-y border-r border-gold-400/40 shadow-inner font-serif dark:bg-stone-800",
 };
 
 /**

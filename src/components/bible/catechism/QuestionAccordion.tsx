@@ -57,25 +57,25 @@ export function QuestionAccordion({
   const [showLatin, setShowLatin] = useState(false);
 
   return (
-    <article className="border border-parchment-200 rounded-lg bg-white overflow-hidden">
+    <article className="border border-parchment-200 dark:border-stone-700 rounded-lg bg-white dark:bg-stone-800 overflow-hidden">
       {/* En-tête de la question */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-6 py-4 flex items-start gap-4 hover:bg-parchment-50 transition-colors text-left"
+        className="w-full px-6 py-4 flex items-start gap-4 hover:bg-parchment-50 dark:hover:bg-stone-800/50 transition-colors text-left"
         aria-expanded={isOpen}
       >
-        <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gold-100 text-gold-700 rounded-full font-bold">
+        <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gold-100 dark:bg-gold-500/20 text-gold-700 dark:text-gold-400 rounded-full font-bold">
           {number}
         </span>
 
         <div className="flex-1 min-w-0">
-          <p className="font-serif font-bold text-lg text-ink-900">{question.french}</p>
-          {question.latin && <p className="text-sm text-ink-500 italic mt-1">{question.latin}</p>}
+          <p className="font-serif font-bold text-lg text-ink-900 dark:text-parchment-50">{question.french}</p>
+          {question.latin && <p className="text-sm text-ink-500 dark:text-ink-500 italic mt-1">{question.latin}</p>}
         </div>
 
         <svg
           className={cn(
-            "w-6 h-6 text-ink-400 transition-transform flex-shrink-0 mt-1",
+            "w-6 h-6 text-ink-400 dark:text-ink-500 transition-transform flex-shrink-0 mt-1",
             isOpen && "rotate-180"
           )}
           fill="none"
@@ -88,23 +88,23 @@ export function QuestionAccordion({
 
       {/* Contenu de la réponse */}
       {isOpen && (
-        <div className="px-6 pb-6 border-t border-parchment-200">
+        <div className="px-6 pb-6 border-t border-parchment-200 dark:border-stone-700">
           {/* Toggle Latin */}
           {(answer.latin || question.latin) && (
-            <div className="flex items-center gap-4 py-3 border-b border-parchment-100">
+            <div className="flex items-center gap-4 py-3 border-b border-parchment-100 dark:border-stone-700">
               <button
                 onClick={() => setShowLatin(!showLatin)}
                 className={cn(
                   "flex items-center gap-2 px-3 py-1 rounded-full text-sm transition-colors",
                   showLatin
                     ? "bg-liturgical-purple text-white"
-                    : "bg-parchment-100 text-ink-600 hover:bg-parchment-200"
+                    : "bg-parchment-100 dark:bg-stone-700 text-ink-600 dark:text-ink-400 hover:bg-parchment-200 dark:hover:bg-stone-600"
                 )}
               >
                 <span>🇻🇦</span>
                 <span>Latinum</span>
               </button>
-              <span className="text-sm text-ink-500">
+              <span className="text-sm text-ink-500 dark:text-ink-500">
                 {showLatin ? "Français + Latin" : "Français seulement"}
               </span>
             </div>
@@ -113,23 +113,23 @@ export function QuestionAccordion({
           {/* Réponse */}
           <div className="py-4 space-y-3">
             {answer.latin && showLatin && (
-              <p className="text-ink-700 italic font-serif text-lg leading-relaxed">
+              <p className="text-ink-700 dark:text-ink-300 italic font-serif text-lg leading-relaxed">
                 {answer.latin}
               </p>
             )}
-            <p className="text-ink-900 font-serif text-lg leading-relaxed">{answer.french}</p>
+            <p className="text-ink-900 dark:text-parchment-50 font-serif text-lg leading-relaxed">{answer.french}</p>
           </div>
 
           {/* Références */}
           {references.length > 0 && (
-            <div className="bg-parchment-50 rounded-lg p-4 mt-4">
-              <h4 className="text-sm font-semibold text-ink-700 mb-2 flex items-center gap-2">
+            <div className="bg-parchment-50 dark:bg-stone-800/50 rounded-lg p-4 mt-4">
+              <h4 className="text-sm font-semibold text-ink-700 dark:text-ink-300 mb-2 flex items-center gap-2">
                 <span>📚</span>
                 Références
               </h4>
               <ul className="space-y-1 text-sm">
                 {references.map((ref, i) => (
-                  <li key={i} className="text-ink-600">
+                  <li key={i} className="text-ink-600 dark:text-ink-400">
                     <span className="font-medium">{ref.source}</span>
                     {ref.citation && (
                       <>
@@ -145,13 +145,13 @@ export function QuestionAccordion({
           {/* Questions liées */}
           {relatedQuestions.length > 0 && (
             <div className="mt-4">
-              <h4 className="text-sm font-semibold text-ink-700 mb-2">Questions connexes</h4>
+              <h4 className="text-sm font-semibold text-ink-700 dark:text-ink-300 mb-2">Questions connexes</h4>
               <div className="flex flex-wrap gap-2">
                 {relatedQuestions.map(q => (
                   <Link
                     key={q.id}
                     href={`/catechism/${catechismId}/${q.number}`}
-                    className="px-3 py-1 bg-parchment-100 rounded-full text-sm text-ink-700 hover:bg-parchment-200 transition-colors"
+                    className="px-3 py-1 bg-parchment-100 dark:bg-stone-700 rounded-full text-sm text-ink-700 dark:text-ink-300 hover:bg-parchment-200 dark:hover:bg-stone-600 transition-colors"
                   >
                     Q{q.number}: {q.french}
                   </Link>
@@ -162,11 +162,11 @@ export function QuestionAccordion({
 
           {/* Navigation */}
           {showNavigation && (
-            <div className="flex items-center justify-between mt-6 pt-4 border-t border-parchment-200">
+            <div className="flex items-center justify-between mt-6 pt-4 border-t border-parchment-200 dark:border-stone-700">
               {number > 1 ? (
                 <Link
                   href={`/catechism/${catechismId}/${number - 1}`}
-                  className="flex items-center gap-2 text-ink-600 hover:text-gold-600 transition-colors"
+                  className="flex items-center gap-2 text-ink-600 dark:text-ink-400 hover:text-gold-600 dark:hover:text-gold-400 transition-colors"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -183,7 +183,7 @@ export function QuestionAccordion({
               )}
 
               {totalQuestions && (
-                <span className="text-sm text-ink-500">
+                <span className="text-sm text-ink-500 dark:text-ink-500">
                   {number} / {totalQuestions}
                 </span>
               )}
@@ -191,7 +191,7 @@ export function QuestionAccordion({
               {totalQuestions && number < totalQuestions ? (
                 <Link
                   href={`/catechism/${catechismId}/${number + 1}`}
-                  className="flex items-center gap-2 text-ink-600 hover:text-gold-600 transition-colors"
+                  className="flex items-center gap-2 text-ink-600 dark:text-ink-400 hover:text-gold-600 dark:hover:text-gold-400 transition-colors"
                 >
                   <span>Question {number + 1}</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -234,15 +234,15 @@ export function QuestionGrid({ questions, catechismId }: QuestionGridProps) {
         <Link
           key={q.id}
           href={`/catechism/${catechismId}/${q.number}`}
-          className="p-4 rounded-lg border border-parchment-200 bg-white hover:shadow-md hover:border-gold-300 transition-all"
+          className="p-4 rounded-lg border border-parchment-200 dark:border-stone-700 bg-white dark:bg-stone-800 hover:shadow-md hover:border-gold-300 dark:hover:border-gold-500 transition-all"
         >
           <div className="flex items-center gap-3 mb-2">
-            <span className="w-8 h-8 flex items-center justify-center bg-gold-100 text-gold-700 rounded-full text-sm font-bold">
+            <span className="w-8 h-8 flex items-center justify-center bg-gold-100 dark:bg-gold-500/20 text-gold-700 dark:text-gold-400 rounded-full text-sm font-bold">
               {q.number}
             </span>
-            <h3 className="font-medium text-ink-800 text-sm line-clamp-2">{q.question.french}</h3>
+            <h3 className="font-medium text-ink-800 dark:text-ink-200 text-sm line-clamp-2">{q.question.french}</h3>
           </div>
-          <p className="text-xs text-ink-500 line-clamp-2">{q.answer.french}</p>
+          <p className="text-xs text-ink-500 dark:text-ink-500 line-clamp-2">{q.answer.french}</p>
         </Link>
       ))}
     </div>
@@ -271,7 +271,7 @@ export function CategorySection({ title, icon, questions, catechismId }: Categor
 
   return (
     <section className="space-y-4">
-      <h2 className="flex items-center gap-3 text-xl font-serif font-bold text-ink-900 border-b border-parchment-300 pb-2">
+      <h2 className="flex items-center gap-3 text-xl font-serif font-bold text-ink-900 dark:text-parchment-50 border-b border-parchment-300 dark:border-stone-600 pb-2">
         <span className="text-2xl">{icon}</span>
         {title}
       </h2>

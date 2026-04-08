@@ -14,19 +14,6 @@ Encyclopédie théologique catholique bilingue (latin/français) naviguant à tr
 
 Next.js 16 · React 19 · TypeScript strict · TanStack Query · Tailwind CSS · Zod · Vitest
 
-## Développement
-
-```bash
-pnpm install
-pnpm dev        # http://localhost:3000
-pnpm build      # Production
-pnpm test       # 386 tests
-```
-
 ## Architecture
 
 Données statiques TypeScript (pas de base de données), recherche globale via Server Actions, WikiLinks pour le cross-référencement, SSG avec `generateStaticParams`.
-
-## Licence
-
-À définir.

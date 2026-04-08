@@ -110,13 +110,13 @@ export function CatechismNode({
     return (
       <div className="space-y-6">
         {/* En-tête du catéchisme */}
-        <div className="bg-parchment-50 rounded-lg p-6 border border-parchment-200">
-          <h2 className="text-2xl font-serif font-bold text-ink-900">{catechism.name}</h2>
-          {catechism.nameLatin && <p className="text-ink-600 italic mt-1">{catechism.nameLatin}</p>}
-          <p className="text-sm text-ink-500 mt-2">
+        <div className="bg-parchment-50 dark:bg-stone-800/50 rounded-lg p-6 border border-parchment-200 dark:border-stone-700">
+          <h2 className="text-2xl font-serif font-bold text-ink-900 dark:text-parchment-50">{catechism.name}</h2>
+          {catechism.nameLatin && <p className="text-ink-600 dark:text-ink-400 italic mt-1">{catechism.nameLatin}</p>}
+          <p className="text-sm text-ink-500 dark:text-ink-500 mt-2">
             {catechism.author} • {catechism.year}
           </p>
-          <p className="text-ink-700 mt-3">{catechism.description}</p>
+          <p className="text-ink-700 dark:text-ink-300 mt-3">{catechism.description}</p>
         </div>
 
         {/* Cartes par catégorie */}
@@ -128,15 +128,15 @@ export function CatechismNode({
                 key={category}
                 href={`/catechism/${catechism.id}?category=${category}`}
                 className={cn(
-                  "block p-5 rounded-lg border-2 border-parchment-200 bg-white",
-                  "hover:border-gold-300 hover:shadow-md transition-all"
+                  "block p-5 rounded-lg border-2 border-parchment-200 dark:border-stone-700 bg-white dark:bg-stone-800",
+                  "hover:border-gold-300 dark:hover:border-gold-500 hover:shadow-md transition-all"
                 )}
               >
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-2xl">{config.icon}</span>
-                  <span className="text-sm text-ink-500">{questions.length} questions</span>
+                  <span className="text-sm text-ink-500 dark:text-ink-500">{questions.length} questions</span>
                 </div>
-                <h3 className="font-semibold text-ink-800">{config.label}</h3>
+                <h3 className="font-semibold text-ink-800 dark:text-ink-200">{config.label}</h3>
               </Link>
             );
           })}
@@ -152,16 +152,16 @@ export function CatechismNode({
           <Link
             key={question.id}
             href={`/catechism/${catechism.id}/${question.number}`}
-            className="block px-4 py-3 rounded-lg hover:bg-parchment-100 transition-colors border border-transparent hover:border-parchment-200"
+            className="block px-4 py-3 rounded-lg hover:bg-parchment-100 dark:hover:bg-stone-700 transition-colors border border-transparent hover:border-parchment-200 dark:hover:border-stone-600"
           >
             <div className="flex items-start gap-3">
-              <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-gold-100 text-gold-700 rounded-full text-sm font-medium">
+              <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-gold-100 dark:bg-gold-500/20 text-gold-700 dark:text-gold-400 rounded-full text-sm font-medium">
                 {question.number}
               </span>
               <div>
-                <p className="font-medium text-ink-800 text-sm">{question.question.french}</p>
+                <p className="font-medium text-ink-800 dark:text-ink-200 text-sm">{question.question.french}</p>
                 {question.question.latin && (
-                  <p className="text-xs text-ink-500 italic mt-1">{question.question.latin}</p>
+                  <p className="text-xs text-ink-500 dark:text-ink-500 italic mt-1">{question.question.latin}</p>
                 )}
               </div>
             </div>
@@ -175,11 +175,11 @@ export function CatechismNode({
   return (
     <div className="space-y-4">
       {/* En-tête du catéchisme */}
-      <div className="flex items-center gap-3 pb-3 border-b border-parchment-200">
+      <div className="flex items-center gap-3 pb-3 border-b border-parchment-200 dark:border-stone-700">
         <span className="text-2xl">📖</span>
         <div>
-          <h3 className="font-serif font-bold text-ink-900">{catechism.name}</h3>
-          <p className="text-xs text-ink-500">{catechism.questions.length} questions</p>
+          <h3 className="font-serif font-bold text-ink-900 dark:text-parchment-50">{catechism.name}</h3>
+          <p className="text-xs text-ink-500 dark:text-ink-500">{catechism.questions.length} questions</p>
         </div>
       </div>
 
@@ -193,11 +193,11 @@ export function CatechismNode({
             <div key={category}>
               <button
                 onClick={() => toggleCategory(category as QuestionCategory)}
-                className="w-full flex items-center gap-2 px-3 py-2 rounded hover:bg-parchment-100 transition-colors text-left"
+                className="w-full flex items-center gap-2 px-3 py-2 rounded hover:bg-parchment-100 dark:hover:bg-stone-700 transition-colors text-left"
               >
                 <svg
                   className={cn(
-                    "w-4 h-4 transition-transform text-ink-400",
+                    "w-4 h-4 transition-transform text-ink-400 dark:text-ink-500",
                     expanded && "rotate-90"
                   )}
                   fill="none"
@@ -212,8 +212,8 @@ export function CatechismNode({
                   />
                 </svg>
                 <span>{config.icon}</span>
-                <span className="flex-1 font-medium text-ink-800 text-sm">{config.label}</span>
-                <span className="text-xs text-ink-500">{questions.length}</span>
+                <span className="flex-1 font-medium text-ink-800 dark:text-ink-200 text-sm">{config.label}</span>
+                <span className="text-xs text-ink-500 dark:text-ink-500">{questions.length}</span>
               </button>
 
               {expanded && (
@@ -222,7 +222,7 @@ export function CatechismNode({
                     <Link
                       key={question.id}
                       href={`/catechism/${catechism.id}/${question.number}`}
-                      className="block px-3 py-2 rounded hover:bg-parchment-50 transition-colors text-sm text-ink-700"
+                      className="block px-3 py-2 rounded hover:bg-parchment-50 dark:hover:bg-stone-800/50 transition-colors text-sm text-ink-700 dark:text-ink-300"
                     >
                       <span className="font-medium text-gold-600">Q{question.number}</span>{" "}
                       {question.question.french}
@@ -274,7 +274,7 @@ export function BreadcrumbCat({ catechism, category, questionNumber }: Breadcrum
         <div key={i} className="flex items-center gap-2">
           {i > 0 && (
             <svg
-              className="w-4 h-4 text-ink-400"
+              className="w-4 h-4 text-ink-400 dark:text-ink-500"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -285,8 +285,8 @@ export function BreadcrumbCat({ catechism, category, questionNumber }: Breadcrum
           <Link
             href={crumb.href}
             className={cn(
-              "hover:text-gold-600 transition-colors",
-              i === crumbs.length - 1 ? "text-ink-900 font-medium" : "text-ink-600"
+              "hover:text-gold-600 dark:hover:text-gold-400 transition-colors",
+              i === crumbs.length - 1 ? "text-ink-900 dark:text-parchment-50 font-medium" : "text-ink-600 dark:text-ink-400"
             )}
           >
             {crumb.label}
@@ -311,17 +311,17 @@ export function CompactCatechismList({ catechisms }: CompactCatechismListProps) 
         <li key={c.id}>
           <Link
             href={`/catechism/${c.id}`}
-            className="flex items-center gap-3 p-3 rounded-lg hover:bg-parchment-100 transition-colors border border-transparent hover:border-parchment-200"
+            className="flex items-center gap-3 p-3 rounded-lg hover:bg-parchment-100 dark:hover:bg-stone-700 transition-colors border border-transparent hover:border-parchment-200 dark:hover:border-stone-600"
           >
             <span className="text-xl">📖</span>
             <div className="flex-1">
-              <p className="font-medium text-ink-800">{c.name}</p>
-              <p className="text-xs text-ink-500">
+              <p className="font-medium text-ink-800 dark:text-ink-200">{c.name}</p>
+              <p className="text-xs text-ink-500 dark:text-ink-500">
                 {c.year} • {c.questions.length} questions
               </p>
             </div>
             <svg
-              className="w-5 h-5 text-ink-400"
+              className="w-5 h-5 text-ink-400 dark:text-ink-500"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
