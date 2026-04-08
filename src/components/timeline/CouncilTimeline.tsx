@@ -65,7 +65,7 @@ export function CouncilTimeline({ filter = "all", initialCentury }: CouncilTimel
       {/* Filtres de période */}
       <div className="flex flex-wrap gap-2">
         <button
-          onClick={() => (window.location.href = "/timeline")}
+          onClick={() => (window.location.href = "/councils")}
           className={cn(
             "px-4 py-2 rounded-lg transition-colors",
             filter === "all"
@@ -76,7 +76,7 @@ export function CouncilTimeline({ filter = "all", initialCentury }: CouncilTimel
           Tous les siècles
         </button>
         <button
-          onClick={() => (window.location.href = "/timeline?period=ancient")}
+          onClick={() => (window.location.href = "/councils?period=ancient")}
           className={cn(
             "px-4 py-2 rounded-lg transition-colors",
             filter === "ancient"
@@ -87,7 +87,7 @@ export function CouncilTimeline({ filter = "all", initialCentury }: CouncilTimel
           Antiquité
         </button>
         <button
-          onClick={() => (window.location.href = "/timeline?period=medieval")}
+          onClick={() => (window.location.href = "/councils?period=medieval")}
           className={cn(
             "px-4 py-2 rounded-lg transition-colors",
             filter === "medieval"
@@ -98,7 +98,7 @@ export function CouncilTimeline({ filter = "all", initialCentury }: CouncilTimel
           Moyen Âge
         </button>
         <button
-          onClick={() => (window.location.href = "/timeline?period=modern")}
+          onClick={() => (window.location.href = "/councils?period=modern")}
           className={cn(
             "px-4 py-2 rounded-lg transition-colors",
             filter === "modern"
@@ -227,7 +227,7 @@ function TimelineCouncil({
 
   return (
     <Link
-      href={`/timeline/${council.slug}`}
+      href={`/councils/${council.slug}`}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
       className={cn(
@@ -314,7 +314,7 @@ export function CompactTimeline({ councilSlug }: CompactTimelineProps) {
         {councils.map(council => (
           <Link
             key={council.slug}
-            href={`/timeline/${council.slug}`}
+            href={`/councils/${council.slug}`}
             className={cn(
               "flex flex-col items-center gap-1 px-2 py-1 rounded transition-colors",
               councilSlug === council.slug
@@ -352,7 +352,7 @@ export function CenturyNavigation({ currentCentury }: CenturyNavigationProps) {
           return (
             <li key={century}>
               <Link
-                href={`/timeline?century=${century}`}
+                href={`/councils?century=${century}`}
                 className={cn(
                   "flex items-center justify-between px-3 py-2 rounded transition-colors",
                   currentCentury === century

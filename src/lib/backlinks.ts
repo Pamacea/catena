@@ -175,7 +175,7 @@ export function replaceWikilinks(text: string, replacer: (match: WikilinkMatch) 
 
 /**
  * Génère un lien vers une entité depuis un wikilink.
- * Routes based on entity type (heresy → /doctrine, council → /timeline, etc.)
+ * Routes based on entity type (heresy → /doctrine, council → /councils, etc.)
  *
  * @param match - Parsed wikilink match
  * @returns URL path to the entity
@@ -193,7 +193,7 @@ export function wikilinkToUrl(match: WikilinkMatch): string {
     case "heresy":
       return `/doctrine/${slug}`;
     case "council":
-      return `/timeline/${slug}`;
+      return `/councils/${slug}`;
     case "catechism":
       const [catechismId, questionId] = slug.split("/");
       if (questionId) {

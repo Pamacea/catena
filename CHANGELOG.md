@@ -1,5 +1,37 @@
 # Changelog
 
+## [0.2.0] — 2026-04-08
+
+### Nouveautés
+
+- **Page Chronologie** : nouvelle section `/chronologie` avec frise verticale unifiée (~130+ événements)
+- **Données bibliques** : 73 livres de la Bible avec dates de composition traditionnelles (érudition moderne)
+- **Événements historiques** : ~25 événements majeurs de l'histoire du salut (Appel d'Abraham, Exode, Pentecôte, Édit de Milan, Grand Schisme...)
+- **Filtres interactifs** : filtre par type (Conciles, Hérésies, Livres bibliques, Événements)
+- **Groupement par ères** : Patriarches, Rois et Prophètes, Intertestamentaire, Temps du Christ, Église primitive, Moyen Âge, Époque moderne...
+- **Barre de navigation** : ajout de "Conciles" et "Chronologie" dans la navbar
+
+### Corrections
+
+- **Liens cassés** : le lien `/timeline` (404) dans Header et homepage remplacé par `/chronologie` et `/councils`
+- **Barrel export** : `export * from "./councils"` corrigé (dossier inexistant) → `./timeline` + `./chronology`
+- **Dates bibliques** : dates de composition corrigées selon l'érudition moderne (Pentateuque post-exilique, etc.)
+
+### Données
+
+- `src/data/chronology/index.ts` — module unifié avec types `ChronologyEvent`, adapters conciles/hérésies, dates bibliques, événements historiques
+- Interface `ChronologyEvent` : `type` (COUNCIL/HERESY/BIBLE_BOOK/HISTORICAL), `year`, `href`, `tags`, `location`
+- Helpers : `getAllChronologyEvents()`, `formatYear()`, `getEraLabel()`, `getEras()`
+
+### Composants
+
+- `ChronologyTimeline` — frise verticale avec filtres et groupement par ères
+- `ChronologyEventCard` — carte d'événement colorée par type
+
+### Pages
+
+- `/chronologie` — layout + page server component
+
 ## [0.1.1] — 2026-04-08
 
 ### Fixes

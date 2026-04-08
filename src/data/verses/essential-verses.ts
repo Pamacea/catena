@@ -529,7 +529,7 @@ const essentialVerses: EssentialVerse[] = [
   {
     id: "ph-4-13",
     reference: "Philippiens 4:13",
-    bookId: "philippiens",
+    bookId: "philippians",
     chapter: 4,
     verse: 13,
     text: "Je peux tout par celui qui me fortifie.",
@@ -745,7 +745,7 @@ const essentialVerses: EssentialVerse[] = [
   {
     id: "ph-2-3-4",
     reference: "Philippiens 2:3-4",
-    bookId: "philippiens",
+    bookId: "philippians",
     chapter: 2,
     verse: "3-4",
     text: "Ne faites rien par esprit de parti ou par vaine gloire, mais que l'humilité vous fasse regarder les autres comme étant au-dessus de vous-mêmes. Que chacun de ses regards, non seulement à ses propres intérêts, mais aussi à ceux des autres.",
@@ -1231,7 +1231,7 @@ const essentialVerses: EssentialVerse[] = [
   {
     id: "ph-4-7",
     reference: "Philippiens 4:7",
-    bookId: "philippiens",
+    bookId: "philippians",
     chapter: 4,
     verse: 7,
     text: "Et la paix de Dieu, qui surpasse toute intelligence, gardera vos cœurs et vos pensées en Jésus-Christ.",

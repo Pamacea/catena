@@ -195,7 +195,7 @@ describe("wikilinkToUrl", () => {
       fullMatch: "[[nicee-1]]",
     };
 
-    expect(wikilinkToUrl(match)).toBe("/timeline/nicee-1");
+    expect(wikilinkToUrl(match)).toBe("/councils/nicee-1");
   });
 
   it("generates URL for catechism type without question", () => {
@@ -450,7 +450,7 @@ describe("wikilinksToHtml", () => {
     const text = "[[nicee-1]]";
     const result = wikilinksToHtml(text);
 
-    expect(result).toContain('href="/timeline/nicee-1"');
+    expect(result).toContain('href="/councils/nicee-1"');
     expect(result).toContain('data-type="council"');
   });
 });

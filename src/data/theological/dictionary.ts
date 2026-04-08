@@ -5,7 +5,7 @@
 
 import type { DictionaryEntry, TheologicalConcept, GreekTerm, HebrewTerm } from '../types/enriched'
 
-/** ===== TERMES HÉBREUX =====
+/* ===== TERMES HÉBREUX ===== */
 
 export const hebrewTerms: HebrewTerm[] = [
   {
@@ -274,7 +274,7 @@ export const hebrewTerms: HebrewTerm[] = [
   },
 ]
 
-/** ===== TERMES GRECS =====
+/* ===== TERMES GRECS ===== */
 
 export const greekTerms: GreekTerm[] = [
   {
@@ -555,7 +555,7 @@ export const greekTerms: GreekTerm[] = [
   },
 ]
 
-/** ===== CONCEPTS THÉOLOGIQUES =====
+/* ===== CONCEPTS THÉOLOGIQUES ===== */
 
 export const theologicalConcepts: TheologicalConcept[] = [
   {
@@ -770,7 +770,7 @@ export const theologicalConcepts: TheologicalConcept[] = [
   },
 ]
 
-/** ===== EXPORTS =====
+/* ===== EXPORTS ===== */
 
 export function searchDictionary(query: string): DictionaryEntry[] {
   const lowerQuery = query.toLowerCase()

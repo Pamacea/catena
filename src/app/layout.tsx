@@ -42,36 +42,19 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f5f3f0" },
-    { media: "(prefers-color-scheme: dark)", color: "#2d2926" },
-  ],
-  colorScheme: "light dark",
+  themeColor: "#f5f3f0",
   width: "device-width",
   initialScale: 1,
 };
 
-const themeScript = `
-(function() {
-  try {
-    var d = document.documentElement;
-    var t = localStorage.getItem('theme');
-    if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      d.classList.add('dark');
-    }
-  } catch(e) {}
-})();
-`;
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang="fr">
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <meta name="google-site-verification" content="RngM7SyDMb5xACx10fCkpCN6tsXHl8t2Y8FTNGsq9Cc" />
       </head>
       <body
-        className={`${inter.variable} ${ebGaramond.variable} font-sans antialiased bg-stone-200 dark:bg-stone-900 text-ink-900 dark:text-parchment-100`}
+        className={`${inter.variable} ${ebGaramond.variable} font-sans antialiased bg-stone-200 text-ink-900`}
       >
         {children}
         <Analytics mode="production" />

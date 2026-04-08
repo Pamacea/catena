@@ -50,13 +50,13 @@ export default async function DoctrinePage({ searchParams }: DoctrinePageProps) 
     activeFilter = `${centuryNum}${centuryNum === 1 ? "er" : "e"} siècle`;
   }
   return (
-    <div>
+    <div className="max-w-6xl mx-auto">
       {/* Header */}
       <header className="mb-12">
-        <h1 className="font-serif text-4xl font-bold text-ink-900 dark:text-parchment-50 mb-4">
+        <h1 className="font-serif text-4xl font-bold text-ink-900 mb-4">
           Hérésies et Condamnations
         </h1>
-        <p className="text-lg text-ink-700 dark:text-ink-300 max-w-3xl">
+        <p className="text-lg text-ink-700">
           Les principales hérésies condamnées par l'Église catholique, avec leurs erreurs, leurs
           réfutations patristiques, et les condamnations conciliaires ou pontificales.
         </p>
@@ -64,7 +64,7 @@ export default async function DoctrinePage({ searchParams }: DoctrinePageProps) 
 
       {/* Filtres par catégorie */}
       <section className="mb-8">
-        <h2 className="font-serif text-lg font-semibold text-ink-900 dark:text-parchment-50 mb-3">
+        <h2 className="font-serif text-lg font-semibold text-ink-900 mb-3">
           Par catégorie
         </h2>
         <div className="flex flex-wrap gap-2">
@@ -73,7 +73,7 @@ export default async function DoctrinePage({ searchParams }: DoctrinePageProps) 
             className={
               !categoryParam
                 ? "px-4 py-2 rounded-xs bg-amber-800 text-white border border-gold-400/40 transition-colors text-sm font-medium"
-                : "px-4 py-2 rounded-xs bg-gold-50 dark:bg-stone-800 text-ink-800 dark:text-ink-200 hover:bg-gold-100 dark:hover:bg-stone-700 border border-gold-400/40 dark:border-gold-400/30 dark:hover:border-gold-400/30 transition-colors text-sm font-medium"
+                : "px-4 py-2 rounded-xs bg-gold-50 text-ink-800 hover:bg-gold-100 border border-gold-400/40 transition-colors text-sm font-medium"
             }
           >
             Tous
@@ -85,7 +85,7 @@ export default async function DoctrinePage({ searchParams }: DoctrinePageProps) 
               className={
                 categoryParam === key
                   ? "px-4 py-2 rounded-xs bg-amber-800 text-white border border-gold-400/40 transition-colors text-sm font-medium"
-                  : "px-4 py-2 rounded-xs bg-gold-50 dark:bg-stone-800 text-ink-800 dark:text-ink-200 hover:bg-gold-100 dark:hover:bg-stone-700 border border-gold-400/40 dark:border-gold-400/30 dark:hover:border-gold-400/30 transition-colors text-sm font-medium"
+                  : "px-4 py-2 rounded-xs bg-gold-50 text-ink-800 hover:bg-gold-100 border border-gold-400/40 transition-colors text-sm font-medium"
               }
             >
               {name}
@@ -99,7 +99,7 @@ export default async function DoctrinePage({ searchParams }: DoctrinePageProps) 
 
       {/* Filtres par siècle */}
       <section className="mb-10">
-        <h2 className="font-serif text-lg font-semibold text-ink-900 dark:text-parchment-50 mb-3">
+        <h2 className="font-serif text-lg font-semibold text-ink-900 mb-3">
           Par siècle
         </h2>
         <div className="flex flex-wrap gap-2">
@@ -110,7 +110,7 @@ export default async function DoctrinePage({ searchParams }: DoctrinePageProps) 
               className={
                 centuryParam === String(century)
                   ? "px-4 py-2 rounded-xs bg-amber-800 text-white border border-gold-400/40 transition-colors text-sm font-medium"
-                  : "px-4 py-2 rounded-xs bg-gold-50 dark:bg-stone-800 text-ink-700 dark:text-ink-300 hover:bg-gold-100 dark:hover:bg-stone-700 border border-gold-400/40 dark:border-gold-400/30 dark:hover:border-gold-400/30 transition-colors text-sm font-medium"
+                  : "px-4 py-2 rounded-xs bg-gold-50 text-ink-700 hover:bg-gold-100 border border-gold-400/40 transition-colors text-sm font-medium"
               }
             >
               {century}
@@ -123,7 +123,7 @@ export default async function DoctrinePage({ searchParams }: DoctrinePageProps) 
 
       {/* Liste complète - layout ligne par ligne */}
       <section>
-        <h2 className="font-serif text-lg font-semibold text-ink-900 dark:text-parchment-50 mb-4">
+        <h2 className="font-serif text-lg font-semibold text-ink-900 mb-4">
           {activeFilter ? (
             <span>
               <Link href="/doctrine" className="text-ink-600 hover:text-ink-900 mr-2">
@@ -143,17 +143,17 @@ export default async function DoctrinePage({ searchParams }: DoctrinePageProps) 
               <Link
                 key={heresy.slug}
                 href={`/doctrine/${heresy.slug}`}
-                className="group flex items-center gap-4 p-3 rounded-xs border border-transparent hover:border-gold-400/40 dark:hover:border-gold-400/30 hover:bg-parchment-50/50 dark:hover:bg-stone-800/50 transition-all"
+                className="group flex items-center gap-4 p-3 rounded-xs border border-transparent hover:border-gold-400/40 hover:bg-parchment-50/50 transition-all"
               >
                 {/* Siècle */}
-                <span className="text-xs text-ink-500 dark:text-ink-500 w-20 flex-shrink-0">
+                <span className="text-xs text-ink-500 w-20 flex-shrink-0">
                   {heresy.century}
                   {heresy.century === 1 ? "er" : "e"} s.
                 </span>
 
                 {/* Nom */}
                 <div className="flex-1 min-w-0">
-                  <span className="font-serif text-ink-900 dark:text-parchment-50 group-hover:underline">
+                  <span className="font-serif text-ink-900 group-hover:underline">
                     {heresy.name}
                   </span>
                   {heresy.nameLatin && (
@@ -164,12 +164,12 @@ export default async function DoctrinePage({ searchParams }: DoctrinePageProps) 
                 </div>
 
                 {/* Promoteur */}
-                <span className="text-sm text-ink-600 dark:text-ink-400 truncate max-w-xs hidden lg:block">
+                <span className="text-sm text-ink-600 truncate max-w-xs hidden lg:block">
                   {heresy.promoter}
                 </span>
 
                 {/* Flèche */}
-                <span className="text-ink-600 dark:text-ink-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-ink-600 opacity-0 group-hover:opacity-100 transition-opacity">
                   →
                 </span>
               </Link>
@@ -179,12 +179,12 @@ export default async function DoctrinePage({ searchParams }: DoctrinePageProps) 
       </section>
 
       {/* Légende */}
-      <section className="mt-12 pt-6 border-t border-gold-400/40 dark:border-gold-400/30">
-        <h3 className="text-sm font-semibold text-ink-700 dark:text-ink-300 mb-3">Légende des catégories</h3>
+      <section className="mt-12 pt-6 border-t border-gold-400/40">
+        <h3 className="text-sm font-semibold text-ink-700 mb-3">Légende des catégories</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
           {Object.entries(categoryLabels).map(([key, { name }]) => (
             <div key={key} className="flex items-center gap-2">
-              <span className="text-ink-700 dark:text-ink-300">{name}</span>
+              <span className="text-ink-700">{name}</span>
             </div>
           ))}
         </div>

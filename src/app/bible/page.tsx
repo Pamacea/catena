@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { bibleBooks, Testament, Genre } from "@/data/bible/index";
+import { SearchBar } from "@/components/ui/SearchBar";
 
 // Groupement des livres par testament et genre
 const testamentLabels = {
@@ -52,32 +53,14 @@ export default function BiblePage() {
 
   return (
     <div className="space-y-12">
-      {/* Quick search */}
+      {/* Recherche */}
       <section className="mb-10">
-        <div className="max-w-2xl mx-auto">
-          <div className="relative group">
-            <input
-              type="search"
-              placeholder="Rechercher un passage, un livre..."
-              className="w-full px-5 py-3 pl-12 rounded-lg border-2 border-gold-300 bg-stone-50 text-ink-900 placeholder:text-gold-600/60 focus:outline-none focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 transition-all shadow-sm group-hover:shadow-md"
-            />
-            <svg
-              className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gold-500"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-gold-500/60 uppercase tracking-wider">
-              <span className="hidden sm:inline">Rechercher</span>
-            </div>
-          </div>
+        <div className="mx-auto">
+          <SearchBar
+            placeholder="Rechercher un passage, un livre..."
+            variant="parchment"
+            icon="book"
+          />
         </div>
       </section>
 

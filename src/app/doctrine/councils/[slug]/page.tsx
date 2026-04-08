@@ -66,12 +66,12 @@ export default async function CouncilPage({ params }: CouncilPageProps) {
   const status = statusLabels[council.status];
 
   return (
-    <div className="min-h-screen bg-parchment-50">
+    <div className="min-h-screen">
       {/* Header */}
       <header className="border-b border-gold-400/40 px-6 py-6">
         <div className="max-w-5xl mx-auto">
           <Link
-            href="/timeline"
+            href="/councils"
             className="inline-flex items-center gap-2 text-sm text-ink-600 hover:text-ink-900 mb-4"
           >
             <span>←</span>
@@ -80,8 +80,7 @@ export default async function CouncilPage({ params }: CouncilPageProps) {
 
           {/* En-tête du concile */}
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span
-              className={`inline-block px-3 py-1 rounded-xs text-sm font-medium ${status.color}`}
+            <span className={`inline-block px-3 py-1 rounded-xs text-sm font-medium ${status.color}`}
             >
               #{council.number} • {typeLabels[council.type]}
             </span>

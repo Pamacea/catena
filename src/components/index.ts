@@ -17,5 +17,8 @@ export * from "./liturgy";
 // Timeline components
 export * from "./timeline";
 
+// Chronology components
+export * from "./chronology";
+
 // UI components
 export * from "./ui";

@@ -168,7 +168,7 @@ export const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(
           value={value !== undefined ? value : localValue}
           onChange={handleChange}
           className={cn(
-            "w-full rounded-md border py-2.5 px-4 text-ink-900 placeholder:text-ink-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1",
+            "w-full rounded-xs border py-2.5 px-4 text-ink-900 placeholder:text-ink-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1",
             variantStyles[variant],
             icon !== "none" && "pl-10",
             className

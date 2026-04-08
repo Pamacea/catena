@@ -48,35 +48,34 @@ export default async function CatechismQuestionsPage({ params }: CatechismPagePr
   const catechismWithLessons = getCatechismWithLessonsById(lessonsId);
 
   if (!catechism) {
-    notFound();
-  }
+  mx-auto}
 
   return (
     <div className="max-w-4xl mx-auto">
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-sm text-ink-600 dark:text-ink-400 mb-6">
+      <nav className="flex items-center gap-2 text-sm text-ink-600 mb-6">
         <Link href="/catechism" className="hover:underline">
           Catéchismes
         </Link>
         <span>/</span>
-        <span className="text-ink-900 dark:text-ink-200">{catechism.name}</span>
+        <span className="text-ink-900">{catechism.name}</span>
       </nav>
 
       {/* Header */}
-      <header className="mb-12 pb-8 border-b border-gold-400/40 dark:border-gold-400/30">
-        <h1 className="font-serif text-4xl font-bold text-ink-900 dark:text-parchment-50 mb-3">
+      <header className="mb-12 pb-8 border-b border-gold-400/40">
+        <h1 className="font-serif text-4xl font-bold text-ink-900 mb-3">
           {catechism.name}
         </h1>
         {catechism.nameLatin && (
-          <p className="text-lg text-ink-600 dark:text-ink-400 italic mb-4">
+          <p className="text-lg text-ink-600 italic mb-4">
             {catechism.nameLatin}
           </p>
         )}
-        <p className="text-ink-700 dark:text-ink-300 mb-2">
+        <p className="text-ink-700 mb-2">
           {catechism.author && <span>{catechism.author}, </span>}
           <span>{catechism.year}</span>
         </p>
-        <p className="text-ink-600 dark:text-ink-400">{catechism.description}</p>
+        <p className="text-ink-600">{catechism.description}</p>
       </header>
 
       {/* Navigation vers les leçons si disponibles */}
@@ -108,16 +107,16 @@ export default async function CatechismQuestionsPage({ params }: CatechismPagePr
             href={`/catechism/${catechism.id}/${question.id}`}
             className="block group"
           >
-            <article className="p-5 rounded-xs border border-gold-400/40 dark:border-gold-400/40 bg-parchment-50/30 dark:bg-stone-800/30 hover:bg-parchment-100 dark:hover:bg-stone-700 transition-colors">
+            <article className="p-5 rounded-xs border border-gold-400/40 bg-parchment-50/30 hover:bg-parchment-100 transition-colors">
               <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-8 h-8 rounded-xs bg-ink-200 dark:bg-ink-900 text-ink-800 dark:text-ink-200 flex items-center justify-center text-sm font-semibold">
+                <span className="flex-shrink-0 w-8 h-8 rounded-xs bg-ink-200 text-ink-800 flex items-center justify-center text-sm font-semibold">
                   {question.number}
                 </span>
                 <div className="flex-1">
-                  <h3 className="font-serif text-lg font-semibold text-ink-900 dark:text-parchment-50 group-hover:text-ink-700 dark:group-hover:text-ink-300">
+                  <h3 className="font-serif text-lg font-semibold text-ink-900 group-hover:text-ink-700">
                     {question.question.french}
                   </h3>
-                  <p className="text-sm text-ink-600 dark:text-ink-400 mt-2 line-clamp-2">
+                  <p className="text-sm text-ink-600 mt-2 line-clamp-2">
                     {question.answer.french}
                   </p>
                 </div>
@@ -131,10 +130,10 @@ export default async function CatechismQuestionsPage({ params }: CatechismPagePr
       </section>
 
       {/* Footer navigation */}
-      <footer className="mt-16 pt-8 border-t border-gold-400/40 dark:border-gold-400/30">
+      <footer className="mt-16 pt-8 border-t border-gold-400/40">
         <Link
           href="/catechism"
-          className="inline-flex items-center gap-2 text-ink-600 dark:text-ink-400 hover:underline"
+          className="inline-flex items-center gap-2 text-ink-600 hover:underline"
         >
           <svg
             className="h-5 w-5"

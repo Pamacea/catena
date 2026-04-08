@@ -9,10 +9,7 @@ import { laguerieIBPCatechism } from "./laguerie-ibp";
 import { piusXCatechism } from "./pius-x";
 import { cureDArsCatechism } from "./cure-d-ars";
 
-/** Export des catéchismes individuels
- *
-export { laguerieCatechism } from './laguerie'
-export { laguerieIBPCatechism } from './laguerie-ibp'
+/* Export des catéchismes individuels */
 
 /**
  * Collection des catéchismes avec leçons complètes

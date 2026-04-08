@@ -54,7 +54,7 @@ const typeConfig = {
   council: {
     label: "Concile",
     color: "bg-purple-100 text-purple-700 border-purple-200",
-    href: (slug: string) => `/timeline/${slug}`,
+    href: (slug: string) => `/councils/${slug}`,
   },
   catechism: {
     label: "Catéchisme",

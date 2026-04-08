@@ -10,6 +10,7 @@ export * from "./heresies";
 export * from "./catechisms";
 export * from "./councils";
 export * from "./prayers";
+export * from "./chronology";
 
 import { bibleBooks } from "./bible";
 import { heresies } from "./heresies";

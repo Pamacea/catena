@@ -63,7 +63,7 @@ export default async function QuestionPage({ params }: QuestionPageProps) {
   return (
     <div className="max-w-4xl mx-auto">
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-sm text-ink-600 dark:text-ink-400 mb-6">
+      <nav className="flex items-center gap-2 text-sm text-ink-600 mb-6">
         <Link href="/catechism" className="hover:underline">
           Catéchismes
         </Link>
@@ -72,7 +72,7 @@ export default async function QuestionPage({ params }: QuestionPageProps) {
           {catechism.name}
         </Link>
         <span>/</span>
-        <span className="text-ink-900 dark:text-ink-200">Q{question.number}</span>
+        <span className="text-ink-900">Q{question.number}</span>
       </nav>
 
       {/* Question navigation */}
@@ -80,7 +80,7 @@ export default async function QuestionPage({ params }: QuestionPageProps) {
         {prevQuestion ? (
           <Link
             href={`/catechism/${id}/${prevQuestion.id}`}
-            className="flex items-center gap-2 px-4 py-2 rounded-xs border border-gold-400/40 dark:border-gold-400/40 bg-parchment-50/50 dark:bg-stone-800/50 text-ink-700 dark:text-ink-300 hover:bg-parchment-100 dark:hover:bg-stone-700 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 rounded-xs border border-gold-400/40 bg-parchment-50/50 text-ink-700 hover:bg-parchment-100 transition-colors"
           >
             <svg
               className="h-5 w-5"
@@ -103,14 +103,14 @@ export default async function QuestionPage({ params }: QuestionPageProps) {
           <div />
         )}
 
-        <span className="text-ink-700 dark:text-ink-300 font-medium">
+        <span className="text-ink-700 font-medium">
           Question {question.number} / {catechism.questions.length}
         </span>
 
         {nextQuestion ? (
           <Link
             href={`/catechism/${id}/${nextQuestion.id}`}
-            className="flex items-center gap-2 px-4 py-2 rounded-xs border border-gold-400/40 dark:border-gold-400/40 bg-parchment-50/50 dark:bg-stone-800/50 text-ink-700 dark:text-ink-300 hover:bg-parchment-100 dark:hover:bg-stone-700 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 rounded-xs border border-gold-400/40 bg-parchment-50/50 text-ink-700 hover:bg-parchment-100 transition-colors"
           >
             <span className="hidden sm:inline">Q{nextQuestion.number}</span>
             <span className="sm:hidden">Suiv.</span>
@@ -132,20 +132,20 @@ export default async function QuestionPage({ params }: QuestionPageProps) {
       {/* Main Q/R Accordion */}
       <article className="mb-12">
         <details open className="group/details">
-          <summary className="cursor-pointer p-6 rounded-xs border-2 border-gold-400/40 dark:border-gold-400/40 bg-parchment-100/50 dark:bg-ink-900/30 hover:bg-ink-200/50 dark:hover:bg-ink-900/50 transition-colors list-none">
+          <summary className="cursor-pointer p-6 rounded-xs border-2 border-gold-400/40 bg-parchment-100/50 hover:bg-ink-200/50 transition-colors list-none">
             <div className="flex items-start gap-4">
-              <span className="flex-shrink-0 w-10 h-10 rounded-xs bg-ink-300 dark:bg-ink-700 text-ink-900 dark:text-parchment-100 flex items-center justify-center text-lg font-bold">
+              <span className="flex-shrink-0 w-10 h-10 rounded-xs bg-ink-300 text-ink-900 flex items-center justify-center text-lg font-bold">
                 {question.number}
               </span>
               <div className="flex-1">
-                <span className="text-sm text-ink-600 dark:text-ink-400 font-medium uppercase tracking-wide">
+                <span className="text-sm text-ink-600 font-medium uppercase tracking-wide">
                   Question
                 </span>
-                <h2 className="font-serif text-xl md:text-2xl font-bold text-ink-900 dark:text-parchment-100 mt-1">
+                <h2 className="font-serif text-xl md:text-2xl font-bold text-ink-900 mt-1">
                   {question.question.french}
                 </h2>
                 {question.question.latin && (
-                  <p className="mt-3 text-ink-700 dark:text-ink-300 italic text-sm md:text-base">
+                  <p className="mt-3 text-ink-700 italic text-sm md:text-base">
                     {question.question.latin}
                   </p>
                 )}
@@ -153,15 +153,15 @@ export default async function QuestionPage({ params }: QuestionPageProps) {
             </div>
           </summary>
 
-          <div className="mt-4 p-6 rounded-xs border border-gold-400/40 dark:border-gold-400/40 bg-white dark:bg-stone-800">
-            <span className="text-sm text-green-600 dark:text-green-400 font-medium uppercase tracking-wide">
+          <div className="mt-4 p-6 rounded-xs border border-gold-400/40 bg-white">
+            <span className="text-sm text-green-600 font-medium uppercase tracking-wide">
               Réponse
             </span>
-            <p className="font-serif text-lg md:text-xl leading-relaxed text-ink-900 dark:text-parchment-100 mt-2">
+            <p className="font-serif text-lg md:text-xl leading-relaxed text-ink-900 mt-2">
               {question.answer.french}
             </p>
             {question.answer.latin && (
-              <p className="mt-4 text-ink-700 dark:text-ink-300 italic text-sm md:text-base border-l-4 border-gold-400/40 dark:border-gold-400/40 pl-4">
+              <p className="mt-4 text-ink-700 italic text-sm md:text-base border-l-4 border-gold-400/40 pl-4">
                 {question.answer.latin}
               </p>
             )}
@@ -171,16 +171,16 @@ export default async function QuestionPage({ params }: QuestionPageProps) {
 
       {/* References */}
       {question.references && question.references.length > 0 && (
-        <section className="mb-12 p-6 rounded-xs border border-gold-400/40 dark:border-gold-400/40 bg-parchment-50/30 dark:bg-stone-800/30">
-          <h3 className="font-serif text-lg font-semibold text-ink-900 dark:text-parchment-100 mb-4">
+        <section className="mb-12 p-6 rounded-xs border border-gold-400/40 bg-parchment-50/30/30">
+          <h3 className="font-serif text-lg font-semibold text-ink-900 mb-4">
             Références
           </h3>
           <ul className="space-y-3">
             {question.references.map((ref, index) => (
-              <li key={index} className="text-ink-700 dark:text-ink-300">
+              <li key={index} className="text-ink-700">
                 <span className="font-medium">{ref.source}</span>
                 {ref.citation && (
-                  <span className="block text-sm text-ink-600 dark:text-ink-400 italic mt-1">
+                  <span className="block text-sm text-ink-600 italic mt-1">
                     "{ref.citation}"
                   </span>
                 )}
@@ -193,7 +193,7 @@ export default async function QuestionPage({ params }: QuestionPageProps) {
       {/* Related questions */}
       {question.relatedQuestions && question.relatedQuestions.length > 0 && (
         <section className="mb-12">
-          <h3 className="font-serif text-lg font-semibold text-ink-900 dark:text-parchment-100 mb-4">
+          <h3 className="font-serif text-lg font-semibold text-ink-900 mb-4">
             Questions connexes
           </h3>
           <div className="flex flex-wrap gap-2">
@@ -204,7 +204,7 @@ export default async function QuestionPage({ params }: QuestionPageProps) {
                 <Link
                   key={relatedId}
                   href={`/catechism/${id}/${relatedId}`}
-                  className="px-4 py-2 rounded-xs border border-gold-400/40 dark:border-gold-400/40 bg-parchment-50/50 dark:bg-stone-800/50 text-ink-700 dark:text-ink-300 hover:bg-parchment-100 dark:hover:bg-stone-700 transition-colors"
+                  className="px-4 py-2 rounded-xs border border-gold-400/40 bg-parchment-50/50 text-ink-700 hover:bg-parchment-100 transition-colors"
                 >
                   Q{relatedQ.number}
                 </Link>
@@ -217,7 +217,7 @@ export default async function QuestionPage({ params }: QuestionPageProps) {
       {/* Related councils */}
       {question.relatedCouncils && question.relatedCouncils.length > 0 && (
         <section className="mb-12">
-          <h3 className="font-serif text-lg font-semibold text-ink-900 dark:text-parchment-100 mb-4">
+          <h3 className="font-serif text-lg font-semibold text-ink-900 mb-4">
             Conciles connexes
           </h3>
           <div className="flex flex-wrap gap-2">
@@ -225,7 +225,7 @@ export default async function QuestionPage({ params }: QuestionPageProps) {
               <Link
                 key={councilId}
                 href={`/doctrine/${councilId}`}
-                className="px-4 py-2 rounded-xs border border-amber-200 dark:border-gold-400/40 bg-amber-50/50 dark:bg-stone-800/50 text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-stone-700 transition-colors"
+                className="px-4 py-2 rounded-xs border border-amber-200 bg-amber-50/50 text-amber-700 hover:bg-amber-100 transition-colors"
               >
                 {councilId.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase())}
               </Link>
@@ -238,7 +238,7 @@ export default async function QuestionPage({ params }: QuestionPageProps) {
       <footer className="flex items-center justify-between pt-8 border-t border-gold-400/40/50">
         <Link
           href={`/catechism/${id}`}
-          className="inline-flex items-center gap-2 text-ink-600 dark:text-ink-400 hover:underline"
+          className="inline-flex items-center gap-2 text-ink-600 hover:underline"
         >
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path

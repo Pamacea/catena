@@ -53,7 +53,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className="max-w-2/3 mx-auto relative z-10">
           <div className="text-center">
             {/* Croix gothique */}
             <div className="text-gold-600 mb-2 tracking-wider flex justify-center">
@@ -71,7 +71,7 @@ export default function HomePage() {
 
       {/* Navigation rapide */}
       <nav className="sticky top-0 z-40 bg-stone-100/90 backdrop-blur-sm border-b border-gold-400/20 px-6 py-3">
-        <div className="max-w-6xl mx-auto flex items-center justify-center gap-1 flex-wrap">
+        <div className="max-w-2/3 mx-auto flex items-center justify-center gap-1 flex-wrap">
           {sections.map(section => (
             <Link
               key={section.href}
@@ -83,18 +83,17 @@ export default function HomePage() {
             </Link>
           ))}
           <Link
-            href="/timeline"
+            href="/councils"
             className="px-4 py-2 text-sm text-ink-700 hover:text-gold-700 transition-colors relative group"
           >
-            Chronologie
+            Conciles
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold-500 group-hover:w-full transition-all duration-300" />
           </Link>
         </div>
       </nav>
 
       {/* Contenu principal - Hero majestueux */}
-      <main className="flex-1 px-6 py-16">
-        <div className="max-w-6xl mx-auto">
+      <main className="flex-1 px-6 py-16 max-w-2/3 mx-auto">
           {/* Hero section avec titre majestueux */}
           <section className="mb-20 text-center relative">
             {/* Vignettes d'angle gothiques */}
@@ -111,7 +110,7 @@ export default function HomePage() {
                 La Tradition
                 <span className="block text-gold-600 mt-2">chrétienne</span>
               </h2>
-              <p className="text-xl md:text-2xl text-ink-700 max-w-3xl mx-auto leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-ink-700 mx-auto leading-relaxed font-light">
                 Exploration de la tradition sacrée à travers la Bible, la doctrine, le catéchisme et
                 la liturgie.
               </p>
@@ -133,7 +132,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto ">
               {sections.map(section => {
                 const Icon = sectionIcons[section.name];
                 return (
@@ -179,19 +178,18 @@ export default function HomePage() {
           {/* Accès chronologie - Style parchment */}
           <section className="mt-20 text-center">
             <Link
-              href="/timeline"
+              href="/chronologie"
               className="inline-flex items-center gap-4 text-ink-700 hover:text-gold-700 transition-colors group border-2 border-gold-400 px-8 py-4 hover:border-gold-600 hover:bg-stone-50 transition-all duration-300"
             >
               <CrossPatee className="w-6 h-6 text-gold-600 group-hover:translate-x-1 transition-transform" />
               <span className="font-serif text-lg">Explorer la chronologie</span>
             </Link>
           </section>
-        </div>
       </main>
 
       {/* Footer orné gothique */}
       <footer className="border-t-2 border-gold-500 px-6 py-12">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-2/3 mx-auto">
           {/* Ornementation centrale */}
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px bg-gold-400 w-24" />
