@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HIDE SCROLLBAR EVERYWHERE */
+@layer base {
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  *::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* DIVINE LIGHT EFFECTS */
+@layer utilities {
+  .shadow-divine {
+    box-shadow:
+      0 4px 6px rgba(45, 41, 38, 0.08),
+      0 1px 3px rgba(212, 165, 56, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .shadow-divine-lg {
+    box-shadow:
+      0 10px 25px rgba(45, 41, 38, 0.12),
+      0 4px 10px rgba(212, 165, 56, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+  .glow-hover {
+    transition: box-shadow 0.3s ease;
+  }
+  .glow-hover:hover {
+    box-shadow:
+      0 0 20px rgba(228, 196, 93, 0.15),
+      0 4px 8px rgba(45, 41, 38, 0.1);
+  }
+  .bg-vitrail {
+    background-image:
+      linear-gradient(
+        90deg,
+        transparent 49%,
+        rgba(212, 165, 56, 0.025) 50%,
+        transparent 51%
+      );
+    background-size: 40px 40px;
+  }
+}
+
+/* TYPOGRAPHY SCALE */
+@layer base {
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight leading-tight;
+  }
+  h2 {
+    @apply text-4xl md:text-5xl font-serif font-semibold tracking-tight;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl font-serif font-medium;
+  }
+}
+
+/* Couleurs personnalisées */
+@layer base {
+  :root {
+    --color-parchment-50: #faf8f5;
+    --color-parchment-100: #f5f0e8;
+    --color-parchment-200: #ebe3d4;
+    --color-parchment-300: #e0d6c0;
+    --color-parchment-400: #d4c4a8;
+    --color-parchment-500: #c9b390;
+    --color-parchment-600: #bfa67b;
+    --color-parchment-700: #a89060;
+    --color-parchment-800: #8c7648;
+    --color-parchment-900: #705c38;
+    --color-parchment-950: #433521;
+  }
+}
