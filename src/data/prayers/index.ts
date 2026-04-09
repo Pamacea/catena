@@ -128,7 +128,7 @@ export const ourFather: Prayer = {
     },
   ],
 
-  tags: ["jesus", "enseignement", " modele", "evangile"],
+  tags: ["jesus", "enseignement", "modele", "evangile"],
 };
 
 export const hailMary: Prayer = {
@@ -238,7 +238,7 @@ export const apostlesCreed: Prayer = {
 
   sections: [
     {
-      title: " Dieu le Père",
+      title: "Dieu le Père",
       verses: [
         {
           latin: "Credo in Deum, Patrem omnipotentem,",
@@ -586,7 +586,7 @@ export const actOfFaith: Prayer = {
     },
   ],
 
-  tags: ["foi", "reve9lation", "église"],
+  tags: ["foi", "révélation", "église"],
 };
 
 export const actOfHope: Prayer = {
@@ -610,7 +610,7 @@ export const actOfHope: Prayer = {
           french: "que vous me donnerez,",
         },
         {
-          latin: "que vous me donnerez, par9 vos mérites,",
+          latin: "que vous me donnerez, paré vos mérites,",
           french: "par vos mérites, la vie éternelle",
         },
         {
@@ -640,7 +640,7 @@ export const actOfCharity: Prayer = {
   origin: PrayerOrigin.MEDIEVAL,
 
   description:
-    "Acte par lequel on aime Dieu de tout son cœur et son prochain comme soi-mÄme pour l'amour de Dieu.",
+    "Acte par lequel on aime Dieu de tout son cœur et son prochain comme soi-même pour l'amour de Dieu.",
 
   sections: [
     {
@@ -658,8 +658,8 @@ export const actOfCharity: Prayer = {
           french: "parce que vous êtes infiniment bon,",
         },
         {
-          latin: "et digne d'1tre aimé.",
-          french: "et digne d'1tre aimé.",
+          latin: "et digne d'être aimé.",
+          french: "et digne d'être aimé.",
         },
         {
           latin: "Je désire aimer mon prochain",
@@ -692,14 +692,14 @@ export const hailHolyQueen: Prayer = {
   origin: PrayerOrigin.MEDIEVAL,
   author: "Attribué à Hermann le Reclus (XIe siècle)",
 
-  description: "Antienne mariale trÁs ancienne, r9cit9e Á la fin du chapelet et dans les litanies.",
+  description: "Antienne mariale très ancienne, récitée à la fin du chapelet et dans les litanies.",
 
   sections: [
     {
       verses: [
         {
           latin: "Salve Regina, Mater misericordiæ,",
-          french: "Salut, Reine, mÁre de mis9ricorde,",
+          french: "Salut, Reine, mère de miséricorde,",
         },
         {
           latin: "vita, dulcedo, et spes nostra, salve.",
@@ -723,19 +723,19 @@ export const hailHolyQueen: Prayer = {
         },
         {
           latin: "illos tuos misericordes oculos ad nos converte.",
-          french: "tournez vers nous vos regards mis9ricordieux.",
+          french: "tournez vers nous vos regards miséricordieux.",
         },
         {
           latin: "Et Jesum, benedictum fructum ventris tui,",
-          french: "Et J9sus, le fruit b9ni de vos entrailles,",
+          french: "Et Jésus, le fruit béni de vos entrailles,",
         },
         {
           latin: "nobis post hoc exilium ostende.",
-          french: "montrez-le nous aprÁs cet exil.",
+          french: "montrez-le nous après cet exil.",
         },
         {
           latin: "O clemens, o pia, o dulcis Virgo Maria.",
-          french: "O cl9mente, o pieuse, o douce Vierge Marie.",
+          french: "O clémente, o pieuse, o douce Vierge Marie.",
         },
       ],
     },
@@ -744,7 +744,7 @@ export const hailHolyQueen: Prayer = {
       verses: [
         {
           latin: "Ora pro nobis, sancta Dei Genetrix.",
-          french: "Priez pour nous, sainte MÁre de Dieu.",
+          french: "Priez pour nous, sainte Mère de Dieu.",
         },
         {
           latin: "Ut digni efficiamur promissionibus Christi.",
@@ -756,7 +756,7 @@ export const hailHolyQueen: Prayer = {
         },
         {
           latin: "Deus, qui per Incarnationem Filii tui...",
-          french: "O Dieu, qui par l'Incarnation de votre Fils avez humili9 le monde...",
+          french: "O Dieu, qui par l'Incarnation de votre Fils avez humilié le monde...",
         },
       ],
     },
@@ -773,14 +773,14 @@ export const memorare: Prayer = {
   origin: PrayerOrigin.MEDIEVAL,
   author: "Saint Bernard de Clairvaux (attribué)",
 
-  description: "PriÁre Á la Vierge Marie lui demandant son secours, avec confiance en sa bont9.",
+  description: "Prière à la Vierge Marie lui demandant son secours, avec confiance en sa bonté.",
 
   sections: [
     {
       verses: [
         {
           latin: "Memorare, o piissima Virgo Maria,",
-          french: "Souvenez-vous, 0 trÁs pieuse Vierge Marie,",
+          french: "Souvenez-vous, ô très pieuse Vierge Marie,",
         },
         {
           latin: "non esse auditum a sæculo,",
@@ -788,27 +788,27 @@ export const memorare: Prayer = {
         },
         {
           latin: "quemquam ad tua currentem præsidia,",
-          french: "qu'aucun de ceux qui ont eu recours Á votre protection,",
+          french: "qu'aucun de ceux qui ont eu recours à votre protection,",
         },
         {
           latin: "tua imploratum auxilia,",
-          french: "implor9 votre secours,",
+          french: "imploré votre secours,",
         },
         {
           latin: "esse derelictum.",
-          french: "ait 9t9 abandonn9.",
+          french: "ait été abandonné.",
         },
         {
           latin: "Ego tali animatus confidentia,",
-          french: "Anim9 d'une telle confiance,",
+          french: "Animé d'une telle confiance,",
         },
         {
           latin: "ad te, o Virgo virginum, Mater, curro,",
-          french: "je cours vers vous, 0 Vierge des vierges, 0 mÁre,",
+          french: "je cours vers vous, ô Vierge des vierges, ô mère,",
         },
         {
           latin: "ad te venio,",
-          french: "je viens Á vous,",
+          french: "je viens à vous,",
         },
         {
           latin: "coram te gemens peccator assisto.",
@@ -816,11 +816,11 @@ export const memorare: Prayer = {
         },
         {
           latin: "Noli, o Mater Verbi,",
-          french: "Ne m9prisez pas, 0 MÁre du Verbe,",
+          french: "Ne méprisez pas, ô Mère du Verbe,",
         },
         {
           latin: "mea verba despicere,",
-          french: "mes priÁres,",
+          french: "mes prières,",
         },
         {
           latin: "sed audi propitia",
@@ -843,14 +843,14 @@ export const memorare: Prayer = {
 
 export const saintMichaelPrayer: Prayer = {
   slug: "saint-michel",
-  name: "PriÁre Á saint Michel",
+  name: "Prière à saint Michel",
   nameLatin: "Oratio ad Sanctum Michaelem",
   category: PrayerCategory.SAINT,
   origin: PrayerOrigin.MODERN,
-  author: "Pape L9on XIII (1886)",
+  author: "Pape Léon XIII (1886)",
 
   description:
-    "PriÁre compos9e par le pape L9on XIII aprÁs une vision de la bataille eschatologique entre saint Michel et Satan.",
+    "Prière composée par le pape Léon XIII après une vision de la bataille eschatologique entre saint Michel et Satan.",
 
   sections: [
     {
@@ -861,11 +861,11 @@ export const saintMichaelPrayer: Prayer = {
         },
         {
           latin: "defende nos in prælio,",
-          french: "d9fendez-nous dans le combat,",
+          french: "défendez-nous dans le combat,",
         },
         {
           latin: "contra nequitiam et insidias diaboli esto præsidium.",
-          french: "soyez notre protection contre la m9chancet9 et les piÁges du d9mon.",
+          french: "soyez notre protection contre la méchanceté et les pièges du démon.",
         },
         {
           latin: "Imperet ei Deus, supplices deprecamur,",
@@ -873,7 +873,7 @@ export const saintMichaelPrayer: Prayer = {
         },
         {
           latin: "tuque, Princeps militiae cælestis,",
-          french: "et vous, prince de la milice c9leste,",
+          french: "et vous, prince de la milice céleste,",
         },
         {
           latin: "Satanam aliosque spiritus malignos,",
@@ -895,26 +895,26 @@ export const saintMichaelPrayer: Prayer = {
     },
   ],
 
-  tags: ["ange", "michel", "d9mon", "combat", "leon-xiii"],
+  tags: ["ange", "michel", "démon", "combat", "leon-xiii"],
 };
 
 export const animaChristi: Prayer = {
   slug: "anima-christi",
-  name: "0me du Christ (Anima Christi)",
+  name: "Âme du Christ (Anima Christi)",
   nameLatin: "Anima Christi",
   category: PrayerCategory.EUCHARISTIC,
   origin: PrayerOrigin.MEDIEVAL,
-  author: "Attribu9 Á saint Ignace de Loyola (popularisation)",
+  author: "Attribué à saint Ignace de Loyola (popularisation)",
 
   description:
-    "PriÁre trÁs ancienne, r9cit9e aprÁs la communion, demandant la protection du Christ.",
+    "Prière très ancienne, récitée après la communion, demandant la protection du Christ.",
 
   sections: [
     {
       verses: [
         {
           latin: "Anima Christi, sanctifica me.",
-          french: "0me du Christ, sanctifiez-moi.",
+          french: "Âme du Christ, sanctifiez-moi.",
         },
         {
           latin: "Corpus Christi, salva me.",
@@ -926,7 +926,7 @@ export const animaChristi: Prayer = {
         },
         {
           latin: "Aqua lateris Christi, lava me.",
-          french: "Eau du c09t9 du Christ, lavez-moi.",
+          french: "Eau du côté du Christ, lavez-moi.",
         },
         {
           latin: "Passio Christi, conforta me.",
@@ -934,7 +934,7 @@ export const animaChristi: Prayer = {
         },
         {
           latin: "O bone Iesu, exaudi me.",
-          french: "0 bon J9sus, exaucez-moi.",
+          french: "Ô bon Jésus, exaucez-moi.",
         },
         {
           latin: "Intra tua vulnera abconde me.",
@@ -950,11 +950,11 @@ export const animaChristi: Prayer = {
         },
         {
           latin: "In hora mortis meæ voca me.",
-          french: "Á l'heure de ma mort, appelez-moi.",
+          french: "À l'heure de ma mort, appelez-moi.",
         },
         {
           latin: "Et iube me venire ad te,",
-          french: "et ordonnez-moi de venir Á vous,",
+          french: "et ordonnez-moi de venir à vous,",
         },
         {
           latin: "ut cum Sanctis tuis laudem te",
@@ -962,7 +962,7 @@ export const animaChristi: Prayer = {
         },
         {
           latin: "in sæcula sæculorum.",
-          french: "dans tous les siÁcles des siÁcles.",
+          french: "dans tous les siècles des siècles.",
         },
         {
           latin: "Amen.",
@@ -982,7 +982,7 @@ export const morningOffering: Prayer = {
   category: PrayerCategory.MORNING,
   origin: PrayerOrigin.MODERN,
 
-  description: "PriÁre pour offrir sa journ9e Á Dieu, r9cit9e le matin au r9veil.",
+  description: "Prière pour offrir sa journée à Dieu, récitée le matin au réveil.",
 
   sections: [
     {
@@ -1020,12 +1020,12 @@ export const morningOffering: Prayer = {
 
 export const eveningPrayer: Prayer = {
   slug: "priere-du-soir",
-  name: "PriÁre du soir",
+  name: "Prière du soir",
   nameLatin: "Oratio vespertina",
   category: PrayerCategory.EVENING,
   origin: PrayerOrigin.MEDIEVAL,
 
-  description: "PriÁre pour remercier Dieu de la journ9e et demander pardon pour les péch9s.",
+  description: "Prière pour remercier Dieu de la journée et demander pardon pour les péchés.",
 
   sections: [
     {
@@ -1035,16 +1035,16 @@ export const eveningPrayer: Prayer = {
           french: "Mon Dieu, je vous remercie",
         },
         {
-          latin: "de toutes les gr0ces",
-          french: "de toutes les gr0ces",
+          latin: "de toutes les grâces",
+          french: "de toutes les grâces",
         },
         {
-          latin: "que vous m'avez accord9es aujourd'hui.",
-          french: "que vous m'avez accord9es aujourd'hui.",
+          latin: "que vous m'avez accordées aujourd'hui.",
+          french: "que vous m'avez accordées aujourd'hui.",
         },
         {
-          latin: "Je suis désol9 de mes péch9s,",
-          french: "Je suis désol9 de mes péch9s,",
+          latin: "Je suis désolé de mes péchés,",
+          french: "Je suis désolé de mes péchés,",
         },
         {
           latin: "je vous demande pardon,",
@@ -1067,23 +1067,23 @@ export const eveningPrayer: Prayer = {
 
 export const graceBeforeMeals: Prayer = {
   slug: "grace-repas",
-  name: "Gr0ce avant les repas",
+  name: "Grâce avant les repas",
   nameLatin: "Gratia ante cibum",
   category: PrayerCategory.MEAL,
   origin: PrayerOrigin.MEDIEVAL,
 
-  description: "PriÁre bénisant les alim et remerciant Dieu pour sa providence.",
+  description: "Prière bénissant les aliments et remerciant Dieu pour sa providence.",
 
   sections: [
     {
       verses: [
         {
-          latin: "B9nisse-nous, Seigneur,",
-          french: "B9nisse-nous, Seigneur,",
+          latin: "Bénissez-nous, Seigneur,",
+          french: "Bénissez-nous, Seigneur,",
         },
         {
-          latin: "bénise ces alim",
-          french: "bénise ces alim",
+          latin: "bénissez ces aliments",
+          french: "bénissez ces aliments",
         },
         {
           latin: "que nous allons prendre,",

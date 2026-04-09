@@ -781,9 +781,9 @@ export function searchSummaries(query: string): BookSummary[] {
   const lowerQuery = query.toLowerCase()
   return bookSummaries.filter(
     (s) =>
-      s.bookName.toLowerCase().includes(lowerQuery) ||
-      s.overview.toLowerCase().includes(lowerQuery) ||
-      s.keyThemes.some((t) => t.toLowerCase().includes(lowerQuery)) ||
-      s.keyFigures.some((f) => f.toLowerCase().includes(lowerQuery)),
+      s.bookName?.toLowerCase().includes(lowerQuery) ||
+      (typeof s.overview === 'string' ? s.overview.toLowerCase().includes(lowerQuery) : false) ||
+      s.keyThemes?.some((t) => typeof t === 'string' ? t.toLowerCase().includes(lowerQuery) : t.theme?.toLowerCase().includes(lowerQuery)) ||
+      s.keyFigures?.some((f) => typeof f === 'string' ? f.toLowerCase().includes(lowerQuery) : f.name?.toLowerCase().includes(lowerQuery)),
   )
 }

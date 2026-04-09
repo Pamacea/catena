@@ -24,7 +24,7 @@ export const numbersSummary: BookSummary = {
   abbreviation: "Nb",
   testament: "OLD",
   section: "01-Pentateuque",
-  genre: "pentateuch",
+  genre: "PENTATEUCH",
   chapters: 36,
 
   overview: `Le livre des Nombres raconte le voyage d'Israël du mont Sinaï aux plaines de Moab, près du Jourdain, prêts à entrer dans le pays promis. Son titre vient des recensements (1:46; 26:51), mais en hébreu il est intitulé "Bemidbar" ("Dans le désert").

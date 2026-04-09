@@ -24,7 +24,7 @@ export const deuteronomySummary: BookSummary = {
   abbreviation: "Dt",
   testament: "OLD",
   section: "01-Pentateuque",
-  genre: "pentateuch",
+  genre: "PENTATEUCH",
   chapters: 34,
 
   overview: `Le Deutéronome ("seconde loi' en grec) est le cinquième et dernier livre du Pentateuque. Il contient les discours d'adieu de Moïse aux Israélites avant sa mort et leur entrée dans le pays promis.

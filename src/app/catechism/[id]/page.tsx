@@ -48,7 +48,8 @@ export default async function CatechismQuestionsPage({ params }: CatechismPagePr
   const catechismWithLessons = getCatechismWithLessonsById(lessonsId);
 
   if (!catechism) {
-  mx-auto}
+    notFound();
+  }
 
   return (
     <div className="max-w-4xl mx-auto">

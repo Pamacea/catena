@@ -62,7 +62,7 @@ export default async function HeresyPage({ params }: DoctrinePageProps) {
   }
 
   const category = categoryLabels[heresy.category];
-  const backlinks = getBacklinks(slug);
+  const backlinks = await getBacklinks(slug);
 
   return (
     <div className="max-w-4xl mx-auto">

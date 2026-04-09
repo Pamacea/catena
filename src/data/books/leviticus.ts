@@ -24,7 +24,7 @@ export const leviticusSummary: BookSummary = {
   abbreviation: "Lé",
   testament: "OLD",
   section: "01-Pentateuque",
-  genre: "pentateuch",
+  genre: "PENTATEUCH",
   chapters: 27,
 
   overview: `Le Lévitique est le livre de la sainteté de Dieu et du moyen d'approcher sa présence. Il contient les lois données à Israël au Sinaï concernant le culte, les sacrifices, la pureté rituelle, et la vie sainte.

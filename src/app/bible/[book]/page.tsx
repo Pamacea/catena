@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { bibleBooks, getBookById, Testament } from "@/data/bible/index";
+import { bookSummaries } from "@/data/books/summaries";
 import type { Metadata } from "next";
 
 const testamentLabels = {
@@ -51,8 +52,11 @@ export default async function BookPage({ params }: BookPageProps) {
   const prevBook = bookIndex > 0 ? bibleBooks[bookIndex - 1] : null;
   const nextBook = bookIndex < bibleBooks.length - 1 ? bibleBooks[bookIndex + 1] : null;
 
+  // Résumé du livre
+  const summary = bookSummaries.find(s => s.id === book || s.bookId === book);
+
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="mx-auto">
       {/* Navigation breadcrumbs */}
       <nav className="flex items-center gap-2 text-sm text-ink-600 mb-6">
         <Link href="/bible" className="hover:underline">
@@ -86,6 +90,44 @@ export default async function BookPage({ params }: BookPageProps) {
           </span>
         </div>
       </header>
+
+      {/* Résumé du livre */}
+      {summary && (
+        <section className="mb-8">
+          {summary.overview && (
+            <div className="mb-6">
+              <h2 className="text-lg font-semibold text-ink-900 mb-3">Présentation</h2>
+              <p className="text-ink-700 leading-relaxed">
+                {typeof summary.overview === "string" ? summary.overview : summary.overview.summary}
+              </p>
+            </div>
+          )}
+          {summary.keyThemes && Array.isArray(summary.keyThemes) && summary.keyThemes.length > 0 && (
+            <div className="mb-6">
+              <h2 className="text-lg font-semibold text-ink-900 mb-3">Thèmes clés</h2>
+              <div className="flex flex-wrap gap-2">
+                {summary.keyThemes.map((theme, i) => (
+                  <span key={i} className="px-3 py-1 text-sm bg-parchment-100 border border-gold-400/40 rounded-xs text-ink-700">
+                    {typeof theme === "string" ? theme : theme.theme}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+          {summary.keyFigures && Array.isArray(summary.keyFigures) && summary.keyFigures.length > 0 && (
+            <div className="mb-6">
+              <h2 className="text-lg font-semibold text-ink-900 mb-3">Personnages clés</h2>
+              <div className="flex flex-wrap gap-2">
+                {summary.keyFigures.map((figure, i) => (
+                  <span key={i} className="px-3 py-1 text-sm bg-ink-900 text-parchment-50 rounded-xs">
+                    {typeof figure === "string" ? figure : figure.name}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+      )}
 
       {/* Navigation livres précédent/suivant */}
       {(prevBook || nextBook) && (

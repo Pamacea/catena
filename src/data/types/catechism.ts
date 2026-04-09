@@ -26,7 +26,7 @@ export interface CatechismArticle {
   title: string;
   titleShort: string;
   content: string;
-  questions: CatechismQuestion[];
+  questions?: CatechismQuestion[];
   references?: CatechismReference[];
 }
 
@@ -66,7 +66,9 @@ export type CatechismCategory =
   | "jugement"
   | "enfer"
   | "purgatoire"
-  | "ciel";
+  | "ciel"
+  | "eglise"
+  | "liturgie";
 
 export interface CatechismAuthor {
   name: string;

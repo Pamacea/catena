@@ -37,28 +37,40 @@ export interface BibleQuote {
 }
 
 export interface ConceptNote {
-  title: string
-  description: string
+  title?: string
+  term?: string
+  reference?: string
+  description?: string
+  explanation?: string
   verses?: string[]
   theology?: string
 }
 
 export interface BookSection {
   title: string
-  content: string
+  content?: string
+  summary?: string
   quotes?: BibleQuote[]
+  keyQuotes?: string[]
+  theologicalNotes?: string
   concepts?: ConceptNote[]
 }
 
 export interface BookReadingNotes {
+  book?: string
   bookId?: string
   bookName?: string
   section?: Section
   number?: number // Position dans la Bible (1-73)
   chapters?: number
+  context?: string
   summary?: string
-  keyThemes?: string[]
+  keyThemes?: (string | {theme: string; description?: string; explanation?: string})[]
+  keyFigures?: (string | {name: string; role?: string; significance?: string})[]
+  keyPassages?: (string | {reference: string; description?: string})[]
   introduction?: string
+  theologicalSignificance?: string
+  christologicalTypes?: string[] | {title: string; types: string[]} | {type: string; antitype?: string; description?: string; parallels?: string[]; ntReferences?: string[]}[]
   sections?: BookSection[]
   createdAt?: string
   updatedAt?: string
@@ -68,8 +80,12 @@ export interface BookReadingNotes {
 
 export interface AuthorshipDetail {
   author: string
+  traditionalView?: string
   period?: string
   context?: string
+  evidence?: string[]
+  date?: string
+  circumstances?: string
 }
 
 export interface OverviewDetail {
@@ -79,27 +95,42 @@ export interface OverviewDetail {
 
 export interface BookSummary {
   id?: string
+  book?: string
   title?: string
   titleLatin?: string
+  name?: string
+  frenchName?: string
+  abbreviation?: string
   category?: string
   bookId?: string
   bookName?: string
+  chapters?: number
+  author?: string
+  period?: string
+  theme?: string
   testament?: Testament
   genre?: Genre
   section?: Section
   overview?: string | OverviewDetail
   authorship?: string | AuthorshipDetail
   date?: string
-  keyThemes?: string[]
-  keyFigures?: string[]
-  keyPassages?: string[]
+  keyThemes?: (string | {theme: string; description?: string; explanation?: string})[]
+  keyFigures?: (string | {name: string; role?: string; significance?: string})[]
+  keyPassages?: (string | {reference: string; description?: string})[]
   outline?: ChapterOutline[]
+  literaryStructure?: string | {outline: {section: string; chapters: string}[]}
+  readingTime?: string
   theologicalSignificance?: string
-  christologicalTypes?: string[] | {title: string; types: string[]} // Figures du Christ dans l'AT
+  christologicalTypes?: string[] | {title: string; types: string[]} | {type: string; antitype?: string; description?: string; parallels?: string[]; ntReferences?: string[]}[]
   historicalContext?: {
     setting?: string
+    period?: string
     culturalBackground?: string
+    culturalSetting?: string
+    geopoliticalSituation?: string
     archaeologicalNotes?: string
+    geographicalBackground?: string
+    egyptianContext?: string
   }
 }
 
@@ -109,7 +140,10 @@ export type ChapterOutline = {
   summary?: string
   keyEvents?: string[]
   keyVerses?: string[]
-  verses?: (string | {verse: string; text?: string})[] // Permet les structures personnalisées
+  theologicalNotes?: string
+  geographicalBackground?: string
+  egyptianContext?: string
+  verses?: (string | {verse?: string; text?: string; reference?: string})[] // Permet les structures personnalisées
 } | string // Permet aussi les chaînes simples
 
 export interface KeyPassage {
@@ -117,7 +151,7 @@ export interface KeyPassage {
   citation?: string
   citation2?: string
   commentary?: string
-  [key: string]: string | number | boolean | undefined // Permet les champs additionnels
+  [key: string]: string | number | boolean | string[] | undefined // Permet les champs additionnels
 }
 
 /** ===== VERSETS ===== */
@@ -294,22 +328,4 @@ export interface SearchResult {
 }
 
 /** ===== EXPORTS ===== */
-
-export type {
-  BookReadingNotes,
-  BookSummary,
-  ChapterOutline,
-  KeyPassage,
-  EssentialVerse,
-  VerseCollection,
-  DictionaryEntry,
-  TheologicalConcept,
-  GreekTerm,
-  HebrewTerm,
-  Heresy,
-  ApologeticResponse,
-  BiblicalTheme,
-  DataMetadata,
-  SearchFilters,
-  SearchResult,
-}
+// All types are exported inline at their declarations

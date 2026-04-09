@@ -2,10 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['velite'],
-  // TODO: Fix data/books/*.ts syntax errors, then remove this
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   async headers() {
     return [
       {
