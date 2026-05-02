@@ -4,12 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 import { CrossGothic } from "@/components/ui/Icons";
 
+// Navigation principale du site
 const navItems = [
   { name: "Bible", href: "/bible" },
   { name: "Doctrine", href: "/doctrine" },
   { name: "Catéchisme", href: "/catechism" },
   { name: "Liturgie", href: "/liturgy" },
   { name: "Conciles", href: "/councils" },
+  { name: "Disputationes", href: "/disputationes" },
   { name: "Chronologie", href: "/chronologie" },
 ];
 

@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.2.2] — 2026-05-02
+
+### Nouveautés
+
+- **Page Disputationes** : nouvelle section `/disputationes` avec la méthode scolastique (objections, *sed contra*, *respondeo*, *ad argumenta*)
+- **Filtres par catégorie** : Théologie Dogmatique, Théologie Morale, Ecclésiologie, Apologétique, Discipline, Crise Post-Conciliaire
+- **Lien Disputationes** ajouté à la barre de navigation
+- **Module Citations** : ~80 citations magistérielles organisées en 18 thématiques (Dieu, Trinité, Incarnation, Église, Sacrements, Crise, Droit Canonique...)
+- **Module Crise Post-Conciliaire** : 4 positions face à la crise (Obéissance, Reconnaître/Résister, Sédévacantisme, Thèse de Cassiciacum), distinction sessio/missio, 7 incompatibilités de Vatican II, causes d'invalidité, sources magistérielles, lignée épiscopale
+- **Module Disputationes** : questions disputées structurées avec types `Disputatio`, catégories, helpers de filtrage
+
+### Données
+
+- `src/data/citations/index.ts` — citations magistérielles (ST, Trente, Florence, Vatican I, Pascendi, Cum Ex Apostolatus...)
+- `src/data/crise/index.ts` — analyse de la crise post-conciliaire selon la Thèse de Cassiciacum (P. Guérard des Lauriers O.P.)
+- `src/data/disputationes/index.ts` — questions disputées au format scolastique
+- `src/data/councils/index.ts` — Vatican II retiré de la liste des conciles légitimes (avec justification)
+- `src/data/heresies/index.ts` — 4 nouvelles hérésies : Modernisme, Libéralisme catholique, Indifférentisme religieux, Faux Œcuménisme
+
+### Pages
+
+- `/disputationes` — layout + page server component avec filtres par catégorie
+
 ## [0.2.0] — 2026-04-08
 
 ### Nouveautés

@@ -819,6 +819,264 @@ export const heresies: Heresy[] = [
     connections: [],
     keywords: ["mille ans", "apocalypse", "chiliasme", "augustin"],
   },
+
+  // ===== HÉRÉSIES MODERNES (XIXe-XXe siècle) =====
+  {
+    slug: "modernisme",
+    name: "Modernisme",
+    nameLatin: "Modernismus",
+    category: HeresyCategory.ECCLESIOLOGICAL,
+    century: 20,
+    origin: "Europe (France, Italie, Allemagne)",
+    promoter: "Alfred Loisy, George Tyrrell, Friedrich von Hügel",
+
+    description:
+      "Le modernisme, qualifié de « synthèse de toutes les hérésies » par Pie X, enseigne que le dogme évolue avec les époques, que la foi est un sentiment intérieur et non un assentiment intellectuel à des vérités révélées, et que la critique historique peut rejeter les miracles et la résurrection. Il est la racine intellectuelle de toutes les erreurs de Vatican II.",
+    error:
+      "Le dogme évolue avec les époques ; la foi est un sentiment, non un assentiment intellectuel ; les vérités religieuses sont des symboles de l'expérience intérieure.",
+    refutations: [
+      {
+        source: "Pape Pie X, Encyclique « Pascendi Dominici Gregis » (1907)",
+        latin:
+          "Modernismus est compendium omnium hæresium. Qui modernismum amplectitur, is omnia dogmata catholica destruit.",
+      },
+      {
+        source: "Pape Pie X, « Lamentabili Sane Exitu » (1907)",
+        latin:
+          "Ecclesia non debet præcepta ferre quæ homines adstringunt, nisi sub gravi necessitate et in rebus fidei et morum.",
+      },
+      {
+        source: "Pape Pie X, Motu Proprio « Sacrorum Antistitum » (1910)",
+        latin:
+          "Juro me modernismum, prout a Pio X damnatus est, omnino rejicere, et ad errores ejus non accedere.",
+      },
+    ],
+    condemnations: [
+      {
+        type: CondemnationType.ENCYCLICAL,
+        authority: "Pape Pie X",
+        year: 1907,
+        document: "Encyclique « Pascendi Dominici Gregis »",
+        canons: [
+          "Condamnation du modernisme comme « synthèse de toutes les hérésies »",
+          "Condamnation de l'immanentisme religieux",
+          "Condamnation de l'évolution du dogme",
+          "Condamnation de la critique historique rejetant le surnaturel",
+        ],
+      },
+      {
+        type: CondemnationType.PAPAL_BULL,
+        authority: "Pape Pie X",
+        year: 1907,
+        document: "Décret « Lamentabili Sane Exitu »",
+        canons: [
+          "Condamnation de 65 propositions modernistes",
+          "Prop. 20 : « La Révélation n'est rien d'autre que la conscience acquise par l'homme de sa relation avec Dieu » — Condamnée",
+          "Prop. 22 : « Les dogmes que l'Église propose comme révélés ne sont pas des vérités tombées du ciel, mais une interprétation de faits religieux » — Condamnée",
+          "Prop. 58 : « La vérité n'est pas plus immuable que l'homme lui-même » — Condamnée",
+        ],
+      },
+      {
+        type: CondemnationType.PAPAL_BULL,
+        authority: "Pape Pie X",
+        year: 1910,
+        document: "Motu Proprio « Sacrorum Antistitum » (Serment antimoderniste)",
+      },
+    ],
+    connections: [
+      { slug: "liberalisme-catholique", type: "succeeded" },
+      { slug: "indifferentisme", type: "related" },
+    ],
+    keywords: ["pascendi", "modernisme", "evolution dogme", "immanentisme", "loi-sy", "pie-x"],
+  },
+  {
+    slug: "liberalisme-catholique",
+    name: "Libéralisme catholique",
+    nameLatin: "Liberalismus catholicus",
+    category: HeresyCategory.ECCLESIOLOGICAL,
+    century: 19,
+    origin: "France, Europe",
+    promoter: "Lamennais, Montalembert, Dupanloup, Lacordaire",
+
+    description:
+      "Le libéralisme catholique enseigne que la liberté de conscience et la séparation de l'Église et de l'État sont légitimes et même souhaitables. Il prétend que l'Église doit s'adapter aux idées modernes de liberté, démocratie et progrès. C'est le précurseur direct de la liberté religieuse de Vatican II (Dignitatis Humanae).",
+    error:
+      "La liberté de conscience est un droit ; l'Église doit s'allier aux idées modernes de liberté ; la séparation de l'Église et de l'État est légitime.",
+    refutations: [
+      {
+        source: "Pape Grégoire XVI, Encyclique « Mirari Vos » (1832)",
+        latin:
+          "Ex hac putidissima indifferentismi fonte, absurdum illud ac erroneum, seu potius delirium emanat, liberum cuique esse, religionem, qua rationis lumine quis ductus, veram putaverit, amplecti.",
+      },
+      {
+        source: "Pape Pie IX, « Quanta Cura » et Syllabus (1864)",
+        latin:
+          "Si quis dixerit, hominem ad religionem amplectendam obligari, quæ rationis ductu verissima sit : anathema sit.",
+      },
+      {
+        source: "Pape Léon XIII, « Libertas Praestantissimum » (1888)",
+        latin:
+          "Libertas, ut philosophi appellant et recentiores prædicant, est ea facultas qua quis potest, sine ullo externo impedimento, ad ea quæ velit, se convertere. Atqui hæc, si prave intelligatur, ut solet, est omnino perniciosa.",
+      },
+    ],
+    condemnations: [
+      {
+        type: CondemnationType.ENCYCLICAL,
+        authority: "Pape Grégoire XVI",
+        year: 1832,
+        document: "Encyclique « Mirari Vos »",
+        canons: [
+          "Condamnation de la liberté de conscience comme « délice » (delirium)",
+          "Condamnation de l'indifférentisme religieux",
+          "Condamnation de la liberté de la presse",
+        ],
+      },
+      {
+        type: CondemnationType.ENCYCLICAL,
+        authority: "Pape Pie IX",
+        year: 1864,
+        document: "Encyclique « Quanta Cura » et Syllabus Errorum",
+        canons: [
+          "Prop. 15 : « Tout homme est libre d'embrasser la religion que sa raison lui dicte » — Condamnée",
+          "Prop. 77 : « De nos jours, il est plus utile de rechercher le concours de l'État pour la religion » — Condamnée",
+          "Prop. 78 : « L'Église doit séparer l'État de la religion » — Condamnée",
+          "Prop. 79 : « La liberté de conscience est un droit de tout homme » — Condamnée",
+          "Prop. 80 : « Le pape doit se réconcilier avec le progrès, le libéralisme et la civilisation moderne » — Condamnée",
+        ],
+      },
+      {
+        type: CondemnationType.ENCYCLICAL,
+        authority: "Pape Léon XIII",
+        year: 1888,
+        document: "Encyclique « Libertas Praestantissimum »",
+      },
+    ],
+    connections: [
+      { slug: "modernisme", type: "preceded" },
+      { slug: "indifferentisme", type: "related" },
+    ],
+    keywords: ["liberalisme", "liberte conscience", "mirari vos", "syllabus", "lamennais"],
+  },
+  {
+    slug: "indifferentisme",
+    name: "Indifférentisme religieux",
+    nameLatin: "Indifferentismus religiosus",
+    category: HeresyCategory.ECCLESIOLOGICAL,
+    century: 19,
+    origin: "France, Europe des Lumières",
+    promoter: "Philosophes des Lumières, Voltaire, Condorcet",
+
+    description:
+      "L'indifférentisme religieux enseigne que toutes les religions se valent, qu'il n'y a pas de vraie religion objective, et que chaque homme est libre de choisir sa religion ou d'en changer selon sa convenance. C'est la source du faux œcuménisme de Vatican II et de la déclaration Nostra Aetate.",
+    error:
+      "Toutes les religions se valent ; le choix de la religion est une affaire de préférence personnelle ; l'Église catholique n'est pas la seule vraie religion.",
+    refutations: [
+      {
+        source: "Concile de Florence, « Cantate Domino » (1442)",
+        latin:
+          "Sancta Romana Ecclesia firmiter credit, profitetur et prædicat, nullos extra catholicam Ecclesiam existentes, non solum paganos, sed nec Judæos aut hæreticos atque schismaticos, æternam vitam posse consequi.",
+      },
+      {
+        source: "Pape Grégoire XVI, « Mirari Vos » (1832)",
+        latin:
+          "Ex hoc indifferentismi fonte, absurdum illud ac erroneum, seu potius delirium emanat.",
+      },
+      {
+        source: "Pape Pie IX, Syllabus, Prop. 16 (1864)",
+        latin:
+          "Homines potuerunt, in diversis cultibus, quibus singuli informantur, æternam salutem consequi. — Damnata.",
+      },
+    ],
+    condemnations: [
+      {
+        type: CondemnationType.COUNCIL,
+        authority: "Concile de Florence",
+        year: 1442,
+        document: "Décret « Cantate Domino »",
+        canons: [
+          "Hors de l'Église catholique, personne — païens, juifs, hérétiques ou schismatiques — ne peut être sauvé",
+        ],
+      },
+      {
+        type: CondemnationType.ENCYCLICAL,
+        authority: "Pape Grégoire XVI",
+        year: 1832,
+        document: "Encyclique « Mirari Vos »",
+      },
+      {
+        type: CondemnationType.ENCYCLICAL,
+        authority: "Pape Pie IX",
+        year: 1864,
+        document: "Syllabus Errorum, Prop. 15-18",
+        canons: [
+          "Prop. 15 : « Tout homme est libre de professer la religion qu'il juge vraie » — Condamnée",
+          "Prop. 16 : « Les hommes peuvent être sauvés dans n'importe quel culte » — Condamnée",
+          "Prop. 17 : « On peut au moins espérer la vie éternelle pour ceux qui ne vivent pas dans la vraie Église » — Condamnée",
+          "Prop. 18 : « Le protestantisme n'est qu'une forme différente de la vraie religion » — Condamnée",
+        ],
+      },
+    ],
+    connections: [
+      { slug: "liberalisme-catholique", type: "related" },
+      { slug: "modernisme", type: "related" },
+    ],
+    keywords: ["indifferentisme", "tolerance", "toutes religions", "oecumenisme", "nostra aetate"],
+  },
+  {
+    slug: "faux-oecumenisme",
+    name: "Faux Œcuménisme",
+    nameLatin: "Œcumenismus falsus",
+    category: HeresyCategory.ECCLESIOLOGICAL,
+    century: 20,
+    origin: "Rome, Vatican II",
+    promoter: "Concile Vatican II (Unitatis Redintegratio, Nostra Aetate), Conseil Œcuménique des Églises",
+
+    description:
+      "Le faux œcuménisme enseigne que l'unité des chrétiens se réalise par le dialogue entre égaux, que les communautés séparées (protestantes, orthodoxes) sont des « moyens de salut », et que l'Église catholique doit « rénover » et « réformer » pour s'approcher des autres confessions. C'est contraire à la doctrine constante que l'unité ne se réalise que par le retour des séparés à l'Église catholique.",
+    error:
+      "L'unité chrétienne par le dialogue entre égaux ; les communautés séparées sont des moyens de salut ; l'Église doit se réformer pour s'approcher des autres confessions.",
+    refutations: [
+      {
+        source: "Pape Pie XI, Encyclique « Mortalium Animos » (1928)",
+        latin:
+          "Vix cuiquam licet favere tali conventiculorum congressui. Nam si facit, fovet eos qui a vera religione aberrant, fovet pessimam illam indifferentismi in rebus religionis opinionem.",
+      },
+      {
+        source: "Concile de Florence, « Cantate Domino » (1442)",
+        latin:
+          "Nullus extra catholicam Ecclesiam, non solum paganos, sed nec Judæos aut hæreticos atque schismaticos, æternam vitam consequi.",
+      },
+      {
+        source: "Pape Pie IX, Syllabus, Prop. 18 (1864)",
+        latin:
+          "Protestantismus non aliud est quam diversa verae religionis forma, in qua æque ac in Ecclesia catholica Deo placere datum est. — Damnata.",
+      },
+    ],
+    condemnations: [
+      {
+        type: CondemnationType.ENCYCLICAL,
+        authority: "Pape Pie XI",
+        year: 1928,
+        document: "Encyclique « Mortalium Animos »",
+        canons: [
+          "Condamnation des réunions œcuméniques comme favorisant l'indifférentisme",
+          "L'Église catholique ne peut pas participer à des « conférences » œcuméniques comme un parmi d'autres",
+          "Le retour des séparés à l'Église catholique est la seule voie vers l'unité",
+        ],
+      },
+      {
+        type: CondemnationType.ENCYCLICAL,
+        authority: "Pape Pie IX",
+        year: 1864,
+        document: "Syllabus Errorum, Prop. 18",
+      },
+    ],
+    connections: [
+      { slug: "indifferentisme", type: "succeeded" },
+      { slug: "modernisme", type: "related" },
+    ],
+    keywords: ["oecumenisme", "unite chretienne", "mortalium animos", "dialogue", "nostra aetate", "unitatis redintegratio"],
+  },
 ];
 
 /**

@@ -2,8 +2,9 @@
  *
  * Councils Data - Conciles œcuméniques de l'Église Catholique
  *
- * Les 21 conciles œcuméniques reconnus par l'Église catholique,
+ * Les 20 conciles œcuméniques légitimes de l'Église catholique,
  * avec leurs canons, décrets, et décisions doctrinales.
+ * Vatican II (1962-1965) est exclu — voir Thèse de Cassiciacum.
  */
 
 export enum CouncilType {
@@ -1168,79 +1169,18 @@ export const councils: Council[] = [
     ],
     relatedHeresies: ["gallicanisme", "jansenisme"],
   },
-  {
-    slug: "vatican-ii",
-    name: "Concile Vatican II",
-    nameLatin: "Concilium Vaticanum II",
-    number: 21,
-    type: CouncilType.ECUMENICAL,
-    status: CouncilStatus.RECOGNIZED,
-    year: 1962,
-    yearEnd: 1965,
-    location: "Rome, Vatican",
-    locationLatin: "Roma, Vaticanus",
-    convokedBy: "Pape Jean XXIII",
-    convokedByRole: "Pape",
-    popes: [
-      {
-        name: "Pape Jean XXIII",
-        role: "convoker",
-      },
-      {
-        name: "Pape Paul VI",
-        role: "approver",
-      },
-    ],
-    participants: 2500,
-    description:
-      "Le concile le plus nombreux de l'histoire. Il a renouvelé la liturgie (messe en langue vernaculaire), défini l'œcuménisme, la liberté religieuse, la relation de l'Église avec le monde moderne, et réformé la Curie romaine.",
-    topics: [
-      "Liturgie",
-      "Révélation",
-      "Église",
-      "Évêques",
-      "Œcuménisme",
-      "Églises orientales",
-      "Liberté religieuse",
-      "Église dans le monde moderne",
-      "Prêtres",
-      "Formation des prêtres",
-      "Laïcs",
-      "Missions",
-    ],
-    decrees: [
-      {
-        title: "Sacrosanctum Concilium (Constitution sur la liturgie)",
-        type: "disciplinary",
-        content:
-          "La liturgie est l'œuvre du Christ et de l'Église. Les rites doivent être rénovés, les langues vivantes autorisées, et la participation active des fidèles favorisée.",
-      },
-      {
-        title: "Dei Verbum (Constitution sur la Révélation)",
-        type: "dogmatic",
-        content:
-          "La Révélation se réalise par les actions et les paroles de Dieu, intimement liées. L'Écriture et la Tradition forment un seul dépôt sacré.",
-      },
-      {
-        title: "Lumen Gentium (Constitution sur l'Église)",
-        type: "dogmatic",
-        content:
-          "L'Église est le peuple de Dieu, le corps du Christ. Tous les baptisés participent à sa mission, les évêques en collège avec le pape sont les successeurs des apôtres.",
-      },
-      {
-        title: "Nostra Ætate (Déclaration sur les religions non chrétiennes)",
-        type: "pastoral",
-        content:
-          "L'Église rejette toute discrimination religieuse. Elle a un lien particulier avec le peuple juif, et respecte les autres religions.",
-      },
-      {
-        title: "Dignitatis Humanæ (Déclaration sur la liberté religieuse)",
-        type: "pastoral",
-        content:
-          "Toute personne a droit à la liberté religieuse, en privé et en public. Personne ne doit être forcé d'agir contre sa conscience.",
-      },
-    ],
-  },
+  // ===== CONCILE INVALIDE =====
+  // Vatican II (1962-1965) est exclu de cette liste.
+  // Raison : selon la Thèse de Cassiciacum (P. Guérard des Lauriers O.P.),
+  // les présidents de ce concile (Jean XXIII, Paul VI) n'avaient pas la *missio*
+  // (autorité du Christ) en raison de leur adhésion formelle aux erreurs modernistes.
+  // Un concile présidé par des sujets n'ayant pas l'autorité légitime n'a aucune autorité.
+  // De plus, Vatican II enseigne des doctrines contraires au Magistère infaillible antérieur :
+  // - Dignitatis Humanae (liberté religieuse) contraire au Syllabus, Mirari Vos, Quanta Cura
+  // - Nostra Aetate (religions non-chrétiennes) contraire à Florence (Cantate Domino)
+  // - Lumen Gentium (collégialité) contraire à Pastor Aeternus (Vatican I)
+  // - Gaudium et Spes (évolution dogmatique) contraire à Dei Filius
+  // Voir : src/data/crise/index.ts pour l'analyse complète.
 ];
 
 /**
