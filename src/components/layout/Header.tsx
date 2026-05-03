@@ -11,6 +11,7 @@ const navItems = [
   { name: "Catéchisme", href: "/catechism" },
   { name: "Liturgie", href: "/liturgy" },
   { name: "Conciles", href: "/councils" },
+  { name: "Vault", href: "/vault" },
   { name: "Disputationes", href: "/disputationes" },
   { name: "Chronologie", href: "/chronologie" },
 ];

@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.2.3] — 2026-05-03
+
+### Nouveautés
+
+- **Page Vault** : nouvelle section `/vault` avec explorateur de fichiers interactif (sidebar arborescente + lecteur de notes)
+- **Vault Obsidian** : intégration du vault « Le Livre » (142 notes .md, 2 PDF) dans `public/vault/`
+- **Parsing Obsidian** : support wiki-links `[[liens]]`, callouts `> [!type]`, suppression du frontmatter YAML
+- **Lien Vault** ajouté à la barre de navigation
+
+### Corrections
+
+- **BASE_URL** : migration de `catena.vercel.app` vers `catena.oalacea.fr` (sitemap, robots, layout, JSON-LD)
+- **Scroll** : réinitialisation du scroll lors du changement de note
+- **Titre page** : correction du doublon « Vault | Catena | Catena »
+
+### Fichiers
+
+- `src/app/vault/page.tsx` — page server component (scan du vault)
+- `src/app/vault/layout.tsx` — layout sans footer
+- `src/components/vault/VaultExplorer.tsx` — explorateur client (tree + lecteur)
+- `src/components/vault/VaultMarkdown.tsx` — rendu markdown custom
+- `src/lib/vault/index.ts` — scan récursif du vault + parsing Obsidian
+- `public/vault/` — contenu du vault (notes, prières, PDF)
+
 ## [0.2.2] — 2026-05-02
 
 ### Nouveautés

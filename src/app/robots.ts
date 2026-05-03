@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://catena.vercel.app/sitemap.xml",
+    sitemap: "https://catena.oalacea.fr/sitemap.xml",
   };
 }

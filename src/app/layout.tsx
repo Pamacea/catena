@@ -17,7 +17,7 @@ const ebGaramond = EB_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://catena.vercel.app"),
+  metadataBase: new URL("https://catena.oalacea.fr"),
   title: {
     default: "Catena — Chaîne de la Tradition",
     template: "%s | Catena",

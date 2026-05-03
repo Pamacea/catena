@@ -89,6 +89,13 @@ export default function HomePage() {
             Conciles
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold-500 group-hover:w-full transition-all duration-300" />
           </Link>
+          <Link
+            href="/vault"
+            className="px-4 py-2 text-sm text-ink-700 hover:text-gold-700 transition-colors relative group"
+          >
+            Vault
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold-500 group-hover:w-full transition-all duration-300" />
+          </Link>
         </div>
       </nav>
 

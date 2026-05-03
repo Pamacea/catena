@@ -3,7 +3,7 @@
  * Generates Schema.org markup for SEO
  */
 
-const BASE_URL = "https://catena.vercel.app";
+const BASE_URL = "https://catena.oalacea.fr";
 
 export interface BreadcrumbItem {
   name: string;

@@ -6,7 +6,7 @@ import { catechisms } from "@/data/catechisms";
 import { prayers } from "@/data/prayers";
 import { getCatechismIds } from "@/data/catechism";
 
-const BASE_URL = "https://catena.vercel.app";
+const BASE_URL = "https://catena.oalacea.fr";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/catechism`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE_URL}/liturgy`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE_URL}/councils`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/vault`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
   ];
 
   const bibleRoutes: MetadataRoute.Sitemap = bibleBooks.map(book => ({
