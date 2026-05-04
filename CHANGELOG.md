@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.2.4] — 2026-05-04
+
+### Nouveautés
+
+- **Section Crise** : nouvelle section `/crise` regroupant les études sur la crise post-conciliaire (Vatican II, Thèse de Cassiciacum, Non Una Cum)
+- **Page Vatican II** : analyse des erreurs doctrinales du concile, comparaison avec le Magistère antérieur, conditions de recevabilité, réponses aux objections
+- **Page Thèse de Cassiciacum** : exposé complet de la thèse thomiste du P. Guérard des Lauriers O.P. — fondements (matière/forme), preuves (Saint Thomas, Bellarmin, Cajetan, Droit Canon), objections et réponses
+- **Page Non Una Cum** : contenu théologique complet (transféré dans `/crise/non-una-cum`)
+- **Page Crise index** : présentation des trois études avec cartes cliquables
+- **Bouton remonter** : ajout d'un bouton « Remonter en haut » dans le panel de lecture Vault
+
+### Modifications
+
+- **Navigation** : liens « Non Una Cum » et « Cassiciacum » remplacés par un seul lien « Crise » dans la barre de navigation
+- **Dogmas** : suppression des boutons « Dogmes (55) » et « Hérésies » de la page
+
+### Fichiers
+
+- `src/app/crise/page.tsx` — page index avec 3 cartes
+- `src/app/crise/layout.tsx` — layout avec Header compact, Footer, breadcrumb
+- `src/app/crise/vatican-ii/page.tsx` — erreurs doctrinales, tableau comparatif, objections
+- `src/app/crise/cassiciacum/page.tsx` — thèse complète avec preuves et réponses
+- `src/app/crise/non-una-cum/page.tsx` — contenu théologique et liturgique
+- `src/components/layout/Header.tsx` — lien Crise unique dans la navbar
+- `src/components/vault/VaultExplorer.tsx` — bouton remonter en haut
+- `src/app/globals.css` — styles du bouton remonter
+
 ## [0.2.3] — 2026-05-03
 
 ### Nouveautés
@@ -57,67 +84,3 @@
 - **Filtres interactifs** : filtre par type (Conciles, Hérésies, Livres bibliques, Événements)
 - **Groupement par ères** : Patriarches, Rois et Prophètes, Intertestamentaire, Temps du Christ, Église primitive, Moyen Âge, Époque moderne...
 - **Barre de navigation** : ajout de "Conciles" et "Chronologie" dans la navbar
-
-### Corrections
-
-- **Liens cassés** : le lien `/timeline` (404) dans Header et homepage remplacé par `/chronologie` et `/councils`
-- **Barrel export** : `export * from "./councils"` corrigé (dossier inexistant) → `./timeline` + `./chronology`
-- **Dates bibliques** : dates de composition corrigées selon l'érudition moderne (Pentateuque post-exilique, etc.)
-
-### Données
-
-- `src/data/chronology/index.ts` — module unifié avec types `ChronologyEvent`, adapters conciles/hérésies, dates bibliques, événements historiques
-- Interface `ChronologyEvent` : `type` (COUNCIL/HERESY/BIBLE_BOOK/HISTORICAL), `year`, `href`, `tags`, `location`
-- Helpers : `getAllChronologyEvents()`, `formatYear()`, `getEraLabel()`, `getEras()`
-
-### Composants
-
-- `ChronologyTimeline` — frise verticale avec filtres et groupement par ères
-- `ChronologyEventCard` — carte d'événement colorée par type
-
-### Pages
-
-- `/chronologie` — layout + page server component
-
-## [0.1.1] — 2026-04-08
-
-### Fixes
-
-- **Text colors**: Fix invisible text (white/beige/gray) on light backgrounds across liturgy, catechism, and doctrine pages
-- **Dark mode**: Add missing `dark:` variants to all section layouts and components (20 files)
-- **Ink palette**: Warm up ink colors from cold gray to warm brown for better contrast on parchment backgrounds
-- **DoctrineIndex**: Fix broken dynamic Tailwind class interpolation (`bg-{}-100`)
-- **BilingualText**: Redesign grid layout with LATIN/FR badge labels and synchronized scroll
-- **Search inputs**: Add explicit `text-ink-800` and `placeholder:text-ink-400` classes
-
-### Files Modified
-
-`tailwind.config.ts`, layouts (liturgy, doctrine, catechism), Header, Footer, BilingualText, LiturgyIndex, PrayerCard, DoctrineIndex, HeresyCard, Card, CatechismIndex, CatechismNode, QuestionAccordion, page files
-
-## [0.1.0] — 2026-04-08
-
-### SEO
-- `sitemap.ts` dynamique couvrant toutes les routes (bible, doctrine, catechism, liturgy)
-- `robots.ts` avec référence au sitemap
-- `metadataBase`, OpenGraph, Twitter Cards sur le layout racine
-- OpenGraph `type: article` sur les 8 pages dynamiques
-- Helpers JSON-LD (`BreadcrumbList`, `Book`, `Article`) dans `src/lib/seo/json-ld.ts`
-
-### Sécurité
-- `middleware.ts` avec headers HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy
-- Cache headers dans `next.config.js` (assets immutables, security headers en backup)
-- `try/catch` sur tous les Server Actions (`search.ts`, `server-actions.ts`)
-- `global-error.tsx` — error boundary avec thème Catena
-- `not-found.tsx` — page 404 avec navigation vers les sections
-
-### Optimisation
-- Correction `parchemin` → `parchment` (103 occurrences, 31 fichiers) — les couleurs Tailwind cassées
-- Dark mode fonctionnel : `darkMode: 'class'` dans Tailwind, détection système via script inline
-- `SearchBar` : fuite mémoire debounce corrigée (`useRef` au lieu de `window`), bug CSS `border-gold-400/40/20`
-- Menu mobile fonctionnel dans `Header.tsx` avec toggle et panneau de navigation
-- Suppression des fichiers `nul` (artefacts Windows) et `CouncilCard.tsx` vide
-
-### Infrastructure
-- Build Next.js 16.2.2 avec Turbopack — OK
-- 386 tests Vitest — OK
-- Vercel Analytics intégré

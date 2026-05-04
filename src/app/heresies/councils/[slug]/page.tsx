@@ -69,7 +69,7 @@ export default async function CouncilPage({ params }: CouncilPageProps) {
     <div className="min-h-screen">
       {/* Header */}
       <header className="border-b border-gold-400/40 px-6 py-6">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-2/3 mx-auto">
           <Link
             href="/councils"
             className="inline-flex items-center gap-2 text-sm text-ink-600 hover:text-ink-900 mb-4"
@@ -129,7 +129,7 @@ export default async function CouncilPage({ params }: CouncilPageProps) {
       </header>
 
       <main className="px-6 py-12">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-2/3 mx-auto">
           {/* Description */}
           <section className="mb-12">
             <p className="font-serif text-lg text-ink-700 leading-relaxed">{council.description}</p>
@@ -278,7 +278,7 @@ export default async function CouncilPage({ params }: CouncilPageProps) {
             <div className="flex justify-between items-center">
               {council.number > 1 ? (
                 <Link
-                  href={`/doctrine/councils/${councils.find(c => c.number === council.number - 1)?.slug}`}
+                  href={`/heresies/councils/${councils.find(c => c.number === council.number - 1)?.slug}`}
                   className="flex items-center gap-2 text-ink-600 hover:text-ink-900"
                 >
                   <span>←</span>
@@ -292,7 +292,7 @@ export default async function CouncilPage({ params }: CouncilPageProps) {
 
               {council.number < councils.length ? (
                 <Link
-                  href={`/doctrine/councils/${councils.find(c => c.number === council.number + 1)?.slug}`}
+                  href={`/heresies/councils/${councils.find(c => c.number === council.number + 1)?.slug}`}
                   className="flex items-center gap-2 text-ink-600 hover:text-ink-900"
                 >
                   <span className="font-serif">
@@ -310,7 +310,7 @@ export default async function CouncilPage({ params }: CouncilPageProps) {
 
       {/* Footer */}
       <footer className="border-t border-gold-400/40 px-6 py-8">
-        <div className="max-w-7xl mx-auto text-center text-sm text-ink-500">
+        <div className="mx-auto text-center text-sm text-ink-500">
           <p>Catena — Chaîne de la Tradition © {new Date().getFullYear()}</p>
         </div>
       </footer>

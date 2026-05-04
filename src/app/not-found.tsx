@@ -8,7 +8,7 @@ export default function NotFound() {
         <h2 className="text-3xl font-serif font-semibold mb-4 text-ink-800">
           Page introuvable
         </h2>
-        <p className="text-ink-600 mb-8 max-w-md mx-auto">
+        <p className="text-ink-600 mb-8 mx-auto">
           La page que vous cherchez n&apos;existe pas ou a été déplacée.
         </p>
 
@@ -26,10 +26,10 @@ export default function NotFound() {
             Bible
           </Link>
           <Link
-            href="/doctrine"
+            href="/heresies"
             className="px-5 py-2.5 bg-stone-100 text-ink-800 rounded-md hover:bg-stone-50 transition-colors text-sm border border-stone-300"
           >
-            Doctrine
+            Hérésies
           </Link>
           <Link
             href="/catechism"

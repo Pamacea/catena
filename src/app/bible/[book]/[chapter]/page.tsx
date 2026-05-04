@@ -1,7 +1,30 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { readFileSync, existsSync } from "fs";
+import { join } from "path";
 import { bibleBooks, getBookById } from "@/data/bible/index";
 import type { Metadata } from "next";
+
+interface Verse {
+  verse: number;
+  text: string;
+}
+
+interface BibleTextData {
+  bookId: string;
+  chapters: Record<string, Verse[]>;
+}
+
+function loadBibleText(bookId: string): BibleTextData | null {
+  const filePath = join(process.cwd(), "src/data/bible-text", `${bookId}.json`);
+  if (!existsSync(filePath)) return null;
+  try {
+    const raw = readFileSync(filePath, "utf-8");
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
 
 interface ChapterPageProps {
   params: Promise<{ book: string; chapter: string }>;
@@ -63,8 +86,12 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
       ? bibleBooks[bookIndex + 1]
       : null;
 
+  // Load verse text
+  const bibleText = loadBibleText(book);
+  const verses = bibleText?.chapters[chapter] || [];
+
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="mx-auto">
       {/* Navigation breadcrumbs */}
       <nav className="flex items-center gap-2 text-sm text-ink-600 mb-6">
         <Link href="/bible" className="hover:underline">
@@ -151,29 +178,26 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
 
       {/* Contenu du chapitre */}
       <article className="font-serif text-lg leading-relaxed text-ink-900 mb-12">
-        <div className="text-center text-ink-500 italic py-12 border-l-2 border-gold-400/40">
-          <p>Le contenu de ce chapitre sera chargé depuis la base de données.</p>
-          <p className="mt-2 text-sm">
-            {bookData.name} — Chapitre {chapter} ({bookData.chapters} chapitre
-            {bookData.chapters > 1 ? "s" : ""} au total)
-          </p>
-        </div>
-
-        {/* Structure exemple pour les versets (à remplacer avec les vraies données) */}
-        <div className="space-y-4">
-          {[
-            { number: 1, text: "Premier verset du chapitre..." },
-            { number: 2, text: "Deuxième verset du chapitre..." },
-            { number: 3, text: "Troisième verset du chapitre..." },
-          ].map(verse => (
-            <div key={verse.number} className="flex gap-4 group">
-              <span className="flex-shrink-0 w-8 text-right text-ink-500 font-sans text-base pt-1">
-                {verse.number}
-              </span>
-              <p className="flex-1">{verse.text}</p>
-            </div>
-          ))}
-        </div>
+        {verses.length > 0 ? (
+          <div className="space-y-4">
+            {verses.map(verse => (
+              <div key={verse.verse} className="flex gap-4 group">
+                <span className="flex-shrink-0 w-8 text-right text-ink-500 font-sans text-base pt-1">
+                  {verse.verse}
+                </span>
+                <p className="flex-1">{verse.text}</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center text-ink-500 italic py-12 border-l-2 border-gold-400/40">
+            <p>Le texte de ce chapitre n'est pas encore disponible.</p>
+            <p className="mt-2 text-sm">
+              {bookData.name} — Chapitre {chapter} ({bookData.chapters} chapitre
+              {bookData.chapters > 1 ? "s" : ""} au total)
+            </p>
+          </div>
+        )}
       </article>
 
       {/* Sélecteur de chapitres */}

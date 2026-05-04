@@ -53,7 +53,7 @@ export default function TimelinePage() {
   return (
     <div className="min-h-screen">
       <main className="px-6 py-12">
-        <div className="mx-auto" style={{ maxWidth: "56rem" }}>
+        <div className="max-w-2/3 mx-auto">
           {/* Era navigation */}
           <nav className="flex flex-wrap gap-2 mb-12 justify-center items-center">
             <Link
@@ -120,7 +120,7 @@ function CouncilItem({
 }) {
   return (
     <Link
-      href={`/doctrine/councils/${council.slug}`}
+      href={`/heresies/councils/${council.slug}`}
       className="group block border border-gold-400/30 rounded-xs bg-stone-50 p-6 hover:border-gold-500/50 hover:shadow-md transition-all"
     >
       <div className="flex items-start gap-4">

@@ -69,13 +69,13 @@ export default async function PrayerPage({ params }: LiturgyPageProps) {
       .slice(0, 3);
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="space-y-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-ink-600">
         <Link href="/liturgy" className="hover:underline">
-          Prières
+          Liturgie
         </Link>
-        <span>/</span>
+        <span className="text-gold-500">/</span>
         <span className="text-ink-900">{prayer.name}</span>
       </nav>
 

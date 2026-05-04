@@ -27,14 +27,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const doctrineRoutes: MetadataRoute.Sitemap = heresies.map(h => ({
-    url: `${BASE_URL}/doctrine/${h.slug}`,
+    url: `${BASE_URL}/heresies/${h.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.5,
   }));
 
   const councilRoutes: MetadataRoute.Sitemap = councils.map(c => ({
-    url: `${BASE_URL}/doctrine/councils/${c.slug}`,
+    url: `${BASE_URL}/heresies/councils/${c.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.5,

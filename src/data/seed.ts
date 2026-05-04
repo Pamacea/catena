@@ -13,6 +13,8 @@ export * from "./prayers";
 export * from "./books";
 export * from "./verses";
 export * from "./theological";
+export * from "./dogmas";
+export * from "./masses";
 
 import { bibleBooks } from "./bible";
 import { heresies } from "./heresies";
@@ -22,6 +24,8 @@ import { prayers } from "./prayers";
 import { bookSummaries } from "./books";
 import { essentialVerses } from "./verses";
 import { hebrewTerms, greekTerms, theologicalConcepts } from "./theological";
+import { dogmas } from "./dogmas";
+import { masses } from "./masses";
 
 /**
  * Seed principale - exporte toutes les données
@@ -34,10 +38,12 @@ export const seed = {
   },
   doctrine: {
     heresies,
+    dogmas,
   },
   catechisms,
   councils,
   prayers,
+  masses,
   dictionary: {
     hebrewTerms,
     greekTerms,

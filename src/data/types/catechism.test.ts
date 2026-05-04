@@ -464,8 +464,11 @@ describe("Catechism Types", () => {
       };
 
       // Verify structure integrity
-      expect(metadata.parts[0].articles[0].questions[0].id).toBe("q1");
-      expect(metadata.parts[0].articles[0].questions[0].category).toBe("foi");
+      const firstPart = metadata.parts[0]!;
+      const firstArticle = firstPart.articles[0]!;
+      const firstQuestion = firstArticle.questions![0]!;
+      expect(firstQuestion.id).toBe("q1");
+      expect(firstQuestion.category).toBe("foi");
     });
   });
 });

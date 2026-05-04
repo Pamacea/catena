@@ -27,6 +27,7 @@ export interface AdArgument {
 export interface Disputatio {
   slug: string;
   question: string;
+  questionFr: string;
   category: DisputatioCategory;
   source: string;
   objections: string[];
@@ -43,6 +44,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "angeli-substantiae-imateriales",
     question:
       "Utrum angeli sint substantiae immateriales ?",
+    questionFr: "Les anges sont-ils des substances immatérielles ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "Les Anges",
     objections: [
@@ -75,6 +77,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "angeli-cognoscant-per-speciem-innatam",
     question:
       "Utrum angeli cognoscant per speciem innatam ?",
+    questionFr: "Les anges connaissent-ils par des espèces innées ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "Les Anges",
     objections: [
@@ -105,6 +108,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "daemones-possint-hominem-tentare",
     question:
       "Utrum daemones possint hominem tentare ?",
+    questionFr: "Les démons peuvent-ils tenter l'homme ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "Les Anges",
     objections: [
@@ -139,6 +143,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "mundus-sit-creatus-ex-nihilo",
     question:
       "Utrum mundus sit creatus ex nihilo ?",
+    questionFr: "Le monde est-il créé de rien ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "La Création",
     objections: [
@@ -174,6 +179,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "anima-sit-substantia-spiritualis",
     question:
       "Utrum anima sit substantia spiritualis ?",
+    questionFr: "L'âme est-elle une substance spirituelle ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "L'Homme — Âme et Corps",
     objections: [
@@ -207,6 +213,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "intellectus-et-voluntas-facultates-distinctae",
     question:
       "Utrum intellectus et voluntas sint facultates distinctae ?",
+    questionFr: "L'intelligence et la volonté sont-elles des facultés distinctes ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "L'Homme — Âme et Corps",
     objections: [
@@ -237,6 +244,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "anima-separata-intelligere-sine-corpore",
     question:
       "Utrum anima separata possit intelligere sine corpore ?",
+    questionFr: "L'âme séparée peut-elle comprendre sans le corps ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "L'Homme — Âme et Corps",
     objections: [
@@ -268,6 +276,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "statim-post-mortem-sit-judicium-particulare",
     question:
       "Utrum statim post mortem sit judicium particulare ?",
+    questionFr: "Y a-t-il un jugement particulier immédiatement après la mort ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "Les Fins Dernières",
     objections: [
@@ -301,6 +310,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "purgatorium-sit-possibile",
     question:
       "Utrum purgatorium sit possibile ?",
+    questionFr: "Le purgatoire est-il possible ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "Les Fins Dernières",
     objections: [
@@ -336,6 +346,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "infernus-sit-aeternus",
     question:
       "Utrum infernus sit aeternus ?",
+    questionFr: "L'enfer est-il éternel ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "Les Fins Dernières",
     objections: [
@@ -370,6 +381,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "gratia-sit-necessaria-ad-salutem",
     question:
       "Utrum gratia sit necessaria ad salutem ?",
+    questionFr: "La grâce est-elle nécessaire au salut ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "La Grâce",
     objections: [
@@ -402,6 +414,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "baptismus-sit-necessarius-ad-salutem",
     question:
       "Utrum baptismus sit necessarius ad salutem ?",
+    questionFr: "Le baptême est-il nécessaire au salut ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "Le Baptême",
     objections: [
@@ -436,6 +449,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "septem-sacramenta-sufficienter-numerentur",
     question:
       "Utrum septem sacramenta sufficienter numerentur ?",
+    questionFr: "Les sept sacrements sont-ils suffisamment comptés ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "Les Sacrements",
     objections: [
@@ -467,6 +481,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "sacramenta-conferant-gratiam-ex-opere-operato",
     question:
       "Utrum sacramenta conferant gratiam ex opere operato ?",
+    questionFr: "Les sacrements confèrent-ils la grâce ex opere operato ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "Les Sacrements",
     objections: [
@@ -498,6 +513,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "in-eucharistia-sit-vera-praesentia-christi",
     question:
       "Utrum in Eucharistia sit vera et realis praesentia Christi ?",
+    questionFr: "Le Christ est-il véritablement et réellement présent dans l'Eucharistie ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "L'Eucharistie et la Transsubstantiation",
     objections: [
@@ -538,6 +554,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "maria-sit-vere-mater-dei",
     question:
       "Utrum Maria sit vere mater Dei ?",
+    questionFr: "Marie est-elle véritablement Mère de Dieu ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "Marie — Mère de Dieu",
     objections: [
@@ -570,6 +587,7 @@ export const disputationesDogmatique: Disputatio[] = [
     slug: "maria-fuerit-immacule-concepta",
     question:
       "Utrum Maria fuerit immaculate concepta ?",
+    questionFr: "Marie a-t-elle été immaculée conçue ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "Marie — Mère de Dieu",
     objections: [
@@ -608,6 +626,7 @@ export const disputationesChristologie: Disputatio[] = [
     slug: "christus-assumpserit-omnes-defectus",
     question:
       "Utrum Christus debuerit omnes defectus humanos assumere ?",
+    questionFr: "Le Christ devait-il assumer tous les défauts humains ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "L'Incarnation",
     objections: [
@@ -639,6 +658,7 @@ export const disputationesChristologie: Disputatio[] = [
     slug: "unio-hypostatica-fuerit-possibilis",
     question:
       "Utrum unio hypostatica fuerit possibilis ?",
+    questionFr: "L'union hypostatique a-t-elle été possible ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "L'Incarnation",
     objections: [
@@ -670,6 +690,7 @@ export const disputationesChristologie: Disputatio[] = [
     slug: "christus-per-passionem-redemerit",
     question:
       "Utrum Christus per suam passionem et mortem genus humanum redemerit ?",
+    questionFr: "Le Christ a-t-il racheté l'humanité par sa passion et sa mort ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "L'Incarnation",
     objections: [
@@ -708,6 +729,7 @@ export const disputationesPecheOriginel: Disputatio[] = [
     slug: "peccatum-originale-transmittatur",
     question:
       "Utrum peccatum originale per generationem transmittatur ?",
+    questionFr: "Le péché originel se transmet-il par génération ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "Le Péché Originel",
     objections: [
@@ -740,6 +762,7 @@ export const disputationesPecheOriginel: Disputatio[] = [
     slug: "peccatum-mortale-sit-grave",
     question:
       "Utrum peccatum mortale sit gravissimum ?",
+    questionFr: "Le péché mortel est-il extrêmement grave ?",
     category: DisputatioCategory.THEOLOGIE_MORALE,
     source: "Le Péché Originel",
     objections: [
@@ -772,6 +795,7 @@ export const disputationesPecheOriginel: Disputatio[] = [
     slug: "baptismus-tollat-peccatum-originale",
     question:
       "Utrum baptismus tollat peccatum originale ?",
+    questionFr: "Le baptême efface-t-il le péché originel ?",
     category: DisputatioCategory.THEOLOGIE_DOGMATIQUE,
     source: "Le Péché Originel",
     objections: [
@@ -809,6 +833,7 @@ export const disputationesEcclesiologie: Disputatio[] = [
     slug: "ecclesia-sit-necessaria-ad-salutem",
     question:
       "Utrum Ecclesia catholica sit necessaria ad salutem ?",
+    questionFr: "L'Église catholique est-elle nécessaire au salut ?",
     category: DisputatioCategory.ECLESIOLOGIE,
     source: "L'Église",
     objections: [
@@ -842,6 +867,7 @@ export const disputationesEcclesiologie: Disputatio[] = [
     slug: "ecclesia-sit-visibilis",
     question:
       "Utrum Ecclesia sit visibilis et manifesta ?",
+    questionFr: "L'Église est-elle visible et manifeste ?",
     category: DisputatioCategory.ECLESIOLOGIE,
     source: "L'Église",
     objections: [
@@ -878,6 +904,7 @@ export const disputationesApologetique: Disputatio[] = [
     slug: "deus-sit-demonstrabilis",
     question:
       "Utrum Dei demonstrabilis sit per vias rationis ?",
+    questionFr: "L'existence de Dieu peut-elle être démontrée par la raison ?",
     category: DisputatioCategory.APOLOGETIQUE,
     source: "Dieu — Existence et Attributs",
     objections: [
@@ -915,6 +942,7 @@ export const disputationesMorale: Disputatio[] = [
     slug: "actum-intrinsece-malum-aliquando-permitti",
     question:
       "Utrum actus intrinsece malus aliquando permitti possit propter bonum maius ?",
+    questionFr: "Un acte intrinsèquement mauvais peut-il être permis pour un bien plus grand ?",
     category: DisputatioCategory.THEOLOGIE_MORALE,
     source: "Le Relativisme",
     objections: [
@@ -953,6 +981,7 @@ export const disputationesMorale: Disputatio[] = [
     slug: "veritas-moralis-sit-obiectiva",
     question:
       "Utrum veritas moralis sit obiectiva et universalis ?",
+    questionFr: "La vérité morale est-elle objective et universelle ?",
     category: DisputatioCategory.THEOLOGIE_MORALE,
     source: "Le Relativisme",
     objections: [
@@ -991,6 +1020,7 @@ export const disputationesMorale: Disputatio[] = [
     slug: "conscientia-sit-lex-suprema-morum",
     question:
       "Utrum conscientia sit lex suprema morum ?",
+    questionFr: "La conscience est-elle la loi suprême de la morale ?",
     category: DisputatioCategory.THEOLOGIE_MORALE,
     source: "Le Relativisme",
     objections: [
@@ -1028,6 +1058,7 @@ export const disputationesMorale: Disputatio[] = [
     slug: "matrimonium-sit-vere-sacramentum",
     question:
       "Utrum matrimonium sit vere sacramentum Novae Legis ?",
+    questionFr: "Le mariage est-il véritablement un sacrement de la Nouvelle Loi ?",
     category: DisputatioCategory.THEOLOGIE_MORALE,
     source: "Le Mariage",
     objections: [
@@ -1061,6 +1092,7 @@ export const disputationesMorale: Disputatio[] = [
     slug: "matrimonium-dissolvi-possit",
     question:
       "Utrum matrimonium dissolvi possit ?",
+    questionFr: "Le mariage peut-il être dissous ?",
     category: DisputatioCategory.THEOLOGIE_MORALE,
     source: "Le Mariage",
     objections: [
@@ -1099,6 +1131,7 @@ export const disputationesMorale: Disputatio[] = [
     slug: "contraceptio-sit-intrinsece-mala",
     question:
       "Utrum usus contraceptivus inter coniuges sit intrinsece malus ?",
+    questionFr: "L'usage contraceptif entre époux est-il intrinsèquement mauvais ?",
     category: DisputatioCategory.THEOLOGIE_MORALE,
     source: "Le Mariage",
     objections: [
@@ -1142,6 +1175,7 @@ export const disputationesCrise: Disputatio[] = [
     slug: "sedevacantismus-classicus-possibilis",
     question:
       "Utrum sedevacantismus classicus sit possibilis et cohaerens ?",
+    questionFr: "Le sédévacantisme classique est-il possible et cohérent ?",
     category: DisputatioCategory.CRISE,
     source: "Le Sédévacantisme",
     objections: [
@@ -1175,6 +1209,7 @@ export const disputationesCrise: Disputatio[] = [
     slug: "fsspx-recognoscere-resistere-cohaerens",
     question:
       "Utrum positio FSSPX (recognoscere et resistere) sit cohaerens ?",
+    questionFr: "La position FSSPX (reconnaître et résister) est-elle cohérente ?",
     category: DisputatioCategory.CRISE,
     source: "FSSPX — Reconnaître et Résister",
     objections: [
@@ -1209,6 +1244,7 @@ export const disputationesCrise: Disputatio[] = [
     slug: "sessio-sine-missio-possibilis",
     question:
       "Utrum sessio sine missio sit possibilis et cohaerens ?",
+    questionFr: "La sessio sine missio est-elle possible et cohérente ?",
     category: DisputatioCategory.CRISE,
     source: "Sessio et Missio",
     objections: [
@@ -1248,6 +1284,7 @@ export const disputationesCrise: Disputatio[] = [
     slug: "modernismus-sit-compendium-haeresium",
     question:
       "Utrum modernismus sit compendium omnium hæresium ?",
+    questionFr: "Le modernisme est-il une synthèse de toutes les hérésies ?",
     category: DisputatioCategory.CRISE,
     source: "Le Modernisme",
     objections: [
@@ -1281,6 +1318,7 @@ export const disputationesCrise: Disputatio[] = [
     slug: "liberalismus-catholicus-cohaerens",
     question:
       "Utrum liberalismus catholicus sit cohaerens ?",
+    questionFr: "Le libéralisme catholique est-il cohérent ?",
     category: DisputatioCategory.CRISE,
     source: "Le Libéralisme Catholique",
     objections: [
@@ -1315,6 +1353,7 @@ export const disputationesCrise: Disputatio[] = [
     slug: "indifferentismus-religiosus-cohaerens",
     question:
       "Utrum indifferentismus religiosus sit cohaerens ?",
+    questionFr: "L'indifférentisme religieux est-il cohérent ?",
     category: DisputatioCategory.CRISE,
     source: "L'Indifférentisme Religieux",
     objections: [
@@ -1349,6 +1388,7 @@ export const disputationesCrise: Disputatio[] = [
     slug: "lex-ieiunii-post-vaticanum-ii-obligare-pergat",
     question:
       "Utrum lex ieiunii et abstinentiae post Vaticanum II obligare pergat ?",
+    questionFr: "La loi du jeûne et de l'abstinence continue-t-elle d'obliger après Vatican II ?",
     category: DisputatioCategory.DISCIPLINE,
     source: "Jeûne et Abstinence",
     objections: [
@@ -1380,6 +1420,7 @@ export const disputationesCrise: Disputatio[] = [
     slug: "praeceptum-modestiae-externae-necessarium",
     question:
       "Utrum praeceptum modestiae externae sit necessarium ad salutem ?",
+    questionFr: "Le précepte de modestie extérieure est-il nécessaire au salut ?",
     category: DisputatioCategory.DISCIPLINE,
     source: "Règles de Modestie",
     objections: [

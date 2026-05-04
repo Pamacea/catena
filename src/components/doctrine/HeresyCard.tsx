@@ -102,7 +102,7 @@ export function HeresyCard({
  if (variant === "compact") {
  return (
  <Link
- href={`/doctrine/${slug}`}
+ href={`/heresies/${slug}`}
  className={cn(
  "block p-4 rounded-lg border border-parchment-200 bg-white",
  "hover:shadow-md transition-shadow",
@@ -135,7 +135,7 @@ export function HeresyCard({
  cardClass
  )}
  >
- <Link href={`/doctrine/${slug}`} className="block p-6 space-y-4">
+ <Link href={`/heresies/${slug}`} className="block p-6 space-y-4">
  {/* En-tête */}
  <div className="flex items-start justify-between gap-4">
  <div>
@@ -235,7 +235,7 @@ interface HeresySummaryProps {
 export function HeresySummary({ slug, name, category, century, promoter }: HeresySummaryProps) {
  return (
  <Link
- href={`/doctrine/${slug}`}
+ href={`/heresies/${slug}`}
  className="flex items-center gap-3 px-3 py-2 rounded hover:bg-parchment-100 transition-colors group"
  >
  <span

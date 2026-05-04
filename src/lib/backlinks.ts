@@ -37,7 +37,7 @@ export interface BacklinkResult {
   /** Source slug where the backlink originates */
   source: string;
   /** Type of the source entity */
-  type: "heresy" | "council" | "catechism" | "bible" | "prayer";
+  type: "heresy" | "council" | "catechism" | "bible" | "prayer" | "dogma";
   /** Context excerpt around the backlink reference */
   context?: string;
   /** Relevance score based on connection type and frequency */
@@ -155,7 +155,7 @@ export function parseWikilinks(text: string): WikilinkMatch[] {
  * @example
  * ```ts
  * replaceWikilinks("See [[arianisme]]", (match) => {
- *   return `[${match.slug}](/doctrine/${match.slug})`
+ *   return `[${match.slug}](/heresies/${match.slug})`
  * })
  * ```
  */
@@ -183,7 +183,7 @@ export function replaceWikilinks(text: string, replacer: (match: WikilinkMatch) 
  * @example
  * ```ts
  * wikilinkToUrl({ slug: 'arianisme', type: 'heresy' })
- * // Returns: "/doctrine/arianisme"
+ * // Returns: "/heresies/arianisme"
  * ```
  */
 export function wikilinkToUrl(match: WikilinkMatch): string {
@@ -191,7 +191,7 @@ export function wikilinkToUrl(match: WikilinkMatch): string {
 
   switch (type) {
     case "heresy":
-      return `/doctrine/${slug}`;
+      return `/heresies/${slug}`;
     case "council":
       return `/councils/${slug}`;
     case "catechism":
@@ -271,7 +271,7 @@ export function countWikilinkOccurrences(text: string, slug: string): number {
  * @example
  * ```ts
  * wikilinksToHtml("See [[arianisme]]", { linkClass: "text-red-500" })
- * // Returns: 'See <a href="/doctrine/arianisme" class="text-red-500">arianisme</a>'
+ * // Returns: 'See <a href="/heresies/arianisme" class="text-red-500">arianisme</a>'
  * ```
  */
 export function wikilinksToHtml(

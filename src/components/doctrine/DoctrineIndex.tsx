@@ -224,7 +224,7 @@ function HeresyListItem({ heresy }: HeresyListItemProps) {
 
  return (
  <Link
- href={`/doctrine/${heresy.slug}`}
+ href={`/heresies/${heresy.slug}`}
  className="block p-4 rounded-lg border border-parchment-200 bg-white hover:shadow-lg transition-shadow"
  >
  <div className="flex items-start justify-between gap-3 mb-2">
@@ -273,7 +273,7 @@ export function CompactHeresyList({
  {displayed.map(heresy => (
  <li key={heresy.slug}>
  <Link
- href={`/doctrine/${heresy.slug}`}
+ href={`/heresies/${heresy.slug}`}
  className="block px-3 py-2 rounded hover:bg-parchment-100 transition-colors group"
  >
  <p className="text-sm font-medium text-ink-800 group-hover:text-gold-700">
@@ -289,7 +289,7 @@ export function CompactHeresyList({
  {limit < filtered.length && (
  <li>
  <Link
- href="/doctrine"
+ href="/heresies"
  className="block px-3 py-2 text-sm text-gold-600 hover:text-gold-700"
  >
  Voir toutes les hérésies →

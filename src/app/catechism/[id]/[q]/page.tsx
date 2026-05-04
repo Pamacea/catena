@@ -224,7 +224,7 @@ export default async function QuestionPage({ params }: QuestionPageProps) {
             {question.relatedCouncils.map(councilId => (
               <Link
                 key={councilId}
-                href={`/doctrine/${councilId}`}
+                href={`/heresies/${councilId}`}
                 className="px-4 py-2 rounded-xs border border-amber-200 bg-amber-50/50 text-amber-700 hover:bg-amber-100 transition-colors"
               >
                 {councilId.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase())}

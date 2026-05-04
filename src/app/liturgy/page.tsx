@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { prayers, PrayerCategory } from "@/data/prayers";
+import { masses } from "@/data/masses";
 
 // Configuration des catégories
 const categoryConfig: Record<PrayerCategory, { label: string; description: string }> = {
@@ -87,7 +88,41 @@ export default function LiturgyPage() {
   );
 
   return (
-    <div className="max-w-6xl mx-auto space-y-12">
+    <div className="space-y-12">
+      {/* Section header */}
+      <header className="mb-10 pb-6 border-b-2 border-gold-400/30 text-center">
+        <h1 className="font-serif text-4xl md:text-5xl font-bold text-ink-900 mb-3">
+          Liturgie et prière
+        </h1>
+        <p className="text-lg text-ink-700 mx-auto">
+          Prière sacramentelle et liturgique
+        </p>
+      </header>
+
+      {/* Saintes Messes */}
+      <section className="space-y-4">
+        <h2 className="font-serif text-2xl font-bold text-ink-900">Saintes Messes</h2>
+        <p className="text-ink-700">Les ordinaires des messes traditionnelles en texte bilingue latin-francais.</p>
+        <div className="grid gap-4 md:grid-cols-2">
+          {masses.map(mass => (
+            <Link
+              key={mass.slug}
+              href={`/liturgy/messe/${mass.slug}`}
+              className="block p-5 border border-gold-400/40 rounded-xs hover:bg-parchment-100 transition-all group"
+            >
+              <h3 className="font-serif text-lg font-semibold text-ink-900 group-hover:underline">{mass.name}</h3>
+              <p className="text-sm text-ink-600 italic">{mass.nameLatin}</p>
+              <div className="flex items-center gap-3 mt-2 text-xs text-ink-500">
+                <span>{mass.rite}</span>
+                <span>-</span>
+                <span>{mass.period}</span>
+              </div>
+              <p className="text-sm text-ink-700 mt-2 line-clamp-2">{mass.description}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Prières essentielles */}
       <section className="space-y-4">
         <h2 className="font-serif text-2xl font-bold text-ink-900">Prières essentielles</h2>

@@ -49,7 +49,7 @@ const typeConfig = {
   heresy: {
     label: "Hérésie",
     color: "bg-red-100 text-red-700 border-red-200",
-    href: (slug: string) => `/doctrine/${slug}`,
+    href: (slug: string) => `/heresies/${slug}`,
   },
   council: {
     label: "Concile",
@@ -302,7 +302,7 @@ export function ConnectionGraph({ connections, currentSlug }: ConnectionGraphPro
             {conns.map(conn => (
               <Link
                 key={conn.slug}
-                href={`/doctrine/${conn.slug}`}
+                href={`/heresies/${conn.slug}`}
                 className={cn(
                   "block px-3 py-2 rounded border-l-2 bg-white hover:shadow transition-all",
                   connectionColors[conn.type as keyof typeof connectionColors]

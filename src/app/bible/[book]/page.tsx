@@ -126,6 +126,44 @@ export default async function BookPage({ params }: BookPageProps) {
               </div>
             </div>
           )}
+          {summary.keyPassages && Array.isArray(summary.keyPassages) && summary.keyPassages.length > 0 && (
+            <details className="mb-6">
+              <summary className="text-lg font-semibold text-ink-900 mb-3 cursor-pointer hover:text-gold-700">
+                Passages clés
+              </summary>
+              <ul className="space-y-2 mt-3">
+                {summary.keyPassages.map((passage, i) => (
+                  <li key={i} className="text-sm text-ink-700 pl-4 border-l-2 border-gold-400/40">
+                    {typeof passage === "string" ? passage : <>{passage.reference}{passage.description && ` — ${passage.description}`}</>}
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )}
+          {summary.theologicalSignificance && (
+            <details className="mb-6">
+              <summary className="text-lg font-semibold text-ink-900 mb-3 cursor-pointer hover:text-gold-700">
+                Signification théologique
+              </summary>
+              <p className="text-ink-700 leading-relaxed mt-3 pl-4 border-l-2 border-gold-400/40">
+                {summary.theologicalSignificance}
+              </p>
+            </details>
+          )}
+          {summary.christologicalTypes && Array.isArray(summary.christologicalTypes) && summary.christologicalTypes.length > 0 && (
+            <details className="mb-6">
+              <summary className="text-lg font-semibold text-ink-900 mb-3 cursor-pointer hover:text-gold-700">
+                Types christologiques
+              </summary>
+              <ul className="space-y-2 mt-3">
+                {(summary.christologicalTypes as unknown[]).map((type: unknown, i) => (
+                  <li key={i} className="text-sm text-ink-700 pl-4 border-l-2 border-gold-400/40">
+                    {typeof type === "string" ? type : `${(type as {type: string}).type}${(type as {antitype?: string}).antitype ? ` → ${(type as {antitype: string}).antitype}` : ""}`}
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )}
         </section>
       )}
 
@@ -185,6 +223,43 @@ export default async function BookPage({ params }: BookPageProps) {
             </Link>
           )}
         </nav>
+      )}
+
+      {/* Guide des chapitres */}
+      {summary?.outline && Array.isArray(summary.outline) && summary.outline.length > 0 && (
+        <details className="mb-8">
+          <summary className="text-lg font-semibold text-ink-900 mb-4 cursor-pointer hover:text-gold-700">
+            Guide des chapitres ({summary.outline.length})
+          </summary>
+          <div className="mt-3 space-y-1 max-h-96 overflow-y-auto">
+            {summary.outline.map((ch, i) => {
+              if (typeof ch === "string") {
+                return (
+                  <div key={i} className="py-1.5 px-3 text-sm text-ink-700">
+                    {ch}
+                  </div>
+                );
+              }
+              return (
+                <Link
+                  key={i}
+                  href={`/bible/${bookData.id}/${ch.chapter}`}
+                  className="flex gap-3 py-1.5 px-3 hover:bg-parchment-100/50 rounded-xs group"
+                >
+                  <span className="flex-shrink-0 w-8 text-right text-sm text-ink-500 font-medium group-hover:text-gold-700">
+                    {ch.chapter}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <span className="text-sm font-medium text-ink-900">{ch.title}</span>
+                    {ch.summary && (
+                      <span className="text-xs text-ink-600 ml-2">— {ch.summary}</span>
+                    )}
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </details>
       )}
 
       {/* Liste des chapitres */}

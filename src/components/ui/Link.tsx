@@ -45,7 +45,7 @@ const variantStyles: Record<NonNullable<LinkProps["variant"]>, string> = {
  *
  * @example
  * ```tsx
- * <Link href="/doctrine/arianisme">Arianism</Link>
+ * <Link href="/heresies/arianisme">Arianism</Link>
  * <Link href="/page" external>External Page</Link>
  * <Link href="/page">[[Wiki Link]]</Link>  // Auto-parsed
  * ```

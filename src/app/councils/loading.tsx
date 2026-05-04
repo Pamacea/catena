@@ -1,7 +1,7 @@
 export default function TimelineLoading() {
   return (
     <div className="px-6 py-12">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-2/3 mx-auto">
         {/* Sub-header skeleton */}
         <div className="mb-8 border-b border-gold-400/40 pb-6">
           <div className="flex items-center gap-2 text-sm mb-4">

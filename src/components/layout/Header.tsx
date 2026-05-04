@@ -7,12 +7,14 @@ import { CrossGothic } from "@/components/ui/Icons";
 // Navigation principale du site
 const navItems = [
   { name: "Bible", href: "/bible" },
-  { name: "Doctrine", href: "/doctrine" },
+  { name: "Hérésies", href: "/heresies" },
+  { name: "Dogmes", href: "/dogmas" },
   { name: "Catéchisme", href: "/catechism" },
   { name: "Liturgie", href: "/liturgy" },
   { name: "Conciles", href: "/councils" },
   { name: "Vault", href: "/vault" },
   { name: "Disputationes", href: "/disputationes" },
+  { name: "Crise", href: "/crise" },
   { name: "Chronologie", href: "/chronologie" },
 ];
 

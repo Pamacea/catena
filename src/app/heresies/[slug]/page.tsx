@@ -65,14 +65,14 @@ export default async function HeresyPage({ params }: DoctrinePageProps) {
   const backlinks = await getBacklinks(slug);
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-2/3 mx-auto">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-ink-600 mb-6">
-        <Link href="/doctrine" className="hover:underline">
+        <Link href="/heresies" className="hover:underline">
           Doctrine
         </Link>
         <span>/</span>
-        <Link href="/doctrine" className="hover:underline">
+        <Link href="/heresies" className="hover:underline">
           Hérésies
         </Link>
         <span>/</span>
@@ -116,6 +116,16 @@ export default async function HeresyPage({ params }: DoctrinePageProps) {
         </p>
       </section>
 
+      {/* Contexte historique */}
+      {heresy.historicalContext && (
+        <section className="mb-10">
+          <h2 className="font-serif text-2xl font-semibold text-ink-900 mb-4">
+            Contexte historique
+          </h2>
+          <p className="text-ink-700 leading-relaxed">{heresy.historicalContext}</p>
+        </section>
+      )}
+
       {/* Erreur principale */}
       <section className="mb-10 p-6 rounded-xs bg-red-50 border border-red-200">
         <h2 className="font-serif text-xl font-semibold text-red-900 mb-3">
@@ -123,6 +133,26 @@ export default async function HeresyPage({ params }: DoctrinePageProps) {
         </h2>
         <p className="text-red-800 font-medium">{heresy.error}</p>
       </section>
+
+      {/* Enjeux théologiques */}
+      {heresy.theologicalIssues && (
+        <section className="mb-10">
+          <h2 className="font-serif text-2xl font-semibold text-ink-900 mb-4">
+            Enjeux théologiques
+          </h2>
+          <p className="text-ink-700 leading-relaxed">{heresy.theologicalIssues}</p>
+        </section>
+      )}
+
+      {/* Développement */}
+      {heresy.development && (
+        <section className="mb-10">
+          <h2 className="font-serif text-2xl font-semibold text-ink-900 mb-4">
+            Développement
+          </h2>
+          <p className="text-ink-700 leading-relaxed">{heresy.development}</p>
+        </section>
+      )}
 
       {/* Réfutations patristiques */}
       {heresy.refutations.length > 0 && (
@@ -193,6 +223,65 @@ export default async function HeresyPage({ params }: DoctrinePageProps) {
         </section>
       )}
 
+      {/* Pères de l'Église détaillés */}
+      {heresy.churchFathersDetailed && heresy.churchFathersDetailed.length > 0 && (
+        <section className="mb-10">
+          <h2 className="font-serif text-2xl font-semibold text-ink-900 mb-4">
+            Pères de l'Église
+          </h2>
+          <div className="space-y-4">
+            {heresy.churchFathersDetailed.map((father, index) => (
+              <div key={index} className="p-5 rounded-xs border-l-4 border-gold-400/40 bg-ink-50/50">
+                <h3 className="font-serif text-lg font-semibold text-ink-900 mb-1">
+                  {father.name}
+                </h3>
+                <p className="text-sm text-stone-600 italic mb-2">{father.work}</p>
+                <p className="text-ink-700">{father.contribution}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Réponse en droit canonique */}
+      {heresy.canonicalResponse && (
+        <section className="mb-10">
+          <h2 className="font-serif text-2xl font-semibold text-ink-900 mb-4">
+            Réponse en droit canonique
+          </h2>
+          <p className="text-ink-700 leading-relaxed">{heresy.canonicalResponse}</p>
+        </section>
+      )}
+
+      {/* Références canoniques (CIC) */}
+      {heresy.canonicalReferences && heresy.canonicalReferences.length > 0 && (
+        <section className="mb-10">
+          <h2 className="font-serif text-2xl font-semibold text-ink-900 mb-4">
+            Références canoniques
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {heresy.canonicalReferences.map(ref => (
+              <span
+                key={ref}
+                className="px-3 py-1 rounded-xs bg-stone-100 text-stone-700 text-sm font-mono"
+              >
+                {ref}
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Conséquences */}
+      {heresy.consequences && (
+        <section className="mb-10">
+          <h2 className="font-serif text-2xl font-semibold text-ink-900 mb-4">
+            Conséquences pour l'Église
+          </h2>
+          <p className="text-ink-700 leading-relaxed">{heresy.consequences}</p>
+        </section>
+      )}
+
       {/* Connexions */}
       {heresy.connections && heresy.connections.length > 0 && (
         <section className="mb-10">
@@ -214,7 +303,7 @@ export default async function HeresyPage({ params }: DoctrinePageProps) {
               return (
                 <Link
                   key={connection.slug}
-                  href={`/doctrine/${connection.slug}`}
+                  href={`/heresies/${connection.slug}`}
                   className="px-4 py-2 rounded-xs border border-gold-400/40 bg-ink-50/50 hover:bg-ink-100 transition-colors"
                 >
                   <span className="font-serif text-ink-900">
@@ -242,7 +331,7 @@ export default async function HeresyPage({ params }: DoctrinePageProps) {
               return (
                 <Link
                   key={index}
-                  href={`/doctrine/${backlink.source}`}
+                  href={`/heresies/${backlink.source}`}
                   className="block p-3 rounded-xs border border-transparent hover:border-gold-400/40 hover:bg-ink-50/50 transition-all"
                 >
                   <div className="flex items-center gap-3">

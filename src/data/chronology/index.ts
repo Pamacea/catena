@@ -42,7 +42,7 @@ function adaptCouncils(): ChronologyEvent[] {
     name: c.name,
     description: c.description,
     slug: c.slug,
-    href: `/doctrine/councils/${c.slug}`,
+    href: `/heresies/councils/${c.slug}`,
     category: c.type,
     tags: c.topics,
     location: c.location,

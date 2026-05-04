@@ -2,8 +2,8 @@ import type { ReactNode } from "react";
 import { Header, Footer } from "@/components/layout";
 
 export const metadata = {
-  title: "Doctrine",
-  description: "Conciles, symboles de foi et Pères de l'Église",
+  title: "Hérésies et condamnations",
+  description: "Les principales hérésies condamnées par l'Église catholique",
 };
 
 export default function DoctrineLayout({ children }: { children: ReactNode }) {
@@ -18,16 +18,17 @@ export default function DoctrineLayout({ children }: { children: ReactNode }) {
               Accueil
             </a>
             <span className="text-gold-500">/</span>
-            <span className="text-ink-900">Doctrine</span>
+            <span className="text-ink-900">Hérésies</span>
           </nav>
 
           {/* Section header */}
           <header className="mb-10 pb-6 border-b-2 border-gold-400/30 text-center">
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-ink-900 mb-3">
-              Doctrine de la foi
+              Hérésies et condamnations
             </h1>
             <p className="text-lg text-ink-700 mx-auto">
-              Conciles, symboles de foi et Pères de l'Église
+              Les principales hérésies condamnées par l'Église catholique, avec leurs erreurs, leurs
+              réfutations patristiques, et les condamnations conciliaires ou pontificales.
             </p>
           </header>
 

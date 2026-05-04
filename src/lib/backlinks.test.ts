@@ -183,7 +183,7 @@ describe("wikilinkToUrl", () => {
       fullMatch: "[[arianisme]]",
     };
 
-    expect(wikilinkToUrl(match)).toBe("/doctrine/arianisme");
+    expect(wikilinkToUrl(match)).toBe("/heresies/arianisme");
   });
 
   it("generates URL for council type", () => {
