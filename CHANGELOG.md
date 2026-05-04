@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.2.6] — 2026-05-05
+
+### Enrichissements
+
+- **Hérésies** : `americanisme` et `sillon` enrichis — ajout de `development`, `consequences`, `canonicalResponse` (analyse historique, impact, réponse canonique)
+- **Conciles** : 20/20 conciles ont maintenant les 4 champs optionnels (`heresiesCondemned`, `relatedCouncils`, `relatedBible`, `decrees`) — +12 `heresiesCondemned`, +12 `relatedCouncils`, +18 `relatedBible`, +5 `decrees`
+- **Disputationes** : +13 nouvelles questions (40→53) — APOLOGETIQUE 1→6 (existence Dieu, miracles, vraie religion, Écriture, foi/raison), ECLESIOLOGIE 2→6 (unité, apostolicité, primauté papale, extra Ecclesiam), DISCIPLINE 2→6 (sépulture, jeûne, crémation, voeux religieux)
+- **Catéchisme Laguerie IBP** : +5 questions (35→40) — transsubstantiation, sacrifice de la messe, contrition/attrition, obligation des commandements, suffrages pour les défunts
+
+### Fichiers
+
+- `src/data/heresies/index.ts` — americanisme + sillon enrichis
+- `src/data/councils/index.ts` — 20 conciles enrichis (heresiesCondemned, relatedCouncils, relatedBible, decrees)
+- `src/data/disputationes/index.ts` — +13 disputationes (APOLOGETIQUE, ECLESIOLOGIE, DISCIPLINE)
+- `src/data/catechism/laguerie-ibp.ts` — +5 questions
+
 ## [0.2.5] — 2026-05-04
 
 ### Nouveautés

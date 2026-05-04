@@ -597,6 +597,28 @@ Conditions pour recevoir:
                 },
               ],
             },
+            {
+              id: "eucharistie-quest-2",
+              question: "Qu'est-ce que la transsubstantiation ?",
+              reponse:
+                "La transsubstantiation est le changement de toute la substance du pain en corps du Christ et de toute la substance du vin en son sang, par les paroles de la consécration prononcées par le prêtre. Seules les espèces (apparences) du pain et du vin demeurent. C'est un dogme défini par le Concile de Latran IV (1215) et confirmé par le Concile de Trente.",
+              category: "sacrement-eucharistie",
+              part: 3,
+              article: 3,
+              references: [
+                {
+                  type: "theologique",
+                  source: "Concile de Trente",
+                  citation: "Session XIII, chap. IV : « Par la consécration du pain et du vin s'opère le changement de toute la substance du pain en la substance du corps du Christ »",
+                },
+                {
+                  type: "biblique",
+                  source: "Matthieu 26:26",
+                  citation: "Ceci est mon corps",
+                  url: "https://www.biblegateway.com/passage/?search=Matthieu+26%3A26&version=LSG",
+                },
+              ],
+            },
           ],
         },
         {
@@ -642,6 +664,27 @@ La messe est: le même sacrifice que celui de la Croix, offert de manière non s
                 },
               ],
             },
+            {
+              id: "messe-quest-2",
+              question: "En quoi la messe est-elle le même sacrifice que celui de la Croix ?",
+              reponse:
+                "La messe est le même sacrifice que celui de la Croix parce que la victime est la même (le Christ) et le prêtre principal est le même (le Christ, agissant par le ministère du prêtre). La seule différence est dans la manière d'offrir : sur la Croix, le Christ a versé son sang de manière sanglante ; à la messe, il s'offre de manière non sanglante sous les espèces du pain et du vin. Le sacrifice de la messe n'ajoute rien au sacrifice de la Croix, mais le rend présent et applicable aux fidèles.",
+              category: "liturgie",
+              part: 3,
+              article: 4,
+              references: [
+                {
+                  type: "theologique",
+                  source: "Concile de Trente",
+                  citation: "Session XXII, chap. II : « C'est une seule et même victime ; c'est le même qui offre maintenant par le ministère des prêtres, qui s'est offert lui-même alors sur la croix »",
+                },
+                {
+                  type: "biblique",
+                  source: "1 Corinthiens 11:26",
+                  citation: "Toutes les fois que vous mangez ce pain et que vous buvez cette coupe, vous annoncez la mort du Seigneur, jusqu'à ce qu'il vienne",
+                },
+              ],
+            },
           ],
         },
         {
@@ -673,6 +716,15 @@ Indulgences: remise de la peine temporelle due aux péchés pardonnés.`,
               question: "Comment se confesser ?",
               reponse:
                 "Pour se confesser: 1) Faire un examen de conscience pour identifier ses péchés, 2) Avoir une contrition (douleur d'avoir offensé Dieu), 3) Confesser tous les péchés mortels au prêtre, 4) Accomplir les pénitences, 5) Croire en la rémission.",
+              category: "sacrement-penitence",
+              part: 3,
+              article: 5,
+            },
+            {
+              id: "penitence-quest-2",
+              question: "Quelle est la différence entre contrition parfaite et contrition imparfaite (attrition) ?",
+              reponse:
+                "La contrition parfaite est la douleur d'avoir offensé Dieu parce qu'il est infiniment bon et digne d'être aimé par-dessus toute chose. Elle vient de l'amour de charité et remet immédiatement le péché mortel (si elle inclut le désir de se confesser). L'attrition est la douleur d'avoir offensé Dieu à cause de la laideur du péché ou de la crainte de l'enfer. Elle suffit pour recevoir valablement l'absolution sacramentelle.",
               category: "sacrement-penitence",
               part: 3,
               article: 5,
@@ -856,6 +908,27 @@ Le Christ a résumé toute la loi en deux commandements: "Tu aimeras le Seigneur
                   source: "Exode 20:1-17",
                   citation: "Les dix commandements donnés à Moïse sur le Sinaï.",
                   url: "https://www.biblegateway.com/passage/?search=Exode+20%3A1-17&version=LSG",
+                },
+              ],
+            },
+            {
+              id: "commandements-dieu-quest-2",
+              question: "Les dix commandements engagent-ils tous les hommes ?",
+              reponse:
+                "Oui, les dix commandements engagent tous les hommes parce qu'ils expriment la loi naturelle gravée par Dieu dans le cœur de chaque créature humaine. Ils ne sont pas une invention humaine mais l'expression de la volonté divine. Leur contenu est universel et immuable : nul ne peut les transgresser sans péché. Le Christ n'a pas aboli la loi mais l'a accomplie et perfectionnée (Mt 5, 17).",
+              category: "commandements",
+              part: 7,
+              article: 1,
+              references: [
+                {
+                  type: "theologique",
+                  source: "Catéchisme du Concile de Trente",
+                  citation: "Les commandements de Dieu sont universels et immuables, fondés sur la loi naturelle",
+                },
+                {
+                  type: "biblique",
+                  source: "Romains 2:14-15",
+                  citation: "Quand les païens, qui n'ont pas la loi, font naturellement ce que prescrit la loi, ils sont, eux qui n'ont pas la loi, une loi pour eux-mêmes",
                 },
               ],
             },
@@ -1226,6 +1299,27 @@ Indulgences: manière d'obtenir remise de peine temporelle par les prières et �
                   source: "Concile de Trente",
                   citation: "Session XXV, Décret sur le purgatoire",
                   url: "https://www.vatican.va/archive/ITA0053/_INDEX.HTM",
+                },
+              ],
+            },
+            {
+              id: "purgatoire-quest-2",
+              question: "Comment pouvons-nous aider les âmes du purgatoire ?",
+              reponse:
+                "Nous pouvons aider les âmes du purgatoire par les suffrages : la prière, la messe, l'aumône, les indulgences, le jeûne et les autres œuvres de piété offerts pour elles. Le sacrifice de la messe est le moyen le plus efficace, car c'est le sacrifice du Christ lui-même. Le Concile de Trente enseigne que les suffrages des vivants profitent véritablement aux défunts, même si la manière dont ils allègent leurs peines relève du mystère de Dieu.",
+              category: "purgatoire",
+              part: 4,
+              article: 4,
+              references: [
+                {
+                  type: "biblique",
+                  source: "2 Maccabées 12:46",
+                  citation: "C'est une chose sainte et salutaire de prier pour les morts, afin qu'ils soient délivrés de leurs péchés",
+                },
+                {
+                  type: "theologique",
+                  source: "Concile de Trente",
+                  citation: "Session XXV : « Les âmes détenues au purgatoire sont soulagées par les suffrages des fidèles, et surtout par l'acceptable sacrifice de l'autel »",
                 },
               ],
             },

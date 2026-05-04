@@ -171,6 +171,7 @@ export const councils: Council[] = [
       },
     ],
     relatedHeresies: ["arianisme"],
+    relatedCouncils: ["constantinople-i", "chalcedoine-451"],
     relatedBible: ["Jean-1", "Colossiens-1"],
   },
   {
@@ -237,6 +238,8 @@ export const councils: Council[] = [
       },
     ],
     relatedHeresies: ["macedonianisme", "apollinarisme", "arianisme"],
+    relatedCouncils: ["nicee-i", "ephese-431"],
+    relatedBible: ["Jean-14", "Jean-15", "Romains-8", "1Corinthiens-12"],
   },
   {
     slug: "ephese-431",
@@ -310,6 +313,8 @@ export const councils: Council[] = [
       },
     ],
     relatedHeresies: ["nestorianisme", "pelagianisme"],
+    relatedCouncils: ["nicee-i", "constantinople-i", "chalcedoine-451"],
+    relatedBible: ["Luc-1", "Galates-4", "Romains-5"],
   },
   {
     slug: "chalcedoine-451",
@@ -377,6 +382,8 @@ export const councils: Council[] = [
       },
     ],
     relatedHeresies: ["monophysisme", "nestorianisme"],
+    relatedCouncils: ["ephese-431", "constantinople-ii"],
+    relatedBible: ["Philippiens-2", "Hébreux-2", "1Timothée-3"],
   },
   {
     slug: "constantinople-ii",
@@ -417,6 +424,20 @@ export const councils: Council[] = [
         content: "Celui qui dit que les âmes préexistent et que le monde est éternel est anathème.",
       },
     ],
+    heresiesCondemned: [
+      {
+        heresySlug: "nestorianisme",
+        heresyName: "Nestorianisme (Trois Chapitres)",
+        condemnation: "Les écrits de Théodore de Mopsueste, Théodoret de Cyr et Ibas d'Édesse sont condamnés comme nestoriens",
+      },
+      {
+        heresySlug: "monophysisme",
+        heresyName: "Monophysisme (Origène)",
+        condemnation: "Réaffirmation de la condamnation du monophysisme et condamnation des doctrines origénistes",
+      },
+    ],
+    relatedCouncils: ["chalcedoine-451", "constantinople-iii"],
+    relatedBible: ["Jean-1", "Matthieu-16", "2Pierre-1"],
     relatedHeresies: ["monophysisme", "nestorianisme"],
   },
   {
@@ -460,6 +481,8 @@ export const councils: Council[] = [
         condemnation: "Condamné pour avoir nié la volonté humaine du Christ",
       },
     ],
+    relatedCouncils: ["constantinople-ii", "chalcedoine-451"],
+    relatedBible: ["Philippiens-2", "Hébreux-10", "Matthieu-26"],
     relatedHeresies: ["monothélisme", "monophysisme"],
   },
   {
@@ -515,6 +538,8 @@ export const councils: Council[] = [
         condemnation: "Condamné pour avoir rejeté la vénération des images",
       },
     ],
+    relatedCouncils: ["constantinople-iii", "constantinople-iv"],
+    relatedBible: ["Exode-20", "Deutéronome-5", "Jean-1"],
     relatedHeresies: ["iconoclasme"],
   },
   {
@@ -568,7 +593,37 @@ export const councils: Council[] = [
         content:
           "Le Saint-Esprit procède du Père et du Fils (Filioque), comme le Symbole de foi le professe.",
       },
+      {
+        number: 27,
+        title: "Images sacrées",
+        content: "Les images du Christ, de la Vierge et des saints doivent être honorées, mais non adorées.",
+      },
     ],
+    decrees: [
+      {
+        title: "Condamnation de Photius",
+        type: "dogmatic",
+        content:
+          "Photius, intrus dans le patriarcat de Constantinople, est déposé et excommunié. Tous les actes de son pontificat sont nuls. Le patriarche légitime Ignace est rétabli.",
+      },
+      {
+        title: "Décret sur le Filioque",
+        type: "dogmatic",
+        content:
+          "Le Saint-Esprit procède du Père et du Fils (Filioque), et cette procession est une vérité de foi catholique irréformable.",
+        latin:
+          "Spiritus Sanctus ex Patre et Filio procedit, et hoc est dogma catholicum immutabile.",
+      },
+    ],
+    heresiesCondemned: [
+      {
+        heresySlug: "gallicanisme",
+        heresyName: "Photisme (schisme)",
+        condemnation: "Photius condamné pour usurpation du patriarcat et rejet du Filioque",
+      },
+    ],
+    relatedCouncils: ["nicee-ii", "lyon-ii"],
+    relatedBible: ["Jean-15", "Jean-16", "Matthieu-16"],
     relatedHeresies: [],
   },
 
@@ -613,7 +668,22 @@ export const councils: Council[] = [
         content: "La paix et la trêve de Dieu doivent être observées.",
       },
     ],
+    decrees: [
+      {
+        title: "Liberté des élections épiscopales",
+        type: "disciplinary",
+        content: "Les élections des évêques et abbés doivent être libres, sans simonie ni intervention laïque. L'investiture laïque des évêques est abolie.",
+      },
+    ],
+    heresiesCondemned: [
+      {
+        heresySlug: "investiture",
+        heresyName: "Investiture laïque",
+        condemnation: "L'investiture laïque des évêques et abbés est abolie comme contraire à la liberté de l'Église",
+      },
+    ],
     relatedCouncils: ["lateran-ii"],
+    relatedBible: ["Actes-1", "1Timothée-3", "Tite-1"],
   },
   {
     slug: "lateran-ii",
@@ -656,7 +726,22 @@ export const councils: Council[] = [
         content: "Les clercs ne doivent pas porter d'armes, ni assister à des exécutions.",
       },
     ],
+    decrees: [
+      {
+        title: "Nullité des ordinations d'Anaclet",
+        type: "disciplinary",
+        content: "Toutes les ordinations faites par l'antipape Anaclet II sont déclarées nulles. Les clercs ordonnés par lui doivent être réordonnés.",
+      },
+    ],
+    heresiesCondemned: [
+      {
+        heresySlug: "arnoldisme",
+        heresyName: "Arnoldisme (Arnold de Brescia)",
+        condemnation: "Arnold de Brescia est condamné pour avoir prêché contre les biens temporels de l'Église et la hiérarchie ecclésiastique",
+      },
+    ],
     relatedCouncils: ["lateran-i", "lateran-iii"],
+    relatedBible: ["Matthieu-18", "1Corinthiens-5"],
   },
   {
     slug: "lateran-iii",
@@ -700,7 +785,27 @@ export const councils: Council[] = [
           "Ceux qui prêtent à usure sont frappés d'anathème et ne peuvent recevoir de sépulture ecclésiastique.",
       },
     ],
+    decrees: [
+      {
+        title: "Règle des deux tiers pour l'élection papale",
+        type: "disciplinary",
+        content: "Le pape doit être élu par au moins les deux tiers des cardinaux. Cette mesure vise à empêcher les schismes futurs.",
+      },
+    ],
+    heresiesCondemned: [
+      {
+        heresySlug: "donatisme",
+        heresyName: "Vaudois",
+        condemnation: "Les Vaudois sont condamnés pour prédication laïque sans autorisation et rejet de la hiérarchie ecclésiastique",
+      },
+      {
+        heresySlug: "manicheisme",
+        heresyName: "Cathares",
+        condemnation: "Les Cathares sont condamnés pour leur dualisme (deux principes), rejet des sacrements et de la matière",
+      },
+    ],
     relatedCouncils: ["lateran-ii", "lateran-iv"],
+    relatedBible: ["Matthieu-28", "Romains-13", "Hébreux-13"],
     relatedHeresies: ["vaudois", "cathares"],
   },
   {
@@ -767,6 +872,15 @@ export const councils: Council[] = [
           "Corpus et sanguis Christi vere contineri in sacramento altaris sub speciebus panis et vini, panem transsubstantiari in corpus, et vinum in sanguinem.",
       },
     ],
+    heresiesCondemned: [
+      {
+        heresySlug: "donatisme",
+        heresyName: "Albigeois (Cathares)",
+        condemnation: "Condamnation des Albigeois et ordre de croisade contre eux",
+      },
+    ],
+    relatedCouncils: ["lateran-iii", "lyon-i"],
+    relatedBible: ["Jean-6", "Matthieu-26", "1Corinthiens-11", "Hébreux-9"],
     relatedHeresies: ["albigeois", "vaudois"],
   },
   {
@@ -820,7 +934,15 @@ export const councils: Council[] = [
         latin: "Fridericum a regno deponimus, et omnes qui ei fidelitatem juraverunt a juramento absolventes, universos a dominio ejus amovemus.",
       },
     ],
+    heresiesCondemned: [
+      {
+        heresySlug: "gallicanisme",
+        heresyName: "Frédéricrianisme (schisme impérial)",
+        condemnation: "Frédéric II est déposé pour parjure, persécution de l'Église et collusion avec le sultan",
+      },
+    ],
     relatedCouncils: ["lyon-ii"],
+    relatedBible: ["Matthieu-16", "Jean-21", "Romains-13"],
     relatedHeresies: ["fridricianisme"],
   },
   {
@@ -881,7 +1003,15 @@ export const councils: Council[] = [
           "Si les vrais pénitents quittent cette vie dans la charité avant d'avoir satisfait par des fruits dignes de pénitence pour ce qu'ils ont commis ou omis, leurs âmes sont purifiées par des peines purgatoires après la mort.",
       },
     ],
+    heresiesCondemned: [
+      {
+        heresySlug: "schisme-oriental",
+        heresyName: "Schisme oriental (rejet du Filioque)",
+        condemnation: "Le rejet de la procession du Saint-Esprit du Père et du Fils est condamné",
+      },
+    ],
     relatedCouncils: ["lyon-i", "constance-1414"],
+    relatedBible: ["Jean-15", "Jean-16", "Matthieu-16", "1Corinthiens-12"],
     relatedHeresies: [],
   },
   {
@@ -925,6 +1055,27 @@ export const councils: Council[] = [
           "Les Béguards et Béguines hérétiques, qui vivent en commun sans autorisation, sont condamnés.",
       },
     ],
+    decrees: [
+      {
+        title: "Suppression de l'Ordre du Temple",
+        type: "disciplinary",
+        content: "L'Ordre du Temple est supprimé de manière perpétuelle et irrévocable. Ses biens sont transférés à l'Ordre de l'Hôpital de Saint-Jean de Jérusalem. Les templiers individuels seront jugés par les évêques diocésains.",
+      },
+      {
+        title: "Condamnation des Béguards et Béguines",
+        type: "disciplinary",
+        content: "Les erreurs des Béguards et Béguines sont condamnées : négation de la nécessité des sacrements, perfection par contemplation sans effort, indifférence face au péché.",
+      },
+    ],
+    heresiesCondemned: [
+      {
+        heresySlug: "quietisme",
+        heresyName: "Béguards et Béguines",
+        condemnation: "Condamnés pour quietisme, négation de la nécessité des sacrements et erreurs mystiques",
+      },
+    ],
+    relatedCouncils: ["constance-1414"],
+    relatedBible: ["Matthieu-19", "1Corinthiens-3", "Hébreux-6"],
     relatedHeresies: ["begards"],
   },
 
@@ -993,6 +1144,19 @@ export const councils: Council[] = [
       },
     ],
     relatedCouncils: ["lyon-ii", "bale-1431", "lateran-v"],
+    heresiesCondemned: [
+      {
+        heresySlug: "hussite",
+        heresyName: "Hussitisme",
+        condemnation: "Jean Hus condamné pour négation de la transsubstantiation, du pouvoir ecclésiastique et de la hiérarchie",
+      },
+      {
+        heresySlug: "conciliarisme",
+        heresyName: "Conciliarisme (décret Haec sancta)",
+        condemnation: "Bien que le décret Haec sancta ait été adopté, il fut finalement rejeté par le Latran V comme attentant à la primauté pontificale",
+      },
+    ],
+    relatedBible: ["Matthieu-16", "Jean-6", "1Corinthiens-11"],
     relatedHeresies: ["hussite"],
   },
   {
@@ -1036,6 +1200,15 @@ export const councils: Council[] = [
           "Spiritus Sanctus ex Patre Filioque procedit, non tanquam ex duobus principiis, sed tanquam ex uno.",
       },
     ],
+    heresiesCondemned: [
+      {
+        heresySlug: "schisme-oriental",
+        heresyName: "Schisme oriental (rejet du Filioque)",
+        condemnation: "Réaffirmation du Filioque et de la primauté pontificale comme conditions de l'union avec les Grecs",
+      },
+    ],
+    relatedCouncils: ["constance-1414", "lyon-ii", "lateran-v"],
+    relatedBible: ["Jean-15", "Jean-16", "Matthieu-16"],
   },
   {
     slug: "lateran-v",
@@ -1099,7 +1272,20 @@ export const councils: Council[] = [
           "Les évêques et les supérieurs doivent veiller à ce que la parole de Dieu soit prêchée au peuple au moins les dimanches et fêtes. L'enseignement de la doctrine chrétienne est obligatoire.",
       },
     ],
+    heresiesCondemned: [
+      {
+        heresySlug: "conciliarisme",
+        heresyName: "Conciliarisme",
+        condemnation: "La thèse selon laquelle le concile est supérieur au pape est condamnée comme hérétique",
+      },
+      {
+        heresySlug: "averroisme",
+        heresyName: "Averroïsme padouan",
+        condemnation: "Condamnation de la thèse de l'unité de l'intellect et de la mortalité de l'âme",
+      },
+    ],
     relatedCouncils: ["constance-1414", "trente-1545-1563"],
+    relatedBible: ["Matthieu-16", "Hébreux-12", "1Pierre-1"],
     relatedHeresies: ["conciliarisme"],
   },
   {
@@ -1189,6 +1375,8 @@ export const councils: Council[] = [
         condemnation: "Condamné : prédestination absolue, rejection du libre arbitre",
       },
     ],
+    relatedCouncils: ["lateran-v", "vatican-i"],
+    relatedBible: ["Romains-5", "Jacques-2", "Hébreux-11"],
     relatedHeresies: ["lutheranisme", "calvinisme", "zwinglianisme"],
   },
   {
@@ -1253,6 +1441,8 @@ export const councils: Council[] = [
           "La foi et la raison ne peuvent jamais se contredire, car toutes deux viennent de Dieu.",
       },
     ],
+    relatedCouncils: ["trente-1545-1563", "constance-1414"],
+    relatedBible: ["Matthieu-16", "Jean-21", "Ephésiens-4"],
     relatedHeresies: ["gallicanisme", "jansenisme"],
   },
   // ===== CONCILE INVALIDE =====

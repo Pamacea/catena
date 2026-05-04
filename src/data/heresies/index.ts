@@ -1543,6 +1543,11 @@ export const heresies: Heresy[] = [
       },
     ],
 
+    consequences:
+      "Le conciliarisme affaiblit temporairement l'autorité pontificale pendant le Grand Schisme et permit la réunion de l'Église. Cependant, il créa un dangereux précédent en soumettant le pape à un tribunal humain. Les papes ultérieurs (Eugène IV, Pie II, Jules II) réaffirmèrent avec force la primauté pontificale. Le concile Vatican I mit fin à toute ambiguïté en définissant dogmatiquement l'infaillibilité et la primauté de juridiction du pape.",
+    canonicalResponse:
+      "Le pape est le chef suprême de l'Église et ne peut être jugé par aucun concile. Le concile œcuménique n'a d'autorité que confirmée par le pape (CIC 1917, can. 228). Le conciliarisme est contraire à la constitution divine de l'Église.",
+
     connections: [
       { slug: "gallicanisme", type: "succeeded" },
       { slug: "modernisme", type: "related" },
@@ -1567,6 +1572,12 @@ export const heresies: Heresy[] = [
       "Le febronianisme tire son nom du pseudonyme « Justinus Febronius » utilisé par Johann Nikolaus von Hontheim, suffragant de Trèves, dans son ouvrage De Statu Ecclesiæ (1763). Ce livre influença profondément les princes allemands et les évêques réformateurs, alimentant les tendances anti-romaines du « joséphisme » autrichien. Hontheim se rétracta publiquement en 1778, mais ses idées continuèrent de circuler.",
     development:
       "Le febronianisme fut condamné par le pape Clément XIII (1764) et explicitement réfuté par Pie VI dans « Super soliditate » (1786). Il disparut progressivement après la Révolution française et les guerres napoléoniennes, mais ses idées réapparurent sous d'autres formes au XIXe siècle.",
+    theologicalIssues:
+      "Le febronianisme nie la primauté de juridiction immédiate du pape sur toutes les Églises. Il confond l'indiscipline administrative (collégialité épiscopale) avec l'indépendance doctrinale. Le pape n'est pas un « premier entre égaux » : il possède une juridiction plénière, immédiate et suprême sur toute l'Église (Pastor Æternus, Vatican I).",
+    consequences:
+      "Le febronianisme légitima les réformes joséphistes en Autriche (suppression de couvents, contrôle étatique de l'Église) et alimenta les tendances schismatiques dans le Saint-Empire. Il prépara le terrain pour le vieux-catholicisme après Vatican I. Ses idées réapparaissent dans certains courants conciliaires modernes.",
+    canonicalResponse:
+      "Le pape a autorité suprême sur toute l'Église et chaque évêque lui est soumis. Les Églises particulières n'ont pas de droits propres contre la juridiction pontificale (CIC 1917, can. 218). Le febronianisme est condamné par les bulles de Clément XIII et Pie VI.",
 
     refutations: [
       {
@@ -1619,6 +1630,12 @@ export const heresies: Heresy[] = [
       "Lamennais (1782-1854) fut d'abord un fervent défenseur de l'Église ultramontaine. Son ouvrage Essai sur l'indifférence en matière de religion (1817-1823) le rendit célèbre. Mais ses positions se radicalisèrent : il en vint à nier la raison naturelle, puis à défendre la liberté de conscience et la séparation de l'Église et de l'État. Son ouvrage Paroles d'un croyant (1834) fut condamné par Grégoire XVI (Mirari Vos, encyclique Singulari Nos).",
     theologicalIssues:
       "Le traditionalisme nie un principe fondamental de la théologie catholique : la raison naturelle peut démontrer l'existence de Dieu par les créatures (Vatican I, Dei Filius, ch. 2). Cette négation conduit au fidéisme (la foi sans raison) et au scepticisme (impossibilité de toute certitude naturelle).",
+    development:
+      "Lamennais évolua de l'ultramontanisme radical (Essai sur l'indifférence) vers un traditionalisme sceptique, puis vers un libéralisme politique. Après la condamnation de Paroles d'un croyant (1834), il rompit avec l'Église et mourut hors communion. Le traditionalisme fut ensuite repris par Bautain (Strasbourg) et Bonnetty, qui furent également repris par Rome. Le concile Vatican I trancha définitivement en affirmant le pouvoir de la raison naturelle.",
+    consequences:
+      "Le traditionalisme de Lamennais discrédita temporairement la théologie apologétique traditionnelle en la liant au scepticisme. Il contribua à la confusion entre traditionalisme légitile (primauté de la Tradition) et traditionalisme rationaliste (négation de la raison). La condamnation de Lamennais marqua un tournant dans la lutte de l'Église contre le libéralisme.",
+    canonicalResponse:
+      "La raison naturelle peut certainement connaître Dieu par les créatures (Vatican I, Dei Filius). Le fidéisme est condamné. Tout catholique doit reconnaître le pouvoir de la raison et de la foi, sans les opposer (CIC 1917, can. 1321-1323 sur l'enseignement de la philosophie).",
 
     refutations: [
       {
@@ -1672,6 +1689,12 @@ export const heresies: Heresy[] = [
       "L'abbé Hecker, ancien transcendentaliste converti au catholicisme, fonda la Société de Saint-Paul (les Paulistes) en 1858. Il prônait une adaptation du catholicisme à la culture américaine : dialogue avec les protestants, valorisation de l'initiative individuelle, attitude positive envers la liberté religieuse. Le pape Léon XIII condamna ces tendances dans l'encyclique Testem Benevolentiæ (1899).",
     theologicalIssues:
       "L'américanisme confond l'adaptation légitime aux circonstances locales (la méthode missionnaire) avec la compromission doctrinale. La liberté de conscience ne peut être érigée en droit absolu. Les vertus passives (obéissance, humilité, pauvreté) ne sont pas obsolètes mais fondamentales pour la vie chrétienne.",
+    development:
+      "L'américanisme resta largement un phénomène américain jusqu'à ce que l'abbé Hecker soit traduit en français par l'abbé Elliott, qui présenta ses idées de manière exagérée. Le pape Léon XIII, alerté par des évêques américains, condamna ces tendances dans Testem Benevolentiæ (1899). Après la condamnation, l'américanisme s'éteignit aux États-Unis, mais ses principes réapparurent dans le modernisme et le libéralisme ecclésial du XXe siècle.",
+    consequences:
+      "L'américanisme contribua à la confusion entre adaptation pastorale légitime et compromission doctrinale. Il renforça la méfiance romaine envers les initiatives américaines et freina temporairement l'inculturation du catholicisme aux États-Unis. Ses idées réapparaissent dans certains courants d'« aggiornamento » post-Vatican II.",
+    canonicalResponse:
+      "L'Église n'a pas besoin de s'adapter aux valeurs de la démocratie libérale moderne. Les vertus passives (obéissance, humilité, renoncement) restent fondamentales. La liberté de conscience ne peut être érigée en droit absolu (CIC 1917, can. 1321-1323 sur l'enseignement de la philosophie).",
 
     refutations: [
       {
@@ -1718,6 +1741,12 @@ export const heresies: Heresy[] = [
       "Le Sillon fut fondé par Marc Sangnier en 1894 comme mouvement de jeunesse catholique engagé dans la démocratie. Il prônait la « démocratie intégrale » : la démocratie comme forme politique idéale, compatible et même exigée par le christianisme. Le mouvement s'opposait à l'Action française monarchiste. Le pape Pie X le condamna dans la lettre Notre Charge Apostolique (1910), reprochant au Sillon de subordonner la foi à la politique.",
     theologicalIssues:
       "Le Sillon faisait de la démocratie un absolu, oubliant que la forme de gouvernement est contingente et non révélée. Il substituait la fraternité humanitaire à la charité surnaturelle, et la solidarité sociale à la grâce sanctifiante. Le Christ n'est pas venu fonder une démocratie mais une Église.",
+    development:
+      "Le Sillon commença comme mouvement de jeunesse catholique progressiste, mais évolua vers un syncrétisme politico-religieux. Après les lois laïques de 1901 et 1905, Sangnier tenta de réconcilier catholicisme et République en fondant la « démocratie intégrale ». Le mouvement gagna en influence mais perdit sa spécificité catholique. Après la condamnation de 1910, les sillonnistes se dispersèrent — certains vers l'Action française, d'autres vers le christianisme social.",
+    consequences:
+      "Le Sillon contribua à la politisation du catholicisme français et à la confusion entre engagement politique et apostolat. Il affaiblit la résistance catholique à la laïcisation en proposant une « réconciliation » aux conditions républicaines. La condamnation de Pie X renforça la doctrine des deux glaives et la distinction entre ordre naturel et surnaturel. Certains principes sillonnistes réapparurent dans la Démocratie chrétienne d'après-guerre.",
+    canonicalResponse:
+      "La forme de gouvernement relève de la prudence politique et n'est pas un dogme de foi. L'Église peut coexister avec toute forme de gouvernement juste (monarchie, démocratie, aristocratie) sans en faire un absolu. La charité surnaturelle ne peut être remplacée par la solidarité humanitaire. L'apostolat religieux et l'action politique restent distincts dans leur nature et leurs fins (Pie X, Notre Charge Apostolique, 1910).",
 
     refutations: [
       {

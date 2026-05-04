@@ -895,6 +895,132 @@ export const disputationesEcclesiologie: Disputatio[] = [
       "Bellarmin, De Notis Ecclesiae",
     ],
   },
+  {
+    slug: "ecclesia-sit-una",
+    question: "Utrum Ecclesia sit una ?",
+    questionFr: "L'Église est-elle une ?",
+    category: DisputatioCategory.ECLESIOLOGIE,
+    source: "De Notis Ecclesiae",
+    objections: [
+      "Il semble que l'Église ne soit pas une, car le christianisme est divisé en de nombreuses confessions (catholique, orthodoxe, protestante) qui professent des doctrines contradictoires.",
+      "De plus, même au sein de l'Église catholique, il existe des rites divers (latin, byzantin, copte) qui semblent contredire l'unité.",
+    ],
+    sedContra:
+      "Le Seigneur a prié : « Que tous soient un, comme toi, Père, tu es en moi et moi en toi, qu'eux aussi soient un en nous, afin que le monde croie que tu m'as envoyé » (Jn 17, 21). Saint Paul enseigne : « Un seul Seigneur, une seule foi, un seul baptême » (Ep 4, 5). Le Concile de Florence (1439) définit l'unité de l'Église comme un signe distinctif.",
+    respondeo:
+      "L'unité de l'Église est un signe (nota) qui la distingue des communautés séparées. Cette unité a trois aspects : l'unité de foi (une même profession de foi catholique), l'unité de culte (les mêmes sacrements, en particulier l'Eucharistie), et l'unité de gouvernement (la soumission au pape, vicaire du Christ). Les schismes et hérésies ne détruisent pas l'unité de l'Église, mais en séparent des membres. Les divers rites catholiques (latin, byzantin, etc.) ne sont pas des divisions mais des expressions légitimes de la même foi dans des traditions liturgiques différentes, toutes unies sous la même autorité pontificale.",
+    adArguments: [
+      {
+        type: "primum",
+        content: "La multiplicité des confessions chrétiennes est le résultat du péché des hommes (schismes, hérésies), non d'une déficience de l'Église. L'Église du Christ subsiste dans sa plénitude dans l'Église catholique, les autres confessions possédant des éléments de sanctification empruntés à elle.",
+      },
+      {
+        type: "secundum",
+        content: "La diversité des rites est la richesse, non la ruine de l'unité. Tous les rites catholiques professent la même foi, reconnaissent le même pape et célèbrent les mêmes sacrements. L'unité est dans la substance de la foi, non dans l'uniformité liturgique.",
+      },
+    ],
+    references: [
+      "Jn 17, 21",
+      "Ep 4, 5",
+      "Florence (1439)",
+      "Bellarmin, De Notis Ecclesiae",
+    ],
+  },
+  {
+    slug: "ecclesia-sit-apostolica",
+    question: "Utrum Ecclesia sit apostolica ?",
+    questionFr: "L'Église est-elle apostolique ?",
+    category: DisputatioCategory.ECLESIOLOGIE,
+    source: "De Notis Ecclesiae",
+    objections: [
+      "Il semble que l'Église ne soit pas apostolique, car les Apôtres ont vécu au Ier siècle et n'ont rien écrit de systématique. La prétendue succession apostolique est une construction tardive.",
+      "De plus, les protestants revendiquent aussi l'apostolicité en se fondant sur l'Écriture seule.",
+    ],
+    sedContra:
+      "Saint Irénée de Lyon enseigne (Adv. Haer. III, 3, 1) : « La tradition des Apôtres, manifeste dans le monde entier, se montre à tous ceux qui veulent voir la vérité ». Le Concile Vatican I (Pastor Æternus, 1870) enseigne que le pape possède « la plénitude de la puissance apostolique ».",
+    respondeo:
+      "L'apostolicité de l'Église se manifeste en trois manières : par la succession des évêques depuis les Apôtres (chaîne ininterrompue d'ordinations), par la fidélité à la doctrine apostolique (Tradition), et par la fondation historique de chaque Église particulière sur un Apôtre ou un successeur d'Apôtre. La succession apostolic est un fait historique vérifiable : les listes épiscopales de Rome, Antioche, Alexandrie remontent aux Apôtres. Les Églises protestantes, fondées au XVIe siècle et après, ne peuvent revendiquer cette continuité historique.",
+    adArguments: [
+      {
+        type: "primum",
+        content: "La succession apostolique n'est pas une construction tardive : saint Clément de Rome (96 ap. J.-C.) la mentionne déjà dans sa lettre aux Corinthiens. La transmission de l'ordination épiscopale est un fait historique attesté par les sources les plus anciennes.",
+      },
+      {
+        type: "secundum",
+        content: "Les protestants ne peuvent revendiquer l'apostolicité au sens catholique : ils n'ont pas la succession épiscopale, leur doctrine contredit celle des Apôtres sur des points essentiels (sacrements, primauté de Pierre), et leurs Églises ont été fondées par des hommes au XVIe siècle, non par les Apôtres.",
+      },
+    ],
+    references: [
+      "Rm 10, 17",
+      "1 Tm 4, 14",
+      "Adv. Haer. III, 3, 1",
+      "Pastor Æternus (1870)",
+      "Bellarmin, De Notis Ecclesiae",
+    ],
+  },
+  {
+    slug: "papa-habeat-primatum-jurisdictionis",
+    question: "Utrum papa habeat primatum jurisdictionis super universam Ecclesiam ?",
+    questionFr: "Le pape possède-t-il la primauté de juridiction sur toute l'Église ?",
+    category: DisputatioCategory.ECLESIOLOGIE,
+    source: "De Ecclesia",
+    objections: [
+      "Il semble que le pape n'ait pas la primauté de juridiction, car le Concile de Chalcédoine (can. 28) accordait des privilèges égaux au patriarche de Constantinople, et les Églises orientales ont toujours contesté la suprématie romaine.",
+      "De plus, les Apôtres avaient tous un pouvoir égal, et Pierre n'avait pas de supériorité sur les autres.",
+    ],
+    sedContra:
+      "Le Seigneur dit à Pierre : « Tu es Pierre, et sur cette pierre je bâtirai mon Église... Je te donnerai les clefs du Royaume des Cieux » (Mt 16, 18-19). Le Concile Vatican I (Pastor Æternus, 1870) définit : « Si quelqu'un dit que le pontife romain n'a qu'une charge d'inspection ou de direction, et non le pouvoir plénier et suprême de juridiction sur toute l'Église, qu'il soit anathème ».",
+    respondeo:
+      "Le pape possède la primauté de juridiction non par droit humain mais par institution divine. Le Christ a établi Pierre comme chef visible de l'Église, et cette primauté passe à ses successeurs, les évêques de Rome. Le pouvoir papal est plénier (s'étend à toutes les Églises), suprême (aucun pouvoir humain ne lui est supérieur), immédiat (le pape peut exercer sa juridiction directement sur chaque diocèse), et libre (il ne dépend d'aucun concile). Le canon 28 de Chalcédoine, qui accordait des privilèges à Constantinople, fut rejeté par le pape Léon I comme illégitime.",
+    adArguments: [
+      {
+        type: "primum",
+        content: "Le canon 28 de Chalcédoine fut adopté par les Pères sans l'approbation du pape. Léon I le rejeta formellement, et il ne fait pas partie des canons reconnus par l'Église latine. Le primat de Rome est antérieur à Chalcédoine et reconnu dès le Ier siècle (Clément de Rome, Ignace d'Antioche).",
+      },
+      {
+        type: "secundum",
+        content: "Pierre n'avait pas le même pouvoir que les autres Apôtres : il reçut personnellement la charge de « paître les brebis » du Christ (Jn 21, 15-17), et sa confession de foi fut le fondement de l'Église (Mt 16, 18). Les autres Apôtres reçurent le pouvoir de lier et délier, mais Pierre reçut en plus la charge de gouverner l'ensemble.",
+      },
+    ],
+    references: [
+      "Mt 16, 18-19",
+      "Jn 21, 15-17",
+      "Lc 22, 32",
+      "Pastor Æternus (1870)",
+      "ST IIa-IIae, q. 39, a. 1",
+    ],
+  },
+  {
+    slug: "extra-ecclesiam-nulla-salus",
+    question: "Utrum extra Ecclesiam nulla salus ?",
+    questionFr: "Hors de l'Église, point de salut ?",
+    category: DisputatioCategory.ECLESIOLOGIE,
+    source: "De Ecclesia",
+    objections: [
+      "Il semble que cette formule soit fausse, car elle semble condamner tous les non-catholiques, y compris ceux qui n'ont jamais entendu l'Évangile, ce qui serait contraire à la bonté divine.",
+      "De plus, le Concile Vatican II a enseigné que les non-chrétiens peuvent être sauvés, ce qui contredit la formule traditionnelle.",
+    ],
+    sedContra:
+      "Le Pape Boniface VIII (Unam Sanctam, 1302) définit : « Nous déclarons, disons et définissons qu'il est absolument nécessaire au salut de toute créature humaine d'être soumise au pontife romain ». Le Concile de Florence (1442) enseigne que « ceux qui meurent dans le péché mortel ou seulement dans le péché originel descendent aussitôt dans l'enfer, pour être punis, cependant avec des peines inégales ».",
+    respondeo:
+      "La formule « Hors de l'Église point de salut » est un dogme de foi qui signifie que le salut n'est possible que par l'appartenance à l'Église du Christ. Cette appartenance peut être explicite (baptême, profession de foi) ou implicite (baptême de désir pour ceux qui, sans faute de leur part, ne connaissent pas l'Évangile mais suivent leur conscience). L'Église enseigne cependant que le moyen ordinaire de salut est l'entrée visible dans l'Église par le baptême. Les invinciblement ignorants ne sont pas damnés par leur ignorance, mais ils ne sont pas non plus assurés de leur salut : Dieu seul juge les cœurs.",
+    adArguments: [
+      {
+        type: "primum",
+        content: "La formule ne signifie pas que tous les non-catholiques sont damnés, mais que l'Église est le moyen ordinaire et voulu par Dieu pour le salut. Le baptême de désir et le baptême de sang sont des exceptions providentielles, non la règle. L'urgence de la mission demeure.",
+      },
+      {
+        type: "secundum",
+        content: "Les enseignements de Vatican II sur le salut des non-chrétiens ne sont pas contradictoires avec la formule traditionnelle : ils l'interprètent de manière plus large, en admettant la possibilité du salut pour ceux de bonne foi. Cependant, la thèse de Cassiciacum remet en question l'autorité de Vatican II, et la position traditionnelle reste celle de Florence et Boniface VIII.",
+      },
+    ],
+    references: [
+      "Unam Sanctam (1302)",
+      "Florence (1442)",
+      "Mc 16, 16",
+      "ST IIa-IIae, q. 10, a. 12",
+    ],
+  },
 ];
 
 // ===== APOLOGETIQUE =====
@@ -931,6 +1057,164 @@ export const disputationesApologetique: Disputatio[] = [
       "Rm 1, 20",
       "Dei Filius (1870)",
       "ST Ia, q. 2, a. 3",
+    ],
+  },
+  {
+    slug: "unus-sit-deus",
+    question: "Utrum Deus sit unus ?",
+    questionFr: "Dieu est-il unique ?",
+    category: DisputatioCategory.APOLOGETIQUE,
+    source: "De Deo Uno",
+    objections: [
+      "Il semble que Dieu ne soit pas unique, car de nombreuses religions professent plusieurs dieux (polythéisme grec, romain, égyptien), et l'expérience humaine semble révéler une pluralité de principes (bien/mal, ordre/chaos).",
+      "De plus, la Trinité chrétienne elle-même enseigne trois Personnes divines, ce qui semble contredire l'unité de Dieu.",
+    ],
+    sedContra:
+      "L'Écriture dit : « Écoute, Israël, le Seigneur notre Dieu est l'unique Seigneur » (Dt 6, 4). Le Concile de Latran IV (1215) définit : « Il n'y a qu'un seul vrai Dieu, éternel, immense, incompréhensible, tout-puissant ». Le Concile du Vatican I (1870) réaffirme que Dieu est « une substance spirituelle, unique, absolument simple et immuable ».",
+    respondeo:
+      "Saint Thomas démontre (Ia, q. 11, a. 3) que Dieu est nécessairement un. L'unité de Dieu se prouve par la raison : s'il y avait deux dieux, l'un devrait différer de l'autre par quelque perfection ; or celui qui manquerait de cette perfection ne serait pas Dieu. De même, l'infinité divine exclut la pluralité : deux êtres infinis se confondraient nécessairement. Quant à la Trinité, les trois Personnes divines partagent une seule et même nature divine, une seule essence, un seul acte d'être : l'unité de nature est préservée dans la distinction des Personnes.",
+    adArguments: [
+      {
+        type: "primum",
+        content: "Le polythéisme est une dégradation de la connaissance naturelle de Dieu. Les « dieux » païens sont des démons (1 Co 10, 20) ou des forces naturelles déifiées. La raison suffit à montrer qu'un être infini ne peut être qu'un.",
+      },
+      {
+        type: "secundum",
+        content: "La Trinité n'est pas une division de Dieu en trois parties. Les trois Personnes sont consubstantielles : le Père est Dieu tout entier, le Fils est Dieu tout entier, le Saint-Esprit est Dieu tout entier. Il y a trois Personnes, une seule nature.",
+      },
+    ],
+    references: [
+      "Dt 6, 4",
+      "1 Co 8, 6",
+      "Latran IV (1215)",
+      "ST Ia, q. 11, a. 3",
+    ],
+  },
+  {
+    slug: "miracula-sint-possibilia",
+    question: "Utrum miracula sint possibilia ?",
+    questionFr: "Les miracles sont-ils possibles ?",
+    category: DisputatioCategory.APOLOGETIQUE,
+    source: "De Miraculis",
+    objections: [
+      "Il semble que les miracles soient impossibles, car les lois de la nature sont immuables et universelles. Un miracle violerait ces lois, ce qui est contradictoire avec la sagesse divine qui les a établies.",
+      "De plus, les prétendus miracles peuvent toujours s'expliquer par des causes naturelles encore inconnues, comme l'a montré la science moderne.",
+    ],
+    sedContra:
+      "Le Seigneur dit : « Ces signes accompagneront ceux qui auront cru : en mon nom, ils chasseront les démons, ils parleront des langues nouvelles, ils prendront des serpents dans leurs mains » (Mc 16, 17-18). Saint Thomas enseigne (Ia, q. 105, a. 6) que Dieu, étant la cause première, peut agir au-delà de l'ordre de toute cause seconde.",
+    respondeo:
+      "Le miracle est possible parce que Dieu est la cause première de tout être et de tout mouvement. Les lois de la nature sont les effets de la volonté divine ; Dieu peut donc, en vertu de sa toute-puissance, agir au-delà de ces lois sans les détruire. Un miracle n'est pas une violation arbitraire de la nature, mais l'intervention de Dieu qui produit un effet que la nature ne peut produire par ses seules causes. Saint Thomas distingue trois degrés de miracles : les faits que Dieu fait au-delà de la nature (miracles stricts), les faits que Dieu fait au-delà de la nature mais par le moyen d'une nature (guérisons), et les faits que Dieu fait sans que la nature y coopère (résurrection).",
+    adArguments: [
+      {
+        type: "primum",
+        content: "Les lois de la nature ne sont pas nécessaires mais contingentes : elles dépendent de la volonté divine. Dieu peut suspendre ou dépasser l'ordre naturel sans contradiction, comme un pilote peut dévier un navire de sa route sans détruire le navire.",
+      },
+      {
+        type: "secundum",
+        content: "L'argument du « dieu des lacunes » ne s'applique pas au miracle véritable. Le miracle est identifiable non pas par l'ignorance de sa cause, mais par l'impossibilité radicale de toute cause naturelle : un lépreux guéri instantanément sans traitement, un mort ressuscité après quatre jours, ne relèvent pas de l'inconnu scientifique mais de l'intervention divine.",
+      },
+    ],
+    references: [
+      "Mc 16, 17-18",
+      "Jn 14, 12",
+      "Dei Filius (1870)",
+      "ST Ia, q. 105, a. 6",
+      "ST Ia, q. 110, a. 4",
+    ],
+  },
+  {
+    slug: "religio-catholica-sit-vera",
+    question: "Utrum religio catholica sit vera religio ?",
+    questionFr: "La religion catholique est-elle la vraie religion ?",
+    category: DisputatioCategory.APOLOGETIQUE,
+    source: "De Vera Religione",
+    objections: [
+      "Il semble que la religion catholique ne soit pas la seule vraie religion, car de nombreuses religions contiennent des vérités morales et spirituelles profondes, et l'on ne peut condamner des milliards de croyants sincères.",
+      "De plus, l'histoire de l'Église montre des erreurs, des abus et des contradictions qui affaiblissent ses prétentions à la vérité absolue.",
+    ],
+    sedContra:
+      "Le Seigneur dit : « Je suis le chemin, la vérité et la vie ; nul ne vient au Père que par moi » (Jn 14, 6). Le Pape Pie IX enseigne (Syllabus, prop. 16) que « l'on peut avoir bonne espérance de l'éternel salut de tous ceux qui ne sont point dans la vraie Église du Christ ». Le Concile de Florence (1442) définit que « ceux qui sont hors de l'Église catholique, non seulement les païens, mais aussi les juifs, les hérétiques et les schismatiques, ne peuvent participer à la vie éternelle ».",
+    respondeo:
+      "La vraie religion se reconnaît à des critères objectifs que l'Église catholique remplit seule : la continuité historique avec les Apôtres (apostolicité), la conformité aux Écritures, la cohérence doctrinale à travers les siècles, la fécondité spirituelle (saints, miracles, martyrs), et la capacité de répondre aux questions ultimes de l'homme. Les autres religions contiennent des « semences du Verbes » (Lactance, Justin), mais ces vérités partielles ne suffisent pas au salut sans la foi au Christ et l'appartenance à son Église. L'indifférentisme religieux, qui prétend que toutes les religions se valent, est une erreur condamnée par le Magistère.",
+    adArguments: [
+      {
+        type: "primum",
+        content: "La sincérité d'un croyant ne garantit pas la vérité de sa croyance. On peut être sincèrement dans l'erreur. La charité nous prie pour les non-catholiques, mais la vérité nous oblige à affirmer que la Révélation complète est dans le catholicisme.",
+      },
+      {
+        type: "secundum",
+        content: "Les erreurs et abus commis par des membres de l'Église ne prouvent rien contre sa doctrine. L'infaillibilité porte sur le dépôt de la foi, non sur la conduite personnelle de chaque chrétien. Le péché des membres n'invalide pas les promesses du Christ à son Église.",
+      },
+    ],
+    references: [
+      "Jn 14, 6",
+      "Ac 4, 12",
+      "Florence (1442)",
+      "ST IIa-IIae, q. 10, a. 12",
+    ],
+  },
+  {
+    slug: "scriptura-sit-verbum-dei",
+    question: "Utrum Scriptura sacra sit verbum Dei ?",
+    questionFr: "L'Écriture sainte est-elle la parole de Dieu ?",
+    category: DisputatioCategory.APOLOGETIQUE,
+    source: "De Revelatione",
+    objections: [
+      "Il semble que l'Écriture ne soit pas la parole de Dieu, car elle a été écrite par des hommes dans un contexte historique particulier, avec des genres littéraires divers et des erreurs apparentes.",
+      "De plus, les protestants qui attribuent tout à l'Écriture seule (sola Scriptura) oublient que la Tradition et le Magistère sont nécessaires pour l'interpréter.",
+    ],
+    sedContra:
+      "Saint Paul écrit : « Toute Écriture est inspirée de Dieu et utile pour enseigner, convaincre, corriger, former à la justice » (2 Tm 3, 16). Le Concile de Trente (sess. IV, 1546) définit que l'Écriture est reçue « avec un égal sentiment de piété et de révérence » que la Tradition.",
+    respondeo:
+      "L'Écriture sainte est véritablement la parole de Dieu, non pas au sens que Dieu a dicté mécaniquement les mots, mais au sens que Dieu est l'auteur principal de l'Écriture, les hagiographes (auteurs humains) étant les instruments de l'inspiration divine. L'inspiration signifie que Dieu a mû l'esprit de l'écrivain sacré et l'a assisté dans la rédaction, de telle sorte que tout ce qu'il affirme, l'Église l'affirme. Les genres littéraires, le style personnel, le contexte historique sont les moyens humains dont Dieu se sert, sans que cela nuise à la vérité divine du message. L'Écriture est infaillible dans son objet propre : le salut des âmes.",
+    adArguments: [
+      {
+        type: "primum",
+        content: "L'humanité de l'Écriture (style, contexte) n'empêche pas sa divinité. Le Verbe divin s'est incarné dans la chair humaine ; de même, la parole divine s'incarne dans des mots humains. L'inspiration divine garantit que le sens voulu par Dieu est transmis fidèlement.",
+      },
+      {
+        type: "secundum",
+        content: "L'Écriture seule (sola Scriptura) est insuffisante : elle-même renvoie à la Tradition orale (2 Th 2, 15) et au Magistère de l'Église (Ac 15). Mais l'Écriture, interprétée par l'Église, est bien la parole de Dieu et non un simple document humain.",
+      },
+    ],
+    references: [
+      "2 Tm 3, 16",
+      "2 P 1, 20-21",
+      "Trente, sess. IV (1546)",
+      "Dei Filius (1870)",
+      "ST Ia, q. 1, a. 10",
+    ],
+  },
+  {
+    slug: "fides-et-ratio-non-contradicantur",
+    question: "Utrum fides et ratio sibi invicem contradicere possint ?",
+    questionFr: "La foi et la raison peuvent-elles se contredire ?",
+    category: DisputatioCategory.APOLOGETIQUE,
+    source: "De Fide et Ratione",
+    objections: [
+      "Il semble que la foi et la raison se contredisent, car la raison exige des preuves tandis que la foi repose sur l'autorité divine, et de nombreux points de foi (Trinité, Incarnation, Eucharistie) dépassent radicalement la raison.",
+      "De plus, l'histoire des sciences montre un conflit permanent entre la foi et la raison (Galilée, Darwin).",
+    ],
+    sedContra:
+      "Le Concile Vatican I (Dei Filius, 1870) définit : « La foi et la raison ne peuvent jamais se contredire, car le même Dieu qui révèle les mystères et communique la foi a aussi déposé dans l'esprit humain la lumière de la raison ». Saint Augustin enseigne : « Je crois pour comprendre, et je comprends pour croire » (In Io. tr. 29).",
+    respondeo:
+      "La foi et la raison, étant toutes deux des dons de Dieu, ne peuvent se contredire en vérité. Leur domaine est distinct mais non séparé : la raison connaît les vérités accessibles à la lumière naturelle (existence de Dieu, loi naturelle), la foi connaît les mystères surnaturels (Trinité, Rédemption). La raison est le préambule de la foi (elle prouve que Dieu existe et peut parler), la foi perfectionne la raison (elle éclaire l'intelligence sur des réalités qu'elle ne pourrait atteindre seule). Les prétendus conflits viennent soit d'une raison qui dépasse ses limites (scientisme), soit d'une foi mal interprétée (fondamentalisme).",
+    adArguments: [
+      {
+        type: "primum",
+        content: "Le surnaturel n'est pas irrationnel : il est supra-rationnel. La Trinité ne se prouve pas par la raison, mais une fois révélée, elle ne contredit pas la raison. La raison peut montrer que la révélation est crédible (miracles, prophéties, témoignages) et que les mystères ne sont pas contradictoires.",
+      },
+      {
+        type: "secundum",
+        content: "Le conflit Galilée-Darwin n'est pas un conflit foi-raison mais un conflit interprétations. L'Église n'a jamais condamné la science comme telle, mais des interprétations philosophiques déguisées en science (matérialisme, évolutionnisme athée). L'Église a toujours été la mécène des sciences.",
+      },
+    ],
+    references: [
+      "Dt 6, 4",
+      "Dei Filius (1870)",
+      "Fides et Ratio (1998)",
+      "ST Ia, q. 1, a. 8",
+      "ST Ia, q. 2, a. 2",
     ],
   },
 ];
@@ -1448,6 +1732,130 @@ export const disputationesCrise: Disputatio[] = [
       "Mt 5, 28",
       "1 Co 6, 19",
       "ST IIa-IIae, q. 160",
+    ],
+  },
+  {
+    slug: "sepultura-ecclesiastica-debita-omnibus",
+    question: "Utrum sepultura ecclesiastica omnibus fidelibus sit debita ?",
+    questionFr: "La sépulture ecclésiastique est-elle due à tous les fidèles ?",
+    category: DisputatioCategory.DISCIPLINE,
+    source: "De Sacramentalibus",
+    objections: [
+      "Il semble que la sépulture ecclésiastique soit due à tous les fidèles, car l'Église est une mère miséricordieuse et ne peut refuser les derniers honneurs à ses enfants.",
+      "De plus, on ne peut juger de l'état d'une âme au moment de la mort, et le refus de sépulture semble un jugement téméraire.",
+    ],
+    sedContra:
+      "Le Code de Droit Canon (can. 1184, 1983) énumère ceux qui doivent être privés de sépulture ecclésiastique : les notoires apostats, hérétiques, schismatiques, ceux qui ont choisi la crémation par motif contraire à la foi, et les pécheurs publics manifestes. Le Concile de Trente (sess. XXV, De purgatorio) enseigne que les suffrages des vivants profitent aux défunts.",
+    respondeo:
+      "La sépulture ecclésiastique est un droit des fidèles décédés en communion avec l'Église, mais elle peut être refusée à ceux qui meurent dans un état de rupture publique et obstinée avec la foi. Le refus n'est pas un jugement sur l'âme du défunt (qui relève de Dieu seul), mais un acte de protection de la communauté ecclésiale : donner une sépulture ecclésiastique à un hérétique notoire ou un ennemi public de l'Église donnerait un mauvais exemple et semblerait approuver sa conduite. Le droit canon prévoit des nuances : l'exclu peut recevoir la bénédiction du prêtre si sa conversion est probable, et les enfants mineurs des exclus ont droit à la sépulture.",
+    adArguments: [
+      {
+        type: "primum",
+        content: "La miséricorde de l'Église s'exerce par les prières et les suffrages pour les défunts, non par l'approbation publique de ceux qui ont rejeté la foi. La sépulture ecclésiastique est un signe communautaire, pas un droit inconditionnel.",
+      },
+      {
+        type: "secundum",
+        content: "Le jugement sur la sépulture porte sur la conduite publique, non sur l'état de l'âme. Un pécheur public qui meurt sans signe de repentir ne peut recevoir les honneurs de l'Église, mais les prières privées pour son âme sont toujours permises et encouragées.",
+      },
+    ],
+    references: [
+      "CIC 1983, can. 1184",
+      "Trente, sess. XXV",
+      "ST Suppl., q. 71, a. 1",
+    ],
+  },
+  {
+    slug: "ieiunium-aecclesiasticum-obligare-pergat",
+    question: "Utrum ieiunium ecclesiasticum adhuc obliget post mutationes disciplinae ?",
+    questionFr: "Le jeûne ecclésiastique oblige-t-il encore après les changements disciplinaires ?",
+    category: DisputatioCategory.DISCIPLINE,
+    source: "De Sacramentalibus",
+    objections: [
+      "Il semble que le jeûne ecclésiastique n'oblige plus, car les lois disciplinaires de l'Église ont été considérablement assouplies après Vatican II, et la pratique du jeûne a presque disparu.",
+      "De plus, le jeûne est un moyen et non une fin, et la charité est préférable aux observances corporelles.",
+    ],
+    sedContra:
+      "Le Seigneur a dit : « Quand vous jeûnez, ne prenez pas un air triste comme les hypocrites » (Mt 6, 16), supposant que les disciples jeûneraient. Le Concile de Trente (sess. XIII, can. 2) enseigne que les lois de l'Église obligent en conscience. Le Code de 1917 (can. 1250-1254) prescrivait le jeûne pour le Carême, les Quatre-Temps et certaines vigiles.",
+    respondeo:
+      "Le jeûne ecclésiastique est une obligation de précepte qui engage en conscience. Les lois du jeûne et de l'abstinence ont été fixées par l'autorité ecclésiastique et ne peuvent être abolies par la négligence des fidèles. Même si les normes post-conciliaires ont réduit considérablement les jours de jeûne (mercredi des Cendres, Vendredi Saint), le principe du jeûne demeure : l'Église peut imposer des privations corporelles pour la purification de l'âme et la préparation aux sacrements. Le jeûne n'oppose pas à la charité : il en est le moyen. Le jeûne ouvre le cœur à Dieu, discipline les passions, et prépare à la prière.",
+    adArguments: [
+      {
+        type: "primum",
+        content: "L'assouplissement des lois de jeûne n'est pas l'abolition. Le Code de 1917 reste la référence pour les catholiques qui suivent la tradition. Le Carême reste un temps de jeûne et de pénitence, même si les formes ont varié.",
+      },
+      {
+        type: "secundum",
+        content: "La charité ne remplace pas le jeûne, elle en est le couronnement. Le Seigneur lui-même a jeûné quarante jours (Mt 4, 2) et a enseigné que certains démons ne chassent que par le jeûne (Mt 17, 20). Le jeûne est un acte de vertu, non un formalisme.",
+      },
+    ],
+    references: [
+      "Mt 6, 16-18",
+      "Mt 4, 2",
+      "Mt 17, 20",
+      "Trente, sess. XIII",
+      "CIC 1917, can. 1250-1254",
+    ],
+  },
+  {
+    slug: "crematio-sit-per-se-mala",
+    question: "Utrum crematio corporum sit per se mala ?",
+    questionFr: "La crémation des corps est-elle intrinsèquement mauvaise ?",
+    category: DisputatioCategory.DISCIPLINE,
+    source: "De Sacramentalibus",
+    objections: [
+      "Il semble que la crémation ne soit pas intrinsèquement mauvaise, car le corps est corruptible et retourne à la poussière de toute manière. L'Église elle-même a levé l'interdit de la crémation en 1963.",
+      "De plus, la crémation peut être un choix économique ou écologique légitime.",
+    ],
+    sedContra:
+      "Le Code de Droit Canon de 1917 (can. 1203 §1) interdisait la crémation sous peine d'excommunication. La pratique constante de l'Église depuis les origines a été l'inhumation, en imitation de la sépulture du Christ. Le Rituel Romain prescrivait l'inhumation comme la seule méthode chrétienne de sépulture.",
+    respondeo:
+      "La crémation n'est pas intrinsèquement mauvaise en soi (le corps étant corruptible), mais elle a été historiquement interdite par l'Église pour deux raisons : d'une part, elle était pratiquée par les païens comme un acte de rejet de la résurrection de la chair ; d'autre part, l'inhumation symbolise mieux le dépôt du corps dans l'attente de la résurrection (le grain semé en terre, 1 Co 15, 36-44). L'Église a permis la crémation en 1963 (Instruction Piam et Constantem) à condition qu'elle ne soit pas choisie par motif contraire à la foi (négation de la résurrection). La préférence demeure pour l'inhumation, qui est la pratique traditionnelle et symboliquement plus riche.",
+    adArguments: [
+      {
+        type: "primum",
+        content: "La crémation choisie par motif anti-chrétien (rejet de la résurrection, paganisme) reste moralement illicite. La permission de 1963 ne vise que les cas où la crémation n'a pas de signification contraire à la foi.",
+      },
+      {
+        type: "secundum",
+        content: "L'inhumation est préférable non parce que la crémation est intrinsèquement mauvaise, mais parce qu'elle est plus conforme au symbolisme de la résurrection. Le corps, temple du Saint-Esprit (1 Co 6, 19), mérite d'être traité avec respect, et l'inhumation exprime mieux ce respect eschatologique.",
+      },
+    ],
+    references: [
+      "1 Co 15, 36-44",
+      "1 Co 6, 19",
+      "CIC 1917, can. 1203",
+      "ST Suppl., q. 71, a. 11",
+    ],
+  },
+  {
+    slug: "votum-religionis-adhuc-obligare",
+    question: "Utrum vota religionis adhuc obligent post mutationes canonicae ?",
+    questionFr: "Les voeux religieux obligent-ils encore après les changements canoniques ?",
+    category: DisputatioCategory.DISCIPLINE,
+    source: "De Statu Religioso",
+    objections: [
+      "Il semble que les voeux religieux n'obligent plus après les changements de Vatican II, car la nouvelle législation canonique a assoupli les conditions de sortie de la vie religieuse.",
+      "De plus, un voeu fait dans un contexte historique particulier peut perdre sa force lorsque ce contexte change radicalement.",
+    ],
+    sedContra:
+      "Le Seigneur dit : « Ne jure pas du tout... mais que votre parole soit oui, oui, non, non » (Mt 5, 34-37). Saint Thomas enseigne (IIa-IIae, q. 88, a. 1) que le voeu est « une promesse faite à Dieu de quelque chose qui plaît à Dieu ». Le Concile de Trente (sess. XXV, De regularibus) enseigne que le voeu de religion est irrévocable.",
+    respondeo:
+      "Les voeux religieux (pauvreté, chasteté, obéissance) sont des promesses faites à Dieu qui engagent en conscience de manière perpétuelle. Le voeu, étant un acte de latrie (culte dû à Dieu), ne peut être délié que par l'autorité légitime (le pape ou son délégué). Les changements canoniques post-conciliaires n'ont pas aboli le voeu lui-même, mais ont facilité les procédures de dispense. Un religieux qui a fait des voeux perpétuels reste tenu par sa promesse même si les conditions extérieures changent. La crise religieuse post-conciliaire (hémorragie des vocations, abandon des voeux) est un scandale, mais n'invalide pas la nature du voeu.",
+    adArguments: [
+      {
+        type: "primum",
+        content: "La facilité de dispense canonique n'abolit pas l'obligation naturelle du voeu. Le religieux qui obtient une dispense du pape est légalement délié, mais moralement, la promesse faite à Dieu garde sa gravité. La dispense est un remède pastoral, non une permission de violer un serment.",
+      },
+      {
+        type: "secundum",
+        content: "Un voeu fait dans un contexte radicalement transformé (par exemple, une communauté qui abandonne sa règle) peut créer une tension légitime. Cependant, le voeu porte sur la substance (pauvreté, chasteté, obéissance), non sur les modalités extérieures. Le changement de forme n'invalide pas le fond.",
+      },
+    ],
+    references: [
+      "Mt 5, 34-37",
+      "Eccl. 5, 3-4",
+      "Trente, sess. XXV",
+      "ST IIa-IIae, q. 88, a. 1",
     ],
   },
 ];
