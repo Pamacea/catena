@@ -613,6 +613,7 @@ export const councils: Council[] = [
         content: "La paix et la trêve de Dieu doivent être observées.",
       },
     ],
+    relatedCouncils: ["lateran-ii"],
   },
   {
     slug: "lateran-ii",
@@ -634,7 +635,7 @@ export const councils: Council[] = [
     ],
     participants: 500,
     description:
-      "Ce concile a condamné l'antipape Anaclet II et ses partisans (schisme d'Anaclet), a réglementé le mariage et a réformé le costume ecclésiastique.",
+      "Convoqué par le pape Innocent II, ce concile mit fin au schisme provoqué par l'antipape Anaclet II (Pierre de Léon), élu par une faction de cardinaux opposée à Innocent II. Le roi Roger II de Sicile soutenait Anaclet, mais le concile confirma la légitimité d'Innocent II. Outre la résolution du schisme, le concile adopta des mesures disciplinaires importantes : interdiction des mariages clandestins (célébrés sans publicité ni bénédiction), règlement du costume des clercs, interdiction du port d'armes par les ecclésiastiques, et condamnation de l'usure. Le concile marqua le début de la réforme grégorienne tardive.",
     topics: ["Fin du schisme d'Anaclet", "Mariage clandestin", "Costume ecclésiastique"],
     canons: [
       {
@@ -655,6 +656,7 @@ export const councils: Council[] = [
         content: "Les clercs ne doivent pas porter d'armes, ni assister à des exécutions.",
       },
     ],
+    relatedCouncils: ["lateran-i", "lateran-iii"],
   },
   {
     slug: "lateran-iii",
@@ -676,7 +678,7 @@ export const councils: Council[] = [
     ],
     participants: 302,
     description:
-      "Ce concile a réformé la procédure d'élection papale (règle des deux tiers) et a condamné les Vaudois et les Cathares (hérésies du XIIe siècle).",
+      "Convoqué par le pape Alexandre III après plus de dix-huit ans de schisme (l'antipape Victor IV soutenu par l'empereur Frédéric Barberousse), ce concile fut un moment majeur de l'affirmation de la liberté de l'Église face à l'Empire. La règle des deux tiers pour l'élection papale fut établie pour empêcher les schismes futurs. Le concile condamna solennellement les deux grandes hérésies du XIIe siècle : les Vaudois (Pierre Valdo, prédication laïque, rejet de la hiérarchie) et les Cathares (dualisme, rejet des sacrements et de la matière). Il interdit l'usure sous peine d'anathème et de refus de sépulture ecclésiastique, et réglementa la protection des pèlerins et des marchands contre les abus seigneuriaux.",
     topics: ["Élection papale", "Condamnation des Vaudois et Cathares", "Réforme ecclésiastique"],
     canons: [
       {
@@ -698,6 +700,8 @@ export const councils: Council[] = [
           "Ceux qui prêtent à usure sont frappés d'anathème et ne peuvent recevoir de sépulture ecclésiastique.",
       },
     ],
+    relatedCouncils: ["lateran-ii", "lateran-iv"],
+    relatedHeresies: ["vaudois", "cathares"],
   },
   {
     slug: "lateran-iv",
@@ -785,21 +789,39 @@ export const councils: Council[] = [
     ],
     participants: 150,
     description:
-      "Ce concile a déposé l'empereur Frédéric II pour félonie et hérésie, et a ordonné une nouvelle croisade.",
-    topics: ["Déposition de Frédéric II", "Septième croisade"],
+      "Convoqué par le pape Innocent IV, ce concile se tint dans un contexte de conflit aigu entre la papauté et l'empereur Frédéric II de Hohenstaufen. Le pape accusa l'empereur de parjure, de persécution de l'Église, de sacrilège et de collusion avec le sultan. Le concile prononça la déposition solennelle de Frédéric II, invoquant sa juridiction spirituelle sur les souverains temporels. Il ordonna également une nouvelle croisade pour la Terre sainte et adopta des mesures de protection du clergé face aux exactions impériales. Ce concile marqua l'apogée de la théocratie pontificale médiévale.",
+    topics: ["Déposition de Frédéric II", "Septième croisade", "Conflit papauté-empire", "Protection du clergé"],
     canons: [
       {
         number: 1,
         title: "Déposition de Frédéric II",
         content:
-          "Frédéric II, empereur romain, est déposé pour avoir violé ses serments, persécuté l'Église et scandalisé les fidèles.",
+          "Frédéric II, empereur romain, est déposé pour avoir violé ses serments, persécuté l'Église et scandalisé les fidèles. Nous le déposons de toute dignité, honneur et pouvoir.",
+        anathema: true,
       },
       {
         number: 3,
         title: "Croisade",
         content: "Une croisade doit être prêchée pour la récupération de la Terre sainte.",
       },
+      {
+        number: 18,
+        title: "Protection du clergé",
+        content:
+          "Ceux qui persécutent les clercs et les ecclésiastiques sont excommuniés. Les biens de l'Église sont inviolables.",
+      },
     ],
+    decrees: [
+      {
+        title: "Déposition de l'empereur Frédéric II",
+        type: "disciplinary",
+        content:
+          "Le concile déclare Frédéric II déchu de l'empire et de tous ses droits. Il libère tous ses sujets de leur serment de fidélité et interdit qu'il soit élu à l'avenir.",
+        latin: "Fridericum a regno deponimus, et omnes qui ei fidelitatem juraverunt a juramento absolventes, universos a dominio ejus amovemus.",
+      },
+    ],
+    relatedCouncils: ["lyon-ii"],
+    relatedHeresies: ["fridricianisme"],
   },
   {
     slug: "lyon-ii",
@@ -821,14 +843,15 @@ export const councils: Council[] = [
     ],
     participants: 500,
     description:
-      "Ce concile a tenté la réunion avec l'Église orthodoxe (grecque) et a défini que le Saint-Esprit procède du Père et du Fils (Filioque). Il a également établi l'existence du purgatoire.",
-    topics: ["Union avec les Grecs", "Filioque", "Purgatoire", "Conclave"],
+      "Ce concile, réuni sous le pontificat de Grégoire X, visait principalement la réunion de l'Église latine et de l'Église grecque séparée depuis le schisme de 1054. Une délégation byzantine présidée par le métropolite Germanos de Constantinople assista aux sessions et accepta la procession du Saint-Esprit du Père « et du Fils » (Filioque). Le concile définit également dogmatiquement l'existence du purgatoire et institua le conclave pour l'élection papale. L'union fut cependant de courte durée, rejetée par le clergé byzantin dès 1277.",
+    topics: ["Union avec les Grecs", "Filioque", "Purgatoire", "Conclave", "Schisme de 1054"],
     canons: [
       {
         number: 1,
         title: "Filioque",
         content:
           "Le Saint-Esprit procède éternellement du Père et du Fils, non comme de deux principes, mais comme d'un seul.",
+        anathema: true,
       },
       {
         number: 2,
@@ -843,6 +866,22 @@ export const councils: Council[] = [
           "Les cardinaux doivent être enfermés dans une chambre close (cum clave) pour élire le pape, pour éviter les trop longs délais.",
       },
     ],
+    decrees: [
+      {
+        title: "Décret sur la procession du Saint-Esprit",
+        type: "dogmatic",
+        content:
+          "Le Saint-Esprit procède éternellement du Père et du Fils, et cette procession est une vérité de foi catholique que tous doivent tenir.",
+        latin: "Spiritus Sanctus ex Patre et Filio aeternaliter est, non tamquam ex duobus principiis, sed tamquam ex uno principio.",
+      },
+      {
+        title: "Décret sur le purgatoire",
+        type: "dogmatic",
+        content:
+          "Si les vrais pénitents quittent cette vie dans la charité avant d'avoir satisfait par des fruits dignes de pénitence pour ce qu'ils ont commis ou omis, leurs âmes sont purifiées par des peines purgatoires après la mort.",
+      },
+    ],
+    relatedCouncils: ["lyon-i", "constance-1414"],
     relatedHeresies: [],
   },
   {
@@ -866,11 +905,12 @@ export const councils: Council[] = [
     ],
     participants: 120,
     description:
-      "Ce concile a supprimé l'ordre du Temple, condamné les Béguards et Béguines, et ordonné la réforme des ordres religieux.",
+      "Convoqué par le pape Clément V à la demande du roi Philippe le Bel de France, ce concile fut principalement marqué par la suppression de l'Ordre du Temple, ordre militaire et religieux fondé en 1119 pour la protection des pèlerins en Terre sainte. Le roi de France avait fait arrêter les templiers en 1307, les accusant d'hérésie, d'idolâtrie et de pratiques obscènes. Malgré les protestations de nombreux templiers et l'absence de preuves solides, le concile, sous pression royale, prononça la suppression de l'ordre et le transfert de ses biens aux Hospitaliers de Saint-Jean. Le concile condamna également les Béguards et Béguines, mouvements mystiques accusés de quietisme, et ordonna la réforme des ordres religieux.",
     topics: [
       "Suppression de l'Ordre du Temple",
       "Condamnation des Béguards",
       "Réforme des ordres religieux",
+      "Pression de Philippe le Bel",
     ],
     canons: [
       {
@@ -914,8 +954,8 @@ export const councils: Council[] = [
     ],
     participants: 600,
     description:
-      "Ce concile a mis fin au Grand Schisme d'Occident (1378-1417) en déposant les antipapes et en élisant Martin V. Il a également condamné Jean Hus et Jérôme de Prague.",
-    topics: ["Fin du Grand Schisme", "Condamnation de Jean Hus", "Conciliarisme"],
+      "Le Concile de Constance fut convoqué pour résoudre la plus grave crise de l'Église médiévale : le Grand Schisme d'Occident (1378-1417), durant lequel deux, puis trois papes rivaux se disputaient la légitimité. Le concile déposa les trois prétendants (Jean XXIII, Benoît XIII, Grégoire XII) et fit élire Martin V par le conclave, rétablissant l'unité de l'Église. Il condamna également les enseignements de Jean Hus, prédicateur bohémien influencé par Wyclif, qui niait la transsubstantiation, le pouvoir ecclésiastique et la hiérarchie, et qui fut brûlé vif en 1415 malgré un sauf-conduit de l'empereur Sigismond. Le concile tenta d'affirmer la supériorité du concile sur le pape (conciliarisme) par le décret « Haec sancta », mais cette position fut finalement rejetée par le Latran V.",
+    topics: ["Fin du Grand Schisme", "Condamnation de Jean Hus", "Conciliarisme", "Réforme de l'Église"],
     canons: [
       {
         number: 1,
@@ -928,8 +968,31 @@ export const councils: Council[] = [
         title: "Condamnation de Hus",
         content:
           "Jean Hus, pour avoir enseigné des erreurs contre la foi, est condamné à être brûlé vif.",
+        anathema: true,
+      },
+      {
+        number: 15,
+        title: "Communion sous les deux espèces",
+        content:
+          "Le laïc peut recevoir la communion sous les deux espèces (pain et vin), mais l'Église peut décider autrement.",
       },
     ],
+    decrees: [
+      {
+        title: "Décret « Haec sancta » sur l'autorité du concile",
+        type: "dogmatic",
+        content:
+          "Ce concile légitimement assemblé au nom du Saint-Esprit, concile œcuménique et représentant l'Église militante, a immédiatement son pouvoir du Christ, et toute personne, de quelque dignité qu'elle soit, y compris le pape, est tenue de lui obéir en ce qui concerne l'extinction du schisme et la réforme de l'Église.",
+        latin: "Haec sancta synodus... declarat, quod ipsa in Spiritu Sancto legitime congregata, concilium generale faciens, et Ecclesiam catholicam militatem repraesentans, potestatem a Christo immediate habet, cui quilibet cuiuscumque status vel dignitatis, etiamsi papalis existat, obedire tenetur.",
+      },
+      {
+        title: "Décret « Frequens » sur la convocation des conciles",
+        type: "disciplinary",
+        content:
+          "Pour que le concile œcuménique ne soit pas retardé, le prochain concile se tiendra dans cinq ans, le suivant dans sept ans, puis tous les dix ans.",
+      },
+    ],
+    relatedCouncils: ["lyon-ii", "bale-1431", "lateran-v"],
     relatedHeresies: ["hussite"],
   },
   {
@@ -999,22 +1062,45 @@ export const councils: Council[] = [
     ],
     participants: 120,
     description:
-      "Dernier concile avant la Réforme protestante. Il a condamné le conciliarisme, tenté une réforme de l'Église, et défini l'immortalité de l'âme.",
-    topics: ["Condamnation du conciliarisme", "Réforme de l'Église", "Immortalité de l'âme"],
+      "Dernier concile avant la Réforme protestante (1517), le Latran V se tint dans un contexte de crise profonde : simonie, népotisme, abus de pouvoir ecclésiastique, et montée du conciliarisme. Convoqué par le pape Jules II en réponse au concile schismatique de Pise (1511) organisé par des cardinaux réformistes, il condamna solennellement le conciliarisme (thèse selon laquelle le concile est supérieur au pape) et réaffirma la primauté pontificale. Il tenta une réforme de l'Église par la bulle « Inter multiplices » imposant la prédication et le catéchisme, mais les décrets de réforme restèrent largement inappliqués. Le concile proclama l'immortalité de l'âme contre les averroïstes padouans, et autor l'imprimerie comme moyen de diffusion de la foi. Son échec à réformer l'Église ouvrit la voie à Luther.",
+    topics: [
+      "Condamnation du conciliarisme",
+      "Réforme de l'Église",
+      "Immortalité de l'âme",
+      "Préface à la Réforme",
+    ],
     canons: [
       {
         number: 1,
         title: "Contre le conciliarisme",
         content:
-          "Le concile tire son pouvoir du pape, qui seul peut le convoquer et le transférer. Le concile ne peut juger le pape.",
+          "Le concile tire son pouvoir du pape, qui seul peut le convoquer et le transférer. Le concile ne peut juger le pape. Le pape est au-dessus de tout concile.",
+        anathema: true,
       },
       {
         number: 3,
         title: "Immortalité de l'âme",
         content:
-          "L'âme rationnelle est immortelle, perpétuelle, et ne peut ni mourir ni périr avec le corps.",
+          "L'âme rationnelle est immortelle, perpétuelle, et ne peut ni mourir ni périr avec le corps. Toute opinion contraire est erronée.",
+        anathema: true,
+      },
+      {
+        number: 10,
+        title: "Prédication",
+        content:
+          "Tout prélat cathédral ou conventuel doit prêcher la parole de Dieu au peuple. S'il néglige, il sera puni par son supérieur.",
       },
     ],
+    decrees: [
+      {
+        title: "Bulle « Inter multiplices » sur la prédication",
+        type: "pastoral",
+        content:
+          "Les évêques et les supérieurs doivent veiller à ce que la parole de Dieu soit prêchée au peuple au moins les dimanches et fêtes. L'enseignement de la doctrine chrétienne est obligatoire.",
+      },
+    ],
+    relatedCouncils: ["constance-1414", "trente-1545-1563"],
+    relatedHeresies: ["conciliarisme"],
   },
   {
     slug: "trente-1545-1563",

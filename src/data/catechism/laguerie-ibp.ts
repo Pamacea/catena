@@ -679,6 +679,344 @@ Indulgences: remise de la peine temporelle due aux péchés pardonnés.`,
             },
           ],
         },
+        {
+          id: "article-confirmation",
+          part: 3,
+          article: 6,
+          title: "La Confirmation",
+          titleShort: "Sacrement de la Force",
+          content: `La confirmation est le sacrement qui donne le Saint-Esprit avec la plénitude de ses dons pour fortifier les baptisés dans la foi.
+
+Effets de la confirmation:
+- Réception des sept dons du Saint-Esprit (sagesse, intelligence, conseil, force, science, piété, crainte de Dieu)
+- Force pour confesser courageusement la foi
+- Perfection du caractère baptismal
+- Incorporation plus parfaite à l'Église
+
+Matière: saint chrême (huile + baume) consacré par l'évêque
+Formule: "Je te signe du signe de la croix et je te confirme avec le chrême du salut"
+Ministre: l'évêque seul (de droit divin)
+
+La confirmation ne peut être reçue qu'une seule fois, car elle imprime un caractère indélébile. Le confirmé devient "soldat du Christ" (miles Christi).`,
+          questions: [
+            {
+              id: "confirmation-quest-1",
+              question: "Qu'est-ce que la confirmation ?",
+              reponse:
+                "La confirmation est le sacrement qui donne le Saint-Esprit avec la plénitude de ses dons pour fortifier les baptisés dans la foi. Elle les rend soldats du Christ et leur donne la force de confesser leur foi.",
+              category: "sacrement-confirmation",
+              part: 3,
+              article: 6,
+              references: [
+                {
+                  type: "biblique",
+                  source: "Actes 8:14-17",
+                  citation: "Les apôtres imposèrent les mains et ils reçurent le Saint-Esprit.",
+                  url: "https://www.biblegateway.com/passage/?search=Actes+8%3A14-17&version=LSG",
+                },
+                {
+                  type: "theologique",
+                  source: "Concile de Trente",
+                  citation: "Session VII, Canons sur la confirmation",
+                  url: "https://www.vatican.va/archive/ITA0053/_INDEX.HTM",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: "article-extreme-onction",
+          part: 3,
+          article: 7,
+          title: "L'Extrême-Onction",
+          titleShort: "Onction des Malades",
+          content: `L'extrême-onction (ou onction des malades) est le sacrement qui donne la grâce spéciale aux fidèles en danger de mort par maladie ou vieillesse.
+
+Effets de l'extrême-onction:
+- Réconfort de l'âme et parfois du corps
+- Résistance contre les dernières tentations du démon
+- Rémission des péchés (si le malade ne peut se confesser)
+- Préparation à la vie éternelle
+
+Matière: huile d'olive bénite par l'évêque
+Formule: "Par cette onction sainte, que le Seigneur vous assiste par la grâce de l'Esprit-Saint"
+Ministre: prêtre seulement
+
+Il ne faut pas attendre le dernier moment pour appeler le prêtre. L'Église recommande d'informer le prêtre dès que la maladie est grave.`,
+          questions: [
+            {
+              id: "extreme-onction-quest-1",
+              question: "Qu'est-ce que l'extrême-onction ?",
+              reponse:
+                "L'extrême-onction est le sacrement qui donne la grâce spéciale aux fidèles en danger de mort. Il réconforte l'âme, donne la force contre les dernières tentations, et peut remettre les péchés.",
+              category: "sacrement-extreme-onction",
+              part: 3,
+              article: 7,
+              references: [
+                {
+                  type: "biblique",
+                  source: "Jacques 5:14-15",
+                  citation:
+                    "Quelqu'un est-il malade ? Qu'il appelle les prêtres de l'Église, et que les prêtres prient pour lui, en l'oignant d'huile au nom du Seigneur.",
+                  url: "https://www.biblegateway.com/passage/?search=Jacques+5%3A14-15&version=LSG",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: "article-mariage",
+          part: 3,
+          article: 8,
+          title: "Le Mariage",
+          titleShort: "Sacrement de Mariage",
+          content: `Le mariage chrétien est le sacrement par lequel un homme et une femme baptisés s'engagent mutuellement dans une union indissoluble pour se sanctifier et élever des enfants dans la foi.
+
+Propriétés du mariage chrétien:
+1. Unité: un seul homme, une seule femme (monogamie)
+2. Indissolubilité: l'union ne peut être rompue que par la mort
+3. Sacramentalité: chez les baptisés, le mariage est toujours un sacrement
+
+Fins du mariage:
+- Fin primaire: la procréation et l'éducation des enfants
+- Fin secondaire: l'aide mutuelle et le remède à la concupiscence
+
+Ministres du sacrement: les époux eux-mêmes (le prêtre est le témoin de l'Église)
+
+Les empêchements de mariage sont réglementés par le droit canonique (consanguinité, lien antérieur, disparité de culte, etc.).`,
+          questions: [
+            {
+              id: "mariage-quest-1",
+              question: "Qu'est-ce que le sacrement de mariage ?",
+              reponse:
+                "Le mariage est le sacrement par lequel un homme et une femme baptisés s'engagent dans une union indissoluble, une, et sanctifiée par le Christ, pour se sanctifier et élever des enfants dans la foi.",
+              category: "sacrement-mariage",
+              part: 3,
+              article: 8,
+              references: [
+                {
+                  type: "biblique",
+                  source: "Éphésiens 5:25-32",
+                  citation: "Le mariage est le symbole de l'union du Christ et de l'Église.",
+                  url: "https://www.biblegateway.com/passage/?search=%C3%89ph%C3%A9siens+5%3A25-32&version=LSG",
+                },
+                {
+                  type: "theologique",
+                  source: "Concile de Trente",
+                  citation: "Session XXIV, Doctrine sur le sacrement de mariage",
+                  url: "https://www.vatican.va/archive/ITA0053/_INDEX.HTM",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "commandements",
+      part: 7,
+      title: "Les Commandements",
+      description: "Les dix commandements de Dieu et les commandements de l'Église, loi morale de la vie chrétienne.",
+      articles: [
+        {
+          id: "article-commandements-dieu",
+          part: 7,
+          article: 1,
+          title: "Les Dix Commandements de Dieu",
+          titleShort: "Le Décalogue",
+          content: `Les dix commandements de Dieu (Décalogue) furent donnés par Dieu à Moïse sur le mont Sinaï (Exode 20). Ils sont la loi morale naturelle gravée dans le cœur de tout homme.
+
+Premier Tableau (devoirs envers Dieu):
+1. Un seul Dieu tu adoreras et aimeras parfaitement
+2. Le nom de Dieu en vain ne jureras
+3. Le jour du dimanche tu sanctifieras
+
+Second Tableau (devoirs envers le prochain):
+4. Père et mère honoreras
+5. Ne tueras point
+6. Le péché de chair tu ne commettras
+7. Tu ne déroberas point
+8. Ne diras point faux témoignage
+9. Le bien d'autrui ne désireras point
+10. La femme d'autrui ne convoiteras
+
+Le Christ a résumé toute la loi en deux commandements: "Tu aimeras le Seigneur ton Dieu de tout ton cœur" et "Tu aimeras ton prochain comme toi-même" (Matthieu 22:37-40).`,
+          questions: [
+            {
+              id: "commandements-dieu-quest-1",
+              question: "Quels sont les dix commandements de Dieu ?",
+              reponse:
+                "Les dix commandements sont: 1) Un seul Dieu tu adoreras, 2) Le nom de Dieu en vain ne jureras, 3) Le dimanche tu sanctifieras, 4) Père et mère honoreras, 5) Ne tueras point, 6) Le péché de chair tu ne commettras, 7) Tu ne déroberas point, 8) Pas de faux témoignage, 9) Le bien d'autrui ne désireras, 10) La femme d'autrui ne convoiteras.",
+              category: "commandements",
+              part: 7,
+              article: 1,
+              references: [
+                {
+                  type: "biblique",
+                  source: "Exode 20:1-17",
+                  citation: "Les dix commandements donnés à Moïse sur le Sinaï.",
+                  url: "https://www.biblegateway.com/passage/?search=Exode+20%3A1-17&version=LSG",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: "article-commandements-eglise",
+          part: 7,
+          article: 2,
+          title: "Les Commandements de l'Église",
+          titleShort: "Loi de l'Église",
+          content: `Les commandements de l'Église complètent le Décalogue et précisent les obligations minimales de la vie chrétienne.
+
+Les cinq commandements de l'Église:
+1. Assister à la messe entière le dimanche et les fêtes d'obligation
+2. Confesser ses péchés au moins une fois par an (précepte pascal)
+3. Communier au moins à Pâques (précepte pascal)
+4. Jeûner et faire abstinence les jours prescrits (Mercredi des Cendres, Vendredi Saint, vigiles)
+5. Subvenir aux besoins matériels de l'Église selon ses moyens
+
+Ces commandements obligent sous peine de péché grave (pour le 1er) ou de péché véniel. Ils sont des lois ecclésiastiques positives visant à aider les fidèles à vivre leur foi.`,
+          questions: [
+            {
+              id: "commandements-eglise-quest-1",
+              question: "Quels sont les commandements de l'Église ?",
+              reponse:
+                "Les commandements de l'Église sont: 1) Assister à la messe le dimanche, 2) Se confesser au moins une fois par an, 3) Communier à Pâques, 4) Jeûner et faire abstinence les jours prescrits, 5) Subvenir aux besoins de l'Église.",
+              category: "commandements",
+              part: 7,
+              article: 2,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "dons-saint-esprit",
+      part: 8,
+      title: "Les Dons du Saint-Esprit et la Vie Spirituelle",
+      description: "Les sept dons du Saint-Esprit, les péchés capitaux, et les moyens de persévérance.",
+      articles: [
+        {
+          id: "article-dons-esprit",
+          part: 8,
+          article: 1,
+          title: "Les Sept Dons du Saint-Esprit",
+          titleShort: "Dons du Saint-Esprit",
+          content: `Les sept dons du Saint-Esprit (Isaïe 11:2-3) sont des habitudes surnaturelles qui perfectionnent les vertus et rendent l'âme docile aux inspirations divines.
+
+Les sept dons:
+1. Sagesse — Goût des choses de Dieu, juger tout selon Dieu
+2. Intelligence — Pénétrer le sens des mystères révélés
+3. Conseil — Discerner la volonté de Dieu dans les cas difficiles
+4. Force — Résister avec courage aux ennemis de l'âme
+5. Science — Juger sainement des créatures par rapport à Dieu
+6. Piété — Cultiver un amour filial envers Dieu et les saints
+7. Crainte de Dieu — Redouter d'offenser Dieu et s'éloigner du péché
+
+Les dons sont supérieurs aux vertus car ils mettent l'âme en mouvement sous l'impulsion directe du Saint-Esprit, sans délibération humaine.`,
+          questions: [
+            {
+              id: "dons-esprit-quest-1",
+              question: "Quels sont les sept dons du Saint-Esprit ?",
+              reponse:
+                "Les sept dons sont: sagesse, intelligence, conseil, force, science, piété et crainte de Dieu. Ce sont des habitudes surnaturelles qui rendent l'âme docile aux inspirations du Saint-Esprit.",
+              category: "vertus",
+              part: 8,
+              article: 1,
+              references: [
+                {
+                  type: "biblique",
+                  source: "Isaïe 11:2-3",
+                  citation: "L'esprit de sagesse et d'intelligence, l'esprit de conseil et de force, l'esprit de science et de piété, et l'esprit de crainte de Dieu.",
+                  url: "https://www.biblegateway.com/passage/?search=Isa%C3%AFe+11%3A2-3&version=LSG",
+                },
+                {
+                  type: "theologique",
+                  source: "Thomas d'Aquin",
+                  citation: "Summa Theologiae, II-II, q. 8-9 (Dons du Saint-Esprit)",
+                  url: "https://www.corpusthomisticum.org/ii.html",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: "article-peches-capitaux",
+          part: 8,
+          article: 2,
+          title: "Les Péchés Capitaux",
+          titleShort: "Sept Péchés Capitaux",
+          content: `Les péchés capitaux sont les vices dont naissent tous les autres péchés. Ils sont appelés "capitaux" (du latin caput, tête) car ils sont la source et le principe des autres fautes.
+
+Les sept péchés capitaux:
+1. Orgueil — Amour désordonné de soi, refus de se soumettre à Dieu
+2. Avarice — Attachement désordonné aux biens matériels
+3. Luxure — Recherche désordonnée du plaisir charnel
+4. Envie — Tristesse du bien d'autrui
+5. Gourmandise — Désir désordonné de manger et boire
+6. Colère — Désir de vengeance, emportement
+7. Paresse — Tristesse face au bien spirituel, refus de la joie divine
+
+À chaque péché capital correspond une vertu qui le combat:
+- Orgueil → Humilité
+- Avarice → Générosité
+- Luxure → Chasteté
+- Envie → Charité
+- Gourmandise → Tempérance
+- Colère → Douceur
+- Paresse → Diligence`,
+          questions: [
+            {
+              id: "peches-capitaux-quest-1",
+              question: "Quels sont les péchés capitaux ?",
+              reponse:
+                "Les sept péchés capitaux sont: l'orgueil, l'avarice, la luxure, l'envie, la gourmandise, la colère et la paresse. Ils sont la source de tous les autres péchés.",
+              category: "peches",
+              part: 8,
+              article: 2,
+            },
+          ],
+        },
+        {
+          id: "article-moyens-perseverance",
+          part: 8,
+          article: 3,
+          title: "Les Moyens de Persévérance",
+          titleShort: "Persévérer dans la Grâce",
+          content: `Pour persévérer dans la grâce jusqu'à la mort, le chrétien dispose de moyens surnaturels indispensables.
+
+Les principaux moyens de persévérance:
+1. La prière — Demander chaque jour la grâce de Dieu
+2. Les sacrements — Se confesser et communier fréquemment
+3. La méditation — Réfléchir aux vérités éternelles
+4. La dévotion à la Sainte Vierge — Le chapelet quotidien
+5. La fuite des occasions de péché — S'éloigner des dangers
+6. La fréquentation des bons — S'entourer de compagnie vertueuse
+7. L'examen de conscience quotidien — Reconnaître ses fautes
+8. La mortification — Se priver de plaisirs légitimes par amour de Dieu
+
+Le Christ lui-même nous avertit: "Veillez et priez, pour ne pas entrer en tentation" (Matthieu 26:41). La persévérance est un don de Dieu, mais nous devons coopérer avec sa grâce.`,
+          questions: [
+            {
+              id: "perseverance-moyens-quest-1",
+              question: "Quels sont les moyens de persévérance ?",
+              reponse:
+                "Les moyens de persévérance sont: la prière, les sacrements, la méditation, la dévotion à la Sainte Vierge, la fuite des occasions de péché, la fréquentation des bons, l'examen de conscience quotidien et la mortification.",
+              category: "perseverance",
+              part: 8,
+              article: 3,
+              references: [
+                {
+                  type: "biblique",
+                  source: "Matthieu 26:41",
+                  citation: "Veillez et priez, pour ne pas entrer en tentation.",
+                  url: "https://www.biblegateway.com/passage/?search=Matthieu+26%3A41&version=LSG",
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
     {
@@ -1288,6 +1626,12 @@ La tempérance s'oppose aux vices capitaux: l'orgueil (excès d'amour-propre), l
     Purgatoire: "État de purification des âmes justes avant d'entrer au ciel",
     Infaillibilité: "Le Pape ne peut enseigner l'erreur en matière de foi et de mœurs",
     Ordre: "Sacrement donnant le pouvoir d'exercer les fonctions sacrées",
+    Confirmation: "Sacrement qui donne le Saint-Esprit avec la plénitude de ses dons",
+    "Extrême-Onction": "Sacrement qui réconforte les fidèles en danger de mort",
+    Mariage: "Sacrement d'union indissoluble entre un homme et une femme",
+    Décalogue: "Les dix commandements de Dieu donnés à Moïse sur le Sinaï",
+    "Péchés capitaux": "Les sept vices sources de tous les autres péchés: orgueil, avarice, luxure, envie, gourmandise, colère, paresse",
+    "Dons du Saint-Esprit": "Les sept dons: sagesse, intelligence, conseil, force, science, piété, crainte de Dieu",
   },
   references: [
     {

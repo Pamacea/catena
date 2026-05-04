@@ -1494,6 +1494,259 @@ export const heresies: Heresy[] = [
     ],
     keywords: ["oecumenisme", "unite chretienne", "mortalium animos", "dialogue", "nostra aetate", "unitatis redintegratio"],
   },
+  {
+    slug: "conciliarisme",
+    name: "Conciliarisme",
+    nameLatin: "Conciliarismus",
+    category: HeresyCategory.ECCLESIOLOGICAL,
+    century: 15,
+    origin: "Universités de Paris et Bâle",
+    promoter: "Jean Gerson, Pierre d'Ailly, Concile de Bâle",
+
+    description:
+      "Doctrine soutenant qu'un concile œcuménique est supérieur au pape en autorité, et que le pape peut être jugé et déposé par un concile.",
+    error:
+      "Le conciliarisme subordonne l'autorité pontificale à l'autorité conciliaire, inversant la hiérarchie ecclésiastique divinement établie. Il nie la primauté de juridiction du pape sur toute l'Église, y compris sur les conciles.",
+
+    historicalContext:
+      "Le conciliarisme naquit pendant le Grand Schisme d'Occident (1378-1417), période où deux puis trois papes se disputèrent la légitimité. Les théologiens de l'Université de Paris (Gerson, d'Ailly) proposèrent la réunion d'un concile pour résoudre la crise. Le Concile de Constance (1414-1418) déposa les papes rivaux et élut Martin V. Le décret Frequens (1417) établit la supériorité du concile sur le pape, position condamnée par les papes suivants.",
+    theologicalIssues:
+      "Le conciliarisme confond l'autorité administrative (le concile peut aider à résoudre une crise) avec l'autorité doctrinale (le pape est le chef suprême de l'Église). Le pape n'est pas soumis au concile : c'est lui qui convoque, préside et confirme les conciles œcuméniques.",
+    development:
+      "Le conciliarisme fut condamné par le pape Eugène IV (1439) et définitivement rejeté par le Concile Vatican I (1870), qui définit la primauté de juridiction du pape sur toute l'Église, y compris sur les conciles. Le conciliarisme subsiste sous des formes atténuées dans certains courants théologiques modernes.",
+
+    refutations: [
+      {
+        source: "Concile Vatican I, Pastor Æternus (1870)",
+        latin: "Si quis ergo dixerit, Romanum Pontificem habere tantummodo officium inspectionis vel directionis, non autem plenam et supremam potestatem iurisdictionis in universam Ecclesiam, non solum in rebus quæ ad fidem et mores, sed etiam in iis quæ ad disciplinam et regimen Ecclesiæ per totum orbem diffusæ pertinent; aut hanc potestatem esse ordinariam et immediatam in omnes ac singulas ecclesias, non vero super omnes ac singulas ecclesias et super omnes ac singulos pastores et fideles; anathema sit.",
+      },
+      {
+        source: "Pape Pie II, Exsecrabilis (1460)",
+        latin: "Exsecrabilis præsumptio quorundam qui ad imperium de apostolicæ sedis iudicio provocare contendunt.",
+      },
+    ],
+
+    condemnations: [
+      {
+        type: CondemnationType.PAPAL_BULL,
+        authority: "Pape Pie II",
+        year: 1460,
+        document: "Bulle « Exsecrabilis »",
+        canons: ["Condamnation de l'appel du pape au concile", "Le pape n'est pas soumis au jugement d'un concile"],
+      },
+      {
+        type: CondemnationType.COUNCIL,
+        authority: "Concile Vatican I",
+        year: 1870,
+        document: "Pastor Æternus, ch. 3",
+        canons: ["Le pape a juridiction plénière et suprême sur toute l'Église, tant en matière de foi et de mœurs que de discipline et de gouvernement"],
+      },
+    ],
+
+    connections: [
+      { slug: "gallicanisme", type: "succeeded" },
+      { slug: "modernisme", type: "related" },
+    ],
+    keywords: ["concile", "conciliarisme", "gerson", "grand schisme", "constance", "bâle", "supériorité du concile"],
+  },
+  {
+    slug: "febronianisme",
+    name: "Febronianisme",
+    nameLatin: "Febronianismus",
+    category: HeresyCategory.ECCLESIOLOGICAL,
+    century: 18,
+    origin: "Empire germanique",
+    promoter: "Justinus Febronius (Johann Nikolaus von Hontheim)",
+
+    description:
+      "Doctrine gallicane adaptée au contexte germanique, proposant de limiter l'autorité papale au profit des évêques et des Églises nationales.",
+    error:
+      "Le febronianisme reprend les erreurs du gallicanisme en les adaptant au Saint-Empire : le pape n'est qu'un « premier entre égaux », son autorité est limitée par les conciles et les évêques, et chaque Église nationale possède des droits propres.",
+
+    historicalContext:
+      "Le febronianisme tire son nom du pseudonyme « Justinus Febronius » utilisé par Johann Nikolaus von Hontheim, suffragant de Trèves, dans son ouvrage De Statu Ecclesiæ (1763). Ce livre influença profondément les princes allemands et les évêques réformateurs, alimentant les tendances anti-romaines du « joséphisme » autrichien. Hontheim se rétracta publiquement en 1778, mais ses idées continuèrent de circuler.",
+    development:
+      "Le febronianisme fut condamné par le pape Clément XIII (1764) et explicitement réfuté par Pie VI dans « Super soliditate » (1786). Il disparut progressivement après la Révolution française et les guerres napoléoniennes, mais ses idées réapparurent sous d'autres formes au XIXe siècle.",
+
+    refutations: [
+      {
+        source: "Pape Clément XIII, In Suprema (1764)",
+        latin: "Liber ille qui inscribitur 'De statu Ecclesiæ'... innumeris scatet erroribus, quibus sanctissima Christi Ecclesia evertitur.",
+      },
+      {
+        source: "Pape Pie VI, Super soliditate (1786)",
+      },
+    ],
+
+    condemnations: [
+      {
+        type: CondemnationType.ENCYCLICAL,
+        authority: "Pape Clément XIII",
+        year: 1764,
+        document: "In Suprema",
+        canons: ["Condamnation du livre De Statu Ecclesiæ", "Réaffirmation de la primauté pontificale"],
+      },
+      {
+        type: CondemnationType.ENCYCLICAL,
+        authority: "Pape Pie VI",
+        year: 1786,
+        document: "Super soliditate",
+        canons: ["Réfutation détaillée des erreurs febroniennes"],
+      },
+    ],
+
+    connections: [
+      { slug: "gallicanisme", type: "related" },
+      { slug: "conciliarisme", type: "preceded" },
+    ],
+    keywords: ["febronius", "hontheim", "allemagne", "joséphisme", "trèves", "eglisés nationales"],
+  },
+  {
+    slug: "traditionalisme-lamennais",
+    name: "Traditionalisme (Lamennais)",
+    nameLatin: "Traditionalismus",
+    category: HeresyCategory.ANTHROPOLOGICAL,
+    century: 19,
+    origin: "France",
+    promoter: "Félicité de Lamennais",
+
+    description:
+      "Doctrine niant la capacité de la raison naturelle à démontrer l'existence de Dieu et les fondements de la morale, réduisant toute connaissance à la tradition et au consentement universel.",
+    error:
+      "Le traditionalisme de Lamennais nie le pouvoir de la raison naturelle (lumen naturale rationis) de connaître Dieu par les créatures. Il affirme que sans la révélation primitive et la tradition, la raison humaine est incapable de démontrer l'existence de Dieu, la spiritualité de l'âme et la liberté humaine.",
+
+    historicalContext:
+      "Lamennais (1782-1854) fut d'abord un fervent défenseur de l'Église ultramontaine. Son ouvrage Essai sur l'indifférence en matière de religion (1817-1823) le rendit célèbre. Mais ses positions se radicalisèrent : il en vint à nier la raison naturelle, puis à défendre la liberté de conscience et la séparation de l'Église et de l'État. Son ouvrage Paroles d'un croyant (1834) fut condamné par Grégoire XVI (Mirari Vos, encyclique Singulari Nos).",
+    theologicalIssues:
+      "Le traditionalisme nie un principe fondamental de la théologie catholique : la raison naturelle peut démontrer l'existence de Dieu par les créatures (Vatican I, Dei Filius, ch. 2). Cette négation conduit au fidéisme (la foi sans raison) et au scepticisme (impossibilité de toute certitude naturelle).",
+
+    refutations: [
+      {
+        source: "Concile Vatican I, Dei Filius, ch. 2 (1870)",
+        latin: "Deum, rerum omnium principium et finem, naturali humanæ rationis lumine e creaturis certo cognosci posse, sancta declarat.",
+      },
+      {
+        source: "Pape Grégoire XVI, Singulari Nos (1834)",
+        latin: "Liber qui inscribitur 'Paroles d'un croyant'... opusculum... perniciosum, turbidum, et novarum rerum studiosum.",
+      },
+    ],
+
+    condemnations: [
+      {
+        type: CondemnationType.ENCYCLICAL,
+        authority: "Pape Grégoire XVI",
+        year: 1834,
+        document: "Singulari Nos",
+        canons: ["Condamnation des Paroles d'un croyant", "Réaffirmation de l'autorité de la raison naturelle"],
+      },
+      {
+        type: CondemnationType.COUNCIL,
+        authority: "Concile Vatican I",
+        year: 1870,
+        document: "Dei Filius, ch. 2",
+        canons: ["La raison naturelle peut certainement connaître Dieu par les créatures", "Le fidéisme est condamné"],
+      },
+    ],
+
+    connections: [
+      { slug: "modernisme", type: "succeeded" },
+      { slug: "indifferentisme", type: "related" },
+    ],
+    keywords: ["lamennais", "traditionalisme", "raison", "fideisme", "consentement universel", "paroles d'un croyant"],
+  },
+  {
+    slug: "americanisme",
+    name: "Américanisme",
+    nameLatin: "Americanismus",
+    category: HeresyCategory.ECCLESIOLOGICAL,
+    century: 19,
+    origin: "États-Unis",
+    promoter: "Abbé Isaac Hecker (fondateur des Paulistes)",
+
+    description:
+      "Tendance à adapter excessivement l'enseignement catholique aux valeurs libérales américaines : liberté de conscience, séparation Église-État, démocratie ecclésiale, minimisation de la vie intérieure au profit de l'action sociale.",
+    error:
+      "L'américanisme propose une nouvelle conception de la vie chrétienne où les vertus passives (obéissance, humilité, renoncement) seraient remplacées par des vertus actives (initiative, courage, action sociale), et où l'Église devrait s'adapter aux valeurs de la démocratie libérale moderne.",
+
+    historicalContext:
+      "L'abbé Hecker, ancien transcendentaliste converti au catholicisme, fonda la Société de Saint-Paul (les Paulistes) en 1858. Il prônait une adaptation du catholicisme à la culture américaine : dialogue avec les protestants, valorisation de l'initiative individuelle, attitude positive envers la liberté religieuse. Le pape Léon XIII condamna ces tendances dans l'encyclique Testem Benevolentiæ (1899).",
+    theologicalIssues:
+      "L'américanisme confond l'adaptation légitime aux circonstances locales (la méthode missionnaire) avec la compromission doctrinale. La liberté de conscience ne peut être érigée en droit absolu. Les vertus passives (obéissance, humilité, pauvreté) ne sont pas obsolètes mais fondamentales pour la vie chrétienne.",
+
+    refutations: [
+      {
+        source: "Pape Léon XIII, Testem Benevolentiæ (1899)",
+        latin: "Ne igitur eiusmodi doctrina, quam Americanismum appellant, ulterius serpat, opportunum ducimus... eam reprobare et damnamus.",
+      },
+    ],
+
+    condemnations: [
+      {
+        type: CondemnationType.ENCYCLICAL,
+        authority: "Pape Léon XIII",
+        year: 1899,
+        document: "Testem Benevolentiæ",
+        canons: [
+          "Condamnation de l'idée que les vertus passives sont obsolètes",
+          "Rejet de l'adaptation excessive aux valeurs libérales",
+          "Affirmation que l'Église n'a pas besoin de nouvelles méthodes adaptées à la modernité",
+        ],
+      },
+    ],
+
+    connections: [
+      { slug: "modernisme", type: "succeeded" },
+      { slug: "liberalisme-catholique", type: "related" },
+    ],
+    keywords: ["hecker", "paulistes", "liberté", "democratie", "action sociale", "testem benevolentiae"],
+  },
+  {
+    slug: "sillon",
+    name: "Le Sillon",
+    nameLatin: "Sillonismus",
+    category: HeresyCategory.ECCLESIOLOGICAL,
+    century: 20,
+    origin: "France",
+    promoter: "Marc Sangnier",
+
+    description:
+      "Mouvement politique-religieux français prônant la démocratie intégrale et la réconciliation du catholicisme avec la République, en subordonnant la doctrine sociale de l'Église aux idéaux républicains.",
+    error:
+      "Le Sillon confondait l'ordre naturel (la politique démocratique) et l'ordre surnaturel (la foi catholique), en prétendant fonder la démocratie sur l'Évangile et en remplaçant la charité chrétienne par la solidarité républicaine.",
+
+    historicalContext:
+      "Le Sillon fut fondé par Marc Sangnier en 1894 comme mouvement de jeunesse catholique engagé dans la démocratie. Il prônait la « démocratie intégrale » : la démocratie comme forme politique idéale, compatible et même exigée par le christianisme. Le mouvement s'opposait à l'Action française monarchiste. Le pape Pie X le condamna dans la lettre Notre Charge Apostolique (1910), reprochant au Sillon de subordonner la foi à la politique.",
+    theologicalIssues:
+      "Le Sillon faisait de la démocratie un absolu, oubliant que la forme de gouvernement est contingente et non révélée. Il substituait la fraternité humanitaire à la charité surnaturelle, et la solidarité sociale à la grâce sanctifiante. Le Christ n'est pas venu fonder une démocratie mais une Église.",
+
+    refutations: [
+      {
+        source: "Pape Pie X, Notre Charge Apostolique (1910)",
+        latin: "Enimvero, dilecti filii, Silloni, de quo sermo est, non alia in causa est, quam quod catholici viam inierint periculosam, per quam, securitatis vel commoditatis causa, a vera doctrina deflectunt.",
+      },
+    ],
+
+    condemnations: [
+      {
+        type: CondemnationType.ENCYCLICAL,
+        authority: "Pape Pie X",
+        year: 1910,
+        document: "Notre Charge Apostolique",
+        canons: [
+          "Le Sillon est condamné pour subordonner la foi à la politique",
+          "La démocratie n'est pas un absolu moral",
+          "Les catholiques ne doivent pas confondre l'action politique et l'apostolat religieux",
+          "Le Sillon est dissous en tant que mouvement catholique",
+        ],
+      },
+    ],
+
+    connections: [
+      { slug: "modernisme", type: "related" },
+      { slug: "liberalisme-catholique", type: "succeeded" },
+    ],
+    keywords: ["sillon", "sangnier", "démocratie", "république", "notre charge apostolique", "solidarité"],
+  },
 ];
 
 /**

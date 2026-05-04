@@ -438,6 +438,390 @@ Le curé d'Ars communiait chaque jour et encourageait ses paroissiens à faire d
             },
           ],
         },
+        {
+          id: "ars-bapteme",
+          part: 3,
+          article: 4,
+          title: "Le Baptême",
+          titleShort: "Renaissance Spirituelle",
+          content: `Le baptême est le premier et le plus nécessaire des sacrements. C'est la porte d'entrée de la vie chrétienne.
+
+Effets du baptême:
+- Efface le péché originel et tous les péchés actuels
+- Donne la grâce sanctifiante
+- Imprime un caractère indélébile
+- Nous fait enfants de Dieu et membres de l'Église
+
+Matière: l'eau (versement ou immersion)
+Formule: "Je te baptise au nom du Père, et du Fils, et du Saint-Esprit"
+
+Le curé d'Ars disait:
+- "Le baptême est la plus belle des naissances"
+- "Par le baptême, nous devenons les enfants de Dieu"
+- "Si les parents comprenaient ce que c'est que le baptême, ils en pleureraient de joie"
+
+Le baptême est nécessaire de nécessité de moyen: sans lui, nul ne peut entrer dans le royaume de Dieu (Jean 3:5). Les petits enfants qui meurent sans baptême ne voient pas Dieu.`,
+          questions: [
+            {
+              id: "ars-q15",
+              question: "Qu'est-ce que le baptême ?",
+              reponse:
+                "Le baptême est le sacrement qui efface le péché originel, donne la grâce sanctifiante, et nous fait enfants de Dieu et membres de l'Église. C'est la porte d'entrée de la vie chrétienne.",
+              category: "sacrement-bapteme",
+              part: 3,
+              article: 4,
+            },
+          ],
+        },
+        {
+          id: "ars-confirmation",
+          part: 3,
+          article: 5,
+          title: "La Confirmation",
+          titleShort: "Perfection du Baptême",
+          content: `La confirmation est le sacrement qui achève la grâce du baptême et nous donne le Saint-Esprit avec sa plénitude de dons.
+
+Effets de la confirmation:
+- Réception des sept dons du Saint-Esprit
+- Force pour confesser la foi chrétienne
+- Perfection du caractère baptismal
+- Soldats du Christ pour le combat spirituel
+
+Matière: le saint chrême (huile mêlée de baume) consacré par l'évêque
+Formule: "Je te signe du signe de la croix et je te confirme avec le chrême du salut, au nom du Père, et du Fils, et du Saint-Esprit"
+Ministre: l'évêque seul
+
+Le curé d'Ars disait: "La confirmation, c'est le sacrement qui fait les soldats du Christ. Sans la force du Saint-Esprit, on ne peut pas résister aux tentations du monde."
+
+On ne peut être confirmé qu'une seule fois, car le caractère est indélébile.`,
+          questions: [
+            {
+              id: "ars-q16",
+              question: "Qu'est-ce que la confirmation ?",
+              reponse:
+                "La confirmation est le sacrement qui achève la grâce du baptême et nous donne le Saint-Esprit avec ses sept dons. Elle nous rend soldats du Christ et nous donne la force de confesser notre foi.",
+              category: "sacrement-confirmation",
+              part: 3,
+              article: 5,
+            },
+          ],
+        },
+        {
+          id: "ars-extreme-onction",
+          part: 3,
+          article: 6,
+          title: "L'Extrême-Onction",
+          titleShort: "Sacrement des Malades",
+          content: `L'extrême-onction (onction des malades) est le sacrement qui fortifie l'âme et le corps dans le danger de mort.
+
+Effets de l'extrême-onction:
+- Confortation de l'âme dans l'épreuve
+- Résistance contre les dernières tentations
+- Rémission des péchés (si le malade ne peut se confesser)
+- Guérison du corps si cela est utile au salut
+
+Matière: huile d'olives bénite par l'évêque
+Formule: "Par cette onction sainte, que le Seigneur, dans sa grande miséricorde, vous assiste par la grâce de l'Esprit-Saint"
+
+Le curé d'Ars disait: "L'extrême-onction est le dernier sacrement que l'Église donne à ses enfants. C'est comme un dernier adieu de la mère Église."
+
+Il faut appeler le prêtre dès que la maladie est grave, et ne pas attendre le dernier moment.`,
+          questions: [
+            {
+              id: "ars-q17",
+              question: "Qu'est-ce que l'extrême-onction ?",
+              reponse:
+                "L'extrême-onction est le sacrement qui fortifie l'âme et le corps dans le danger de mort. Il donne la grâce de supporter la maladie, de résister aux dernières tentations, et parfois la guérison du corps.",
+              category: "sacrement-extreme-onction",
+              part: 3,
+              article: 6,
+            },
+          ],
+        },
+        {
+          id: "ars-ordre",
+          part: 3,
+          article: 7,
+          title: "L'Ordre",
+          titleShort: "Sacrement du Sacerdoce",
+          content: `L'ordre est le sacrement qui donne le pouvoir d'exercer les fonctions sacrées et confère la grâce pour les accomplir dignement.
+
+Degrés de l'ordre:
+- Diaconat: pouvoir de servir l'autel et prêcher
+- Prêtrise: pouvoir de consacrer, absoudre, administrer les sacrements
+- Épiscopat: plénitude du sacerdoce, pouvoir de confirmer et ordonner
+
+Le curé d'Ars disait:
+- "Le prêtre est l'homme de Dieu, il est l'homme des sacrements"
+- "Sans le prêtre, la mort et la passion du Christ ne serviraient à rien"
+- "Le prêtre continuera l'œuvre du Christ jusqu'à la fin du monde"
+
+Le sacerdoce est le plus grand don que Dieu puisse faire à un homme sur la terre. L'ordination imprime un caractère indélébile.`,
+          questions: [
+            {
+              id: "ars-q18",
+              question: "Qu'est-ce que le sacrement de l'ordre ?",
+              reponse:
+                "L'ordre est le sacrement qui donne le pouvoir d'exercer les fonctions sacrées. Le diacre peut servir l'autel, le prêtre peut consacrer et absoudre, l'évêque possède la plénitude du sacerdoce.",
+              category: "sacrement-ordre",
+              part: 3,
+              article: 7,
+            },
+          ],
+        },
+        {
+          id: "ars-mariage",
+          part: 3,
+          article: 8,
+          title: "Le Mariage",
+          titleShort: "Union Sacrée",
+          content: `Le mariage est le sacrement qui sanctifie l'union légitime d'un homme et d'une femme et leur donne la grâce de bien vivre ensemble.
+
+Propriétés du mariage chrétien:
+- Unité: un seul époux, une seule épouse
+- Indissolubilité: jusqu'à la mort, « ce que Dieu a joint, l'homme ne le sépare point »
+- Sacramentalité: le mariage des baptisés est un sacrement
+
+Obligations des époux:
+- Fidélité mutuelle
+- Assistance réciproque
+- Éducation chrétienne des enfants
+- Amour et respect mutuels
+
+Le curé d'Ars disait:
+- "Le mariage est un sacrement très saint, il ne faut pas le profaner"
+- "Les époux chrétiens doivent s'entraider pour aller au ciel"
+- "La famille chrétienne est le premier sanctuaire de la prière"
+
+Le sacrement de mariage est administré par les époux eux-mêmes, devant le prêtre qui le bénit au nom de l'Église.`,
+          questions: [
+            {
+              id: "ars-q19",
+              question: "Qu'est-ce que le sacrement de mariage ?",
+              reponse:
+                "Le mariage est le sacrement qui sanctifie l'union d'un homme et d'une femme. Il est un, indissoluble jusqu'à la mort, et donne la grâce de bien vivre ensemble et d'élever chrétiennement leurs enfants.",
+              category: "sacrement-mariage",
+              part: 3,
+              article: 8,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "commandements-ars",
+      part: 5,
+      title: "Les Commandements",
+      description: "Les dix commandements de Dieu et les commandements de l'Église.",
+      articles: [
+        {
+          id: "ars-commandements-dieu",
+          part: 5,
+          article: 1,
+          title: "Les Dix Commandements de Dieu",
+          titleShort: "Décalogue",
+          content: `Les dix commandements de Dieu sont la loi morale naturelle révélée par Dieu à Moïse sur le mont Sinaï.
+
+1. Un seul Dieu tu adoreras et aimeras parfaitement
+2. Le nom de Dieu en vain ne jureras
+3. Le jour du dimanche tu sanctifieras
+4. Père et mère honoreras
+5. Ne tueras point
+6. Le péché de chair tu ne commettras
+7. Tu ne déroberas point
+8. Ne diras point faux témoignage
+9. Le bien d'autrui ne désireras point
+10. La femme d'autrui ne convoiteras
+
+Le curé d'Ars disait:
+- "Les dix commandements sont la règle de notre vie"
+- "Dieu les a donnés pour nous rendre heureux, non pour nous tourmenter"
+- "Celui qui garde les commandements de Dieu est sur le chemin du ciel"
+
+Ces commandements se résument en deux: "Aime Dieu par-dessus tout et ton prochain comme toi-même" (Matthieu 22:37-40).`,
+          questions: [
+            {
+              id: "ars-q20",
+              question: "Quels sont les dix commandements de Dieu ?",
+              reponse:
+                "Les dix commandements sont: 1) Un seul Dieu tu adoreras, 2) Le nom de Dieu en vain ne jureras, 3) Le dimanche tu sanctifieras, 4) Père et mère honoreras, 5) Ne tueras point, 6) Le péché de chair tu ne commettras, 7) Tu ne déroberas point, 8) Pas de faux témoignage, 9) Le bien d'autrui ne désireras, 10) La femme d'autrui ne convoiteras.",
+              category: "commandements",
+              part: 5,
+              article: 1,
+            },
+            {
+              id: "ars-q21",
+              question: "Pourquoi Dieu a-t-il donné les commandements ?",
+              reponse:
+                "Dieu a donné les commandements pour nous rendre heureux et nous montrer le chemin du ciel. Ils sont la règle de la vie chrétienne et se résument en deux: aimer Dieu par-dessus tout et aimer son prochain comme soi-même.",
+              category: "commandements",
+              part: 5,
+              article: 1,
+            },
+          ],
+        },
+        {
+          id: "ars-commandements-eglise",
+          part: 5,
+          article: 2,
+          title: "Les Commandements de l'Église",
+          titleShort: "Loi de l'Église",
+          content: `Les commandements de l'Église sont des lois établies par l'autorité ecclésiastique pour aider les fidèles à observer les commandements de Dieu.
+
+1. Assister à la messe le dimanche et les fêtes d'obligation
+2. Confesser ses péchés au moins une fois par an
+3. Communier au temps pascal (à Pâques)
+4. Jeûner et faire abstinence les jours prescrits
+5. Ne pas faire gras les jours d'abstinence
+6. Ne pas célébrer de noces aux temps défendus
+7. Contribuer aux besoins de l'Église (dîme)
+
+Le curé d'Ars disait:
+- "Les commandements de l'Église sont la clef de la vie chrétienne"
+- "Celui qui ne va pas à la messe le dimanche fait une faute grave"
+- "La confession annuelle n'est pas un maximum, c'est un minimum"
+
+Il faut observer ces commandements non par contrainte, mais par amour pour Dieu et pour l'Église.`,
+          questions: [
+            {
+              id: "ars-q22",
+              question: "Quels sont les commandements de l'Église ?",
+              reponse:
+                "Les commandements de l'Église sont: 1) Assister à la messe le dimanche, 2) Se confesser au moins une fois par an, 3) Communier à Pâques, 4) Jeûner et faire abstinence les jours prescrits, 5) Ne pas faire gras les jours d'abstinence, 6) Contribuer aux besoins de l'Église.",
+              category: "commandements",
+              part: 5,
+              article: 2,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "vertus-prieres-ars",
+      part: 6,
+      title: "Les Vertus et la Prière",
+      description: "Les vertus théologales, cardinales, et les prières essentielles du chrétien.",
+      articles: [
+        {
+          id: "ars-vertus-theologales",
+          part: 6,
+          article: 1,
+          title: "Les Vertus Théologales",
+          titleShort: "Foi, Espérance, Charité",
+          content: `Les vertus théologales sont les fondements de la vie chrétienne. Elles ont Dieu pour objet direct.
+
+La Foi:
+- Nous fait croire tout ce que Dieu a révélé
+- Est une lumière surnaturelle
+- Sans la foi, on ne peut plaire à Dieu
+
+L'Espérance:
+- Nous fait attendre la vie éternelle
+- Confiance en la miséricorde de Dieu
+- Elle ne trompe pas (Romains 5:5)
+
+La Charité:
+- Amour de Dieu par-dessus tout
+- Amour du prochain pour l'amour de Dieu
+- La plus grande des vertus (1 Corinthiens 13:13)
+
+Le curé d'Ars disait: "La foi sans la charité est une lampe sans huile. L'espérance sans la charité est un navire sans gouvernail. La charité est la reine de toutes les vertus."`,
+          questions: [
+            {
+              id: "ars-q23",
+              question: "Quelles sont les vertus théologales ?",
+              reponse:
+                "Les vertus théologales sont la foi, l'espérance et la charité. La foi nous fait croire en Dieu, l'espérance nous fait attendre la vie éternelle, et la charité nous fait aimer Dieu et le prochain.",
+              category: "vertus-theologales",
+              part: 6,
+              article: 1,
+            },
+          ],
+        },
+        {
+          id: "ars-vertus-cardinales",
+          part: 6,
+          article: 2,
+          title: "Les Vertus Cardinales",
+          titleShort: "Prudence, Justice, Force, Tempérance",
+          content: `Les vertus cardinales sont les charnières (cardo = charnière) de la vie morale.
+
+La Prudence:
+- Discerne le bien du mal dans chaque situation
+- Guide les autres vertus
+- Demande conseil avant d'agir
+
+La Justice:
+- Donne à chacun ce qui lui est dû
+- Respecte les droits d'autrui
+- Rend à Dieu ce qui appartient à Dieu
+
+La Force:
+- Courage dans l'adversité
+- Patience dans les épreuves
+- Constance dans le bien
+
+La Tempérance:
+- Modère l'usage des plaisirs
+- Maîtrise les désirs déréglés
+- Cherche le juste milieu
+
+Le curé d'Ars disait: "Ces quatre vertus sont comme les quatre murs d'une maison. Si l'un manque, tout s'écroule."`,
+          questions: [
+            {
+              id: "ars-q24",
+              question: "Quelles sont les vertus cardinales ?",
+              reponse:
+                "Les vertus cardinales sont la prudence (discerner le bien du mal), la justice (donner à chacun son dû), la force (courage dans l'épreuve) et la tempérance (modération dans les plaisirs).",
+              category: "vertus-cardinales",
+              part: 6,
+              article: 2,
+            },
+          ],
+        },
+        {
+          id: "ars-prieres-essentielles",
+          part: 6,
+          article: 3,
+          title: "Les Prières Essentielles",
+          titleShort: "Prière Quotidienne",
+          content: `Le chrétien doit prier chaque jour. Voici les prières essentielles que tout catholique doit connaître.
+
+Prière du matin:
+- Acte de foi, d'espérance et de charité
+- Consécration à la Sainte Vierge
+
+Prière du soir:
+- Examen de conscience
+- Acte de contrition
+- Re merci pour les bienfaits du jour
+
+Les prières essentielles:
+- Le Notre Père (prié par le Christ lui-même)
+- L'Ave Maria (salutation angélique)
+- Le Gloire au Père
+- Le Credo (symbole des Apôtres)
+- Le Chapelet (méditation des mystères du Christ)
+
+Le curé d'Ars disait:
+- "La prière est la respiration de l'âme"
+- "Celui qui ne prie pas se damne"
+- "Un quart d'heure de méditation chaque jour est nécessaire"
+- "La prière est le trésor du pauvre et la richesse du riche"
+
+Le chrétien qui ne prie pas est comme un soldat sans armes sur le champ de bataille.`,
+          questions: [
+            {
+              id: "ars-q25",
+              question: "Quelles sont les prières essentielles du chrétien ?",
+              reponse:
+                "Les prières essentielles sont: le Notre Père, l'Ave Maria, le Gloire au Père, le Credo, et le Chapelet. Le chrétien doit prier matin et soir, et faire un examen de conscience chaque jour.",
+              category: "priere",
+              part: 6,
+              article: 3,
+            },
+          ],
+        },
       ],
     },
     {
@@ -631,6 +1015,17 @@ Le paradis dure pour l'éternité: sans fin.`,
     Contrition: "Douleur d'avoir offensé Dieu",
     "Vision béatifique": "Vision de Dieu face à face dans le paradis",
     Purgatoire: "État de purification pour les âmes justes avant d'entrer au ciel",
+    Baptême: "Sacrement qui efface le péché originel et nous fait enfants de Dieu",
+    Confirmation: "Sacrement qui achève la grâce du baptême et donne le Saint-Esprit",
+    "Extrême-Onction": "Sacrement qui fortifie l'âme et le corps dans le danger de mort",
+    Ordre: "Sacrement qui confère le pouvoir d'exercer les fonctions sacrées",
+    Mariage: "Sacrement qui sanctifie l'union légitime d'un homme et d'une femme",
+    Charité: "Amour de Dieu par-dessus tout et du prochain pour l'amour de Dieu",
+    Espérance: "Vertu qui nous fait attendre la vie éternelle et les moyens de l'obtenir",
+    Prudence: "Vertu cardinale qui discerne le bien du mal",
+    Justice: "Vertu cardinale qui donne à chacun ce qui lui est dû",
+    Force: "Vertu cardinale qui donne le courage de bien faire",
+    Tempérance: "Vertu cardinale qui modère les désirs déréglés",
   },
   references: [
     {

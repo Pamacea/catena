@@ -1942,6 +1942,91 @@ export const dogmas: Dogma[] = [
     pastoralApplication: "Les indulgences plénières peuvent être obtenues lors de certains moments : visite d'un cimetière (1-8 novembre pour les défunts), adoration eucharistique (au moins 30 minutes), lecture de la Sainte Écriture (au moins 30 minutes). Les conditions sont : confession sacramentelle, communion eucharistique, prière selon les intentions du Pape, et absence d'attachement au péché.",
     relatedDogmas: ["purgatoire", "satisfaction-christ", "merite-bonnes-oeuvres", "peche-originel"],
   },
+  {
+    slug: "providence-divine",
+    name: "Providence divine",
+    nameLatin: "Providentia Dei",
+    category: DogmaCategory.TRINITARIAN,
+    definition:
+      "Dieu gouverne et conserve par sa Providence tout ce qu'il a créé, atteignant avec force d'une extrémité du monde à l'autre et disposant tout avec douceur.",
+    explanation:
+      "La Providence divine est le plan éternel par lequel Dieu conduit toutes les créatures vers leur fin dernière. Rien n'arrive en dehors de la volonté divine ou sans sa permission. Dieu permet le mal physique pour un plus grand bien, mais il ne cause jamais le mal moral. La Providence s'exerce universellement sur toutes les créatures, et particulièrement sur l'homme créé à son image.",
+    sources: [
+      { authority: "Concile Vatican I", document: "Dei Filius, ch. 1", year: 1870 },
+      { authority: "Concile de Trente", document: "Session VI, ch. 1-2", year: 1547 },
+    ],
+    biblicalReferences: ["Sg 8:1", "Mt 6:26-30", "Mt 10:29-31", "Rm 8:28", "He 1:3"],
+    keywords: ["providence", "gouvernement divin", "plan de Dieu", "volonté divine", "permissif"],
+    historicalContext: "La doctrine de la Providence fut combattue par les épicuriens (Dieu indifférent), les manichéens (Dieu limité par le mal), et les déistes (Dieu absent). Le Concile Vatican I (1870) réaffirma solennellement que Dieu gouverne toutes choses par sa Providence, contre le naturalisme et le rationalisme.",
+    theologicalBasis: "La Providence divine se distingue en Providence générale (gouvernement de toutes les créatures) et Providence spéciale (conduite de l'homme vers la fin surnaturelle). La volonté de Dieu se distingue en volonté antécédente (Dieu veut le salut de tous) et volonté conséquente (Dieu dispose selon la liberté humaine). Dieu permet le mal physique (il ne le cause pas) mais il ne permet jamais le mal moral sans raison suffisante.",
+    councilDetails: [
+      { council: "Concile Vatican I", canon: "Dei Filius, ch. 1", decree: "Tout ce que Dieu a créé, il le gouverne et le conserve par sa Providence, qui 'atteint avec force d'une extrémité du monde à l'autre et dispose tout avec douceur' (Sg 8:1)." },
+    ],
+    canonicalReferences: ["CIC can. 204 §1"],
+    patristicFoundations: [
+      "Saint Augustin, De Civitate Dei : « La Providence divine gouverne l'univers entier avec une sagesse et une bonté infinies, même quand elle permet le mal. »",
+      "Saint Thomas d'Aquin, ST I, q. 22 : « Rien ne se produit en ce monde qui ne soit disposé par Dieu soit par action, soit par permission. »",
+    ],
+    pastoralApplication: "La confiance en la Providence est le fondement de l'espérance chrétienne. « Ne vous inquiétez pas pour demain » (Mt 6:34). Les épreuves de la vie sont permises par Dieu pour notre sanctification. La prière de demande exprime notre confiance filiale en la bonté du Père.",
+    relatedDogmas: ["sainte-trinite", "creation", "grace-actuelle"],
+  },
+  {
+    slug: "infaillibilite-pontificale",
+    name: "Infaillibilité pontificale",
+    nameLatin: "Infallibilitas Romani Pontificis",
+    category: DogmaCategory.ECCLESIOLOGICAL,
+    definition:
+      "Le Pontife Romain, lorsqu'il parle ex cathedra, jouit, par l'assistance divine qui lui a été promise en la personne de saint Pierre, de cette infaillibilité dont le divin Rédempteur a voulu que son Église fût dotée.",
+    explanation:
+      "L'infaillibilité est le don par lequel le pape est préservé de l'erreur lorsqu'il définit solennellement une doctrine de foi ou de mœurs, en vertu de sa suprême autorité apostolique, pour toute l'Église. Cette infaillibilité ne s'étend pas aux opinions personnelles du pape, ni à ses déclarations pastorales, ni à ses actes de gouvernement. Elle est conditionnelle : le pape doit parler ex cathedra (depuis la chaire de Pierre).",
+    sources: [
+      { authority: "Concile Vatican I", document: "Pastor Æternus, ch. 4", year: 1870 },
+    ],
+    biblicalReferences: ["Mt 16:18-19", "Lc 22:32", "Jn 21:15-17", "Mt 28:20"],
+    keywords: ["infaillibilité", "pape", "ex cathedra", "pierre", "vatican i"],
+    historicalContext: "Le dogme de l'infaillibilité pontificale fut défini lors du Concile Vatican I (1870), sous le pontificat de Pie IX. Il fut combattu par les gallicans et les vieux-catholiques (qui formèrent la séparation de 1870). La définition fut le fruit d'un long débat théologique sur les limites de l'autorité papale. Elle fut réaffirmée par Vatican II (Lumen Gentium §25).",
+    theologicalBasis: "L'infaillibilité pontificale repose sur la promesse du Christ à Pierre : « Tu es Pierre, et sur cette pierre je bâtirai mon Église » (Mt 16:18) et « J'ai prié pour toi, afin que ta foi ne défaille point » (Lc 22:32). L'infaillibilité n'est pas un attribut personnel du pape mais un charisme de l'Église dont le pape est l'instrument. Elle ne garantit pas la sainteté du pape, ni son impeccabilité, ni l'infaillibilité de ses opinions privées.",
+    councilDetails: [
+      { council: "Concile Vatican I", session: "Session IV (18 juillet 1870)", canon: "Pastor Æternus, ch. 4", decree: "Nous enseignons et définissons comme dogme divinement révélé que le Pontife Romain, lorsqu'il parle ex cathedra, c'est-à-dire lorsque, remplissant sa charge de pasteur et de docteur de tous les chrétiens, il définit, en vertu de sa suprême autorité apostolique, qu'une doctrine sur la foi ou les mœurs doit être tenue par toute l'Église, jouit, par l'assistance divine qui lui a été promise en la personne de la bienheureuse Pierre, de cette infaillibilité dont le divin Rédempteur a voulu que fût pourvue son Église." },
+    ],
+    canonicalReferences: ["CIC can. 331", "CIC can. 749 §1"],
+    patristicFoundations: [
+      "Saint Irénée de Lyon, Adversus Haereses : « Avec cette Église (de Rome), en raison de son origine plus excellente, doit s'accorder toute Église, c'est-à-dire les fidèles de partout. »",
+      "Saint Augustin : « Rome a parlé, la cause est entendue (Roma locuta est, causa finita est). »",
+    ],
+    pastoralApplication: "Le fidèle catholique est tenu d'accepter avec un assentiment de foi les définitions ex cathedra du pape. Depuis 1870, un seul dogme a été défini ex cathedra de cette manière : l'Assomption de Marie (1950). L'infaillibilité est un rempart contre l'erreur doctrinale et un gage de l'unité de foi dans l'Église.",
+    relatedDogmas: ["primauté-pierre", "eglise-catholique", "assomption"],
+  },
+  {
+    slug: "primauté-pierre",
+    name: "Primauté de saint Pierre",
+    nameLatin: "Primatus Petri",
+    category: DogmaCategory.ECCLESIOLOGICAL,
+    definition:
+      "Le bienheureux apôtre Pierre a reçu du Christ une primauté de juridiction véritable, propre, ordinaire et immédiate sur toute l'Église, primauté transmise à ses successeurs les évêques de Rome.",
+    explanation:
+      "Pierre fut choisi par le Christ comme chef visible des apôtres. Il reçut les clefs du Royaume (Mt 16:19), le pouvoir de paître le troupeau (Jn 21:15-17), et la charge de confirmer ses frères (Lc 22:32). Cette primauté est transmise par succession apostolique aux évêques de Rome. Le pape est donc le Vicaire du Christ, le Pasteur de toute l'Église, avec juridiction ordinaire, immédiate et suprême.",
+    sources: [
+      { authority: "Concile Vatican I", document: "Pastor Æternus, ch. 1-2", year: 1870 },
+      { authority: "Concile de Florence", document: "Laetentur Cœli", year: 1439 },
+      { authority: "Concile de Lyon II", document: "Profession de foi de Michel Paléologue", year: 1274 },
+    ],
+    biblicalReferences: ["Mt 16:18-19", "Jn 21:15-17", "Lc 22:32", "Ac 1:15-26", "Ac 15:7-12"],
+    keywords: ["pierre", "primauté", "pape", "évêque de rome", "clefs", "juridiction"],
+    historicalContext: "La primauté de Pierre fut reconnue dès les premiers siècles. Le Concile de Chalcédoine (451) salua le pape Léon Ier comme « Pierre qui parle par Léon ». Le schisme de 1054 opposa l'Église latine (reconnaissant la primauté papale) et l'Église byzantine (refusant cette primauté). Les conciles de Lyon II (1274) et de Florence (1439) tentèrent la réunion, mais sans succès durable.",
+    theologicalBasis: "La primauté de Pierre repose sur trois textes évangéliques fondamentaux : Mt 16:18-19 (les clefs du Royaume), Jn 21:15-17 (« Pais mes agneaux, pais mes brebis ») et Lc 22:32 (« Confirme tes frères »). Cette primauté est : véritable (non honorifique), propre (attribuée à Pierre personnellement), ordinaire (exercée en permanence), immédiate (sans intermédiaire) et épiscopale (s'étendant sur toute l'Église).",
+    councilDetails: [
+      { council: "Concile Vatican I", session: "Session IV", canon: "Pastor Æternus, ch. 1-2", decree: "Si quelqu'un dit que le bienheureux apôtre Pierre n'a pas été établi par le Christ Seigneur prince de tous les apôtres et chef visible de toute l'Église militante, ou qu'il n'a reçu qu'une primauté d'honneur et non de juridiction véritable et propre, qu'il soit anathème." },
+      { council: "Concile de Florence", canon: "Laetentur Cœli", decree: "Nous définissons que le Saint-Siège apostolique et le Pontife Romain ont la primauté sur le monde entier, et que le Pontife Romain est le successeur du bienheureux Pierre, prince des apôtres, et le vrai vicaire du Christ." },
+    ],
+    canonicalReferences: ["CIC can. 331", "CIC can. 332 §1"],
+    patristicFoundations: [
+      "Saint Léon Ier, Sermo 4 : « La dignité de Pierre ne disparaît pas dans son indignité. La fermeté de la foi, qui a été louée dans le prince des apôtres, ne cesse pas. »",
+      "Saint Ambroise, Expositio in Lucam : « Là où est Pierre, là est l'Église. »",
+    ],
+    pastoralApplication: "L'unité de l'Église repose sur la communion avec le pape, successeur de Pierre. Le fidèle catholique est tenu d'être en communion avec l'évêque de Rome. Les encycliques papales engagent l'autorité du magistère ordinaire. Le pape est le garant de l'unité de foi et de communion ecclésiale.",
+    relatedDogmas: ["infaillibilite-pontificale", "eglise-catholique", "sainte-trinite"],
+  },
 ];
 
 // ═══════════════════════════════════════════════

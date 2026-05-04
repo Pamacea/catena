@@ -1,5 +1,33 @@
 # Changelog
 
+## [0.2.5] — 2026-05-04
+
+### Nouveautés
+
+- **Catéchisme Pie X** : expansion de 19 à ~30 articles / 50+ questions — commandements, sacrements (Confirmation, Ordre, Mariage), vertus théologales & cardinales, péchés capitaux, 7 dons du Saint-Esprit, Église (4 notes), Purgatoire, Angelus, Rosaire, Chemin de Croix, glossaires
+- **Catéchisme Curé d'Ars** : enrichi de 14 à 22 articles / 25 questions — ajout de 5 sacrements (Baptême, Confirmation, Extrême-Onction, Ordre, Mariage), commandements de Dieu et de l'Église, vertus théologales & cardinales, prières essentielles
+- **Catéchisme Laguerie IBP** : enrichi de 15 à 21 articles / 21 questions — ajout de 3 sacrements (Confirmation, Extrême-Onction, Mariage), Décalogue complet, commandements de l'Église, 7 dons du Saint-Esprit, 7 péchés capitaux, moyens de persévérance
+- **Prières** : +11 nouvelles prières (Signe de Croix, Sous votre protection, Angelus, Reine du Ciel, Magnificat, Nunc Dimittis, Tantum Ergo, O Salutaris, Adoro Te Devote, Requiem Æternam, De Profundis) — total 28
+- **Dogmes** : 3 nouveaux dogmes (Providence divine, Infaillibilité pontificale, Primauté de saint Pierre)
+- **Hérésies** : 6 nouvelles hérésies historiques (Conciliarisme, Febronianisme, Traditionalisme/Lamennais, Américanisme, Le Sillon)
+- **Conciles** : enrichissement de 8 conciles — descriptions détaillées, décrets dogmatiques, connexions entre conciles (Lyon I-II, Vienne, Latran I-III-V, Constance)
+
+### Corrections
+
+- **Hérésies** : suppression de l'entrée dupliquée « gallicanisme » (clé dupliquée dans la chronologie)
+- **Types** : ajout de `sacrement-confirmation` et `commandements` à `CatechismCategory`
+
+### Fichiers
+
+- `src/data/catechism/pius-x.ts` — expansion massive (~1100 → ~1800 lignes)
+- `src/data/catechism/cure-d-ars.ts` — +395 lignes (sacrements, commandements, vertus)
+- `src/data/catechism/laguerie-ibp.ts` — +344 lignes (sacrements, commandements, dons)
+- `src/data/prayers/index.ts` — +806 lignes (11 nouvelles prières)
+- `src/data/dogmas/index.ts` — +85 lignes (3 dogmes)
+- `src/data/heresies/index.ts` — +253 lignes (6 hérésies, suppression doublon)
+- `src/data/councils/index.ts` — +114 lignes (8 conciles enrichis)
+- `src/data/types/catechism.ts` — +2 catégories
+
 ## [0.2.4] — 2026-05-04
 
 ### Nouveautés

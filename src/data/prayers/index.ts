@@ -1104,10 +1104,806 @@ export const graceBeforeMeals: Prayer = {
   tags: ["repas", "nourriture", "providence"],
 };
 
+export const signOfTheCross: Prayer = {
+  slug: "signe-de-croix",
+  name: "Signe de Croix",
+  nameLatin: "Signum Crucis",
+  category: PrayerCategory.ACTS,
+  origin: PrayerOrigin.APOSTOLIC,
+
+  description:
+    "Acte de profession de foi trinitaire, premier geste de tout chrétien. Il nous rappelle la Rédemption par la croix du Christ.",
+
+  sections: [
+    {
+      verses: [
+        {
+          latin: "In nomine Patris, et Filii, et Spiritus Sancti.",
+          french: "Au nom du Père, et du Fils, et du Saint-Esprit.",
+        },
+        {
+          latin: "Amen.",
+          french: "Ainsi soit-il.",
+        },
+      ],
+    },
+  ],
+
+  tags: ["trinite", "croix", "profession", "foi"],
+};
+
+export const subTuumPraesidium: Prayer = {
+  slug: "sub-tuum",
+  name: "Sous votre protection (Sub Tuum)",
+  nameLatin: "Sub tuum præsidium",
+  category: PrayerCategory.MARIAN,
+  origin: PrayerOrigin.PATRISTIC,
+  source: "Papyrus Rylands 470 (IIIe siècle), plus ancienne prière mariale connue",
+
+  description:
+    "La plus ancienne prière mariale connue, retrouvée sur un papyrus égyptien du IIIe siècle. Elle exprime la confiance du fidèle en la protection de la Mère de Dieu.",
+
+  sections: [
+    {
+      verses: [
+        {
+          latin: "Sub tuum præsidium confugimus,",
+          french: "Nous nous réfugions sous votre protection,",
+        },
+        {
+          latin: "sancta Dei Genetrix.",
+          french: "sainte Mère de Dieu.",
+        },
+        {
+          latin: "Nostras deprecationes ne despicias in necessitatibus,",
+          french: "Ne méprisez pas nos prières dans nos nécessités,",
+        },
+        {
+          latin: "sed a periculis cunctis",
+          french: "mais de tous les dangers",
+        },
+        {
+          latin: "libera nos semper,",
+          french: "délivrez-nous toujours,",
+        },
+        {
+          latin: "Virgo gloriosa et benedicta.",
+          french: "Vierge glorieuse et bénie.",
+        },
+        {
+          latin: "Amen.",
+          french: "Ainsi soit-il.",
+        },
+      ],
+    },
+  ],
+
+  tags: ["marie", "protection", "patristique", "papyrus"],
+};
+
+export const angelus: Prayer = {
+  slug: "angelus",
+  name: "L'Angelus",
+  nameLatin: "Angelus",
+  category: PrayerCategory.MARIAN,
+  origin: PrayerOrigin.MEDIEVAL,
+  source: "Institué au XIVe siècle, sonné trois fois par jour",
+
+  description:
+    "Prière rappelant le mystère de l'Incarnation. Récitée le matin, à midi et le soir. Pendant le Temps pascal, on lui substitue le Regina Cæli.",
+
+  sections: [
+    {
+      title: "Première strophe",
+      verses: [
+        {
+          latin: "V/: Angelus Domini nuntiavit Mariæ.",
+          french: "V/: L'ange du Seigneur annonça à Marie.",
+        },
+        {
+          latin: "R/: Et concepit de Spiritu Sancto.",
+          french: "R/: Et elle conçut du Saint-Esprit.",
+        },
+        {
+          latin: "Ave Maria...",
+          french: "Je vous salue, Marie...",
+        },
+      ],
+    },
+    {
+      title: "Deuxième strophe",
+      verses: [
+        {
+          latin: "V/: Ecce ancilla Domini.",
+          french: "V/: Voici la servante du Seigneur.",
+        },
+        {
+          latin: "R/: Fiat mihi secundum verbum tuum.",
+          french: "R/: Qu'il me soit fait selon votre parole.",
+        },
+        {
+          latin: "Ave Maria...",
+          french: "Je vous salue, Marie...",
+        },
+      ],
+    },
+    {
+      title: "Troisième strophe",
+      verses: [
+        {
+          latin: "V/: Et Verbum caro factum est.",
+          french: "V/: Et le Verbe s'est fait chair.",
+        },
+        {
+          latin: "R/: Et habitavit in nobis.",
+          french: "R/: Et il a habité parmi nous.",
+        },
+        {
+          latin: "Ave Maria...",
+          french: "Je vous salue, Marie...",
+        },
+      ],
+    },
+    {
+      title: "Oraison",
+      verses: [
+        {
+          latin: "V/: Ora pro nobis, sancta Dei Genetrix.",
+          french: "V/: Priez pour nous, sainte Mère de Dieu.",
+        },
+        {
+          latin: "R/: Ut digni efficiamur promissionibus Christi.",
+          french: "R/: Afin que nous soyons rendus dignes des promesses du Christ.",
+        },
+        {
+          latin: "Oremus: Gratiam tuam, quæsumus, Domine, mentibus nostris infunde: ut qui, Angelo nuntiante, Christi Filii tui Incarnationem cognovimus, per Passionem eius et crucem ad resurrectionis gloriam perducamur. Per eundem Christum Dominum nostrum.",
+          french: "Prions: Que ta miséricorde, Seigneur, se répande dans nos cœurs: nous qui, par l'ange, avons connu l'Incarnation de ton Fils, conduis-nous par sa Passion et par sa croix jusqu'à la gloire de la Résurrection. Par le même Jésus-Christ, notre Seigneur.",
+        },
+        {
+          latin: "R/: Amen.",
+          french: "R/: Amen.",
+        },
+      ],
+    },
+  ],
+
+  tags: ["incarnation", "ange", "marie", "midi", "matin", "soir"],
+};
+
+export const reginaCaeli: Prayer = {
+  slug: "regina-caeli",
+  name: "Reine du Ciel (Regina Cæli)",
+  nameLatin: "Regina Cæli",
+  category: PrayerCategory.MARIAN,
+  origin: PrayerOrigin.MEDIEVAL,
+  source: "Antienne mariale du Temps pascal, remplace l'Angelus",
+
+  description:
+    "Prière mariale joyeuse récitée pendant le Temps pascal à la place de l'Angelus. Elle chante la joie de la Résurrection.",
+
+  sections: [
+    {
+      verses: [
+        {
+          latin: "Regina cæli, lætare, alleluia,",
+          french: "Reine du ciel, réjouissez-vous, alléluia,",
+        },
+        {
+          latin: "quia quem meruisti portare, alleluia,",
+          french: "car celui que vous avez mérité de porter, alléluia,",
+        },
+        {
+          latin: "resurrexit, sicut dixit, alleluia.",
+          french: "est ressuscité, comme il l'avait dit, alléluia.",
+        },
+      ],
+    },
+    {
+      verses: [
+        {
+          latin: "Ora pro nobis Deum, alleluia.",
+          french: "Priez Dieu pour nous, alléluia.",
+        },
+      ],
+    },
+    {
+      title: "Oraison",
+      verses: [
+        {
+          latin: "Oremus: Deus, qui per resurrectionem Filii tui Domini nostri Iesu Christi mundum lætificare dignatus es: præsta, quæsumus, ut per eius Genetricem Virginem Mariam, perpetuæ capiamus gaudia vitæ. Per eundem Christum Dominum nostrum.",
+          french: "Prions: Dieu, qui par la résurrection de votre Fils, notre Seigneur Jésus-Christ, avez daigné réjouir le monde, faites, nous vous en prions, que par sa Mère, la Vierge Marie, nous parvenions aux joies de la vie éternelle. Par le même Christ, notre Seigneur.",
+        },
+      ],
+    },
+  ],
+
+  tags: ["paques", "resurrection", "joie", "alleluia", "marie"],
+};
+
+export const magnificat: Prayer = {
+  slug: "magnificat",
+  name: "Magnificat",
+  nameLatin: "Magnificat",
+  category: PrayerCategory.LITURGICAL,
+  origin: PrayerOrigin.BIBLICAL,
+  source: "Luc 1:46-55, cantique de la Vierge Marie lors de la Visitation",
+
+  description:
+    "Cantique de la Vierge Marie lors de la Visitation à sainte Élisabeth. C'est le plus beau cantique de louange de l'Écriture, récité quotidiennement dans les Vêpres.",
+
+  sections: [
+    {
+      verses: [
+        {
+          latin: "Magnificat anima mea Dominum,",
+          french: "Mon âme exalte le Seigneur,",
+        },
+        {
+          latin: "et exsultavit spiritus meus in Deo salutari meo,",
+          french: "et mon esprit exulte en Dieu, mon Sauveur,",
+        },
+        {
+          latin: "quia respexit humilitatem ancillæ suæ.",
+          french: "parce qu'il a regardé la bassesse de sa servante.",
+        },
+        {
+          latin: "Ecce enim ex hoc beatam me dicent omnes generationes,",
+          french: "Oui, désormais toutes les générations me diront bienheureuse,",
+        },
+        {
+          latin: "quia fecit mihi magna qui potens est,",
+          french: "car le Tout-Puissant a fait pour moi de grandes choses,",
+        },
+        {
+          latin: "et sanctum nomen eius.",
+          french: "et son nom est saint.",
+        },
+      ],
+    },
+    {
+      verses: [
+        {
+          latin: "Et misericordia eius a progenie in progenies",
+          french: "Sa miséricorde s'étend de génération en génération",
+        },
+        {
+          latin: "timentibus eum.",
+          french: "sur ceux qui le craignent.",
+        },
+        {
+          latin: "Fecit potentiam in brachio suo,",
+          french: "Il a fait preuve de puissance de son bras,",
+        },
+        {
+          latin: "dispersit superbos mente cordis sui.",
+          french: "il a dispersé les hommes au cœur orgueilleux.",
+        },
+      ],
+    },
+    {
+      verses: [
+        {
+          latin: "Deposuit potentes de sede,",
+          french: "Il a renversé les puissants de leurs trônes,",
+        },
+        {
+          latin: "et exaltavit humiles.",
+          french: "et il a élevé les humbles.",
+        },
+        {
+          latin: "Esurientes implevit bonis,",
+          french: "Il a rassasié de biens les affamés,",
+        },
+        {
+          latin: "et divites dimisit inanes.",
+          french: "et il a renvoyé les riches les mains vides.",
+        },
+      ],
+    },
+    {
+      verses: [
+        {
+          latin: "Suscepit Israel puerum suum,",
+          french: "Il a pris sous sa protection Israël, son serviteur,",
+        },
+        {
+          latin: "recordatus misericordiæ suæ,",
+          french: "se souvenant de sa miséricorde,",
+        },
+        {
+          latin: "sicut locutus est ad patres nostros,",
+          french: "comme il l'avait promis à nos pères,",
+        },
+        {
+          latin: "Abraham et semini eius in sæcula.",
+          french: "en faveur d'Abraham et de sa descendance pour toujours.",
+        },
+        {
+          latin: "Gloria Patri, et Filio, et Spiritui Sancto.",
+          french: "Gloire au Père, au Fils, et au Saint-Esprit.",
+        },
+        {
+          latin: "Sicut erat in principio, et nunc, et semper, et in sæcula sæculorum. Amen.",
+          french: "Comme il était au commencement, maintenant et toujours, et dans les siècles des siècles. Amen.",
+        },
+      ],
+    },
+  ],
+
+  tags: ["marie", "louange", "visitation", "vepres", "cantique"],
+};
+
+export const nuncDimittis: Prayer = {
+  slug: "nunc-dimittis",
+  name: "Maintenant, Seigneur (Nunc Dimittis)",
+  nameLatin: "Nunc Dimittis",
+  category: PrayerCategory.LITURGICAL,
+  origin: PrayerOrigin.BIBLICAL,
+  source: "Luc 2:29-32, cantique de Syméon au Temple",
+
+  description:
+    "Cantique du vieillard Syméon lors de la Présentation de Jésus au Temple. Récité quotidiennement dans les Complies (prière du soir).",
+
+  sections: [
+    {
+      verses: [
+        {
+          latin: "Nunc dimittis servum tuum, Domine,",
+          french: "Maintenant, Maître, tu peux laisser ton serviteur s'en aller",
+        },
+        {
+          latin: "secundum verbum tuum in pace,",
+          french: "en paix, selon ta parole.",
+        },
+        {
+          latin: "quia viderunt oculi mei salutare tuum,",
+          french: "Car mes yeux ont vu ton salut",
+        },
+        {
+          latin: "quod parasti ante faciem omnium populorum,",
+          french: "que tu as préparé face à tous les peuples,",
+        },
+        {
+          latin: "lumen ad revelationem gentium,",
+          french: "lumière pour éclairer les nations",
+        },
+        {
+          latin: "et gloriam plebis tuæ Israel.",
+          french: "et gloire de ton peuple Israël.",
+        },
+        {
+          latin: "Gloria Patri...",
+          french: "Gloire au Père...",
+        },
+      ],
+    },
+  ],
+
+  tags: ["symeon", "temple", "complies", "lumiere", "salut"],
+};
+
+export const tantumErgo: Prayer = {
+  slug: "tantum-ergo",
+  name: "Tantum Ergo",
+  nameLatin: "Tantum ergo Sacramentum",
+  category: PrayerCategory.EUCHARISTIC,
+  origin: PrayerOrigin.MEDIEVAL,
+  author: "Saint Thomas d'Aquin (1225-1274)",
+  source: "Hymne Pange Lingua, strophes 5-6",
+
+  description:
+    "Dernières strophes de l'hymne Pange Lingua composée par saint Thomas d'Aquin. Récitée lors de l'exposition et de la bénédiction du Saint-Sacrement.",
+
+  sections: [
+    {
+      verses: [
+        {
+          latin: "Tantum ergo Sacramentum",
+          french: "Devant ce Sacrement auguste",
+        },
+        {
+          latin: "veneremur cernui:",
+          french: "prosternons-nous dans l'adoration:",
+        },
+        {
+          latin: "et antiquum documentum",
+          french: "que l'ancienne figure",
+        },
+        {
+          latin: "novo cedat ritui:",
+          french: "cède au rite nouveau:",
+        },
+        {
+          latin: "præstet fides supplementum",
+          french: "que la foi supplée",
+        },
+        {
+          latin: "sensuum defectui.",
+          french: "à l'insuffisance de nos sens.",
+        },
+      ],
+    },
+    {
+      title: "Doxologie",
+      verses: [
+        {
+          latin: "Genitori, Genitoque,",
+          french: "Au Père et au Fils engendré,",
+        },
+        {
+          latin: "laus et iubilatio,",
+          french: "louange et jubilation,",
+        },
+        {
+          latin: "salus, honor, virtus quoque",
+          french: "salut, honneur, et puissance",
+        },
+        {
+          latin: "sit et benedictio:",
+          french: "et bénédiction:",
+        },
+        {
+          latin: "procedenti ab utroque",
+          french: "à celui qui procède de l'un et de l'autre",
+        },
+        {
+          latin: "compar sit laudatio. Amen.",
+          french: "soit une louange égale. Amen.",
+        },
+      ],
+    },
+    {
+      title: "Oraison",
+      verses: [
+        {
+          latin: "V/: Panem de cælo præstitisti eis.",
+          french: "V/: Vous leur avez donné un pain venu du ciel.",
+        },
+        {
+          latin: "R/: Omne delectamentum in se habentem.",
+          french: "R/: Qui contenait toute douceur.",
+        },
+        {
+          latin: "Oremus: Deus, qui nobis sub Sacramento mirabili passionis tuæ memoriam reliquisti: tribue, quæsumus, ita corporis et sanguinis tui sacra mysteria venerari, ut redemptionis tuæ fructum in nobis iugiter sentiamus.",
+          french: "Prions: O Dieu, qui nous avez laissé sous ce sacrement admirable le mémorial de votre Passion, accordez-nous, nous vous en prions, de vénérer si saintement les mystères de votre Corps et de votre Sang, que nous ressentions toujours en nous le fruit de votre Rédemption.",
+        },
+      ],
+    },
+  ],
+
+  tags: ["eucharistie", "adoration", "thomas", "pange-lingua", "sacrement"],
+};
+
+export const oSalutaris: Prayer = {
+  slug: "o-salutaris",
+  name: "Ô Hostie salutaire (O Salutaris)",
+  nameLatin: "O Salutaris Hostia",
+  category: PrayerCategory.EUCHARISTIC,
+  origin: PrayerOrigin.MEDIEVAL,
+  author: "Saint Thomas d'Aquin (1225-1274)",
+  source: "Hymne Verbum Supernum, strophes 5-6",
+
+  description:
+    "Dernières strophes de l'hymne Verbum Supernum de saint Thomas d'Aquin. Récitée lors de l'exposition du Saint-Sacrement.",
+
+  sections: [
+    {
+      verses: [
+        {
+          latin: "O salutaris Hostia,",
+          french: "Ô Hostie salutaire,",
+        },
+        {
+          latin: "quæ cæli pandis ostium:",
+          french: "qui ouvres la porte du ciel:",
+        },
+        {
+          latin: "bella premunt hostilia,",
+          french: "les guerres ennemies nous pressent,",
+        },
+        {
+          latin: "da robur, fer auxilium.",
+          french: "donne la force, porte secours.",
+        },
+      ],
+    },
+    {
+      title: "Doxologie",
+      verses: [
+        {
+          latin: "Uni trinoque Domino",
+          french: "Au Seigneur Un et Trine",
+        },
+        {
+          latin: "sit sempiterna gloria,",
+          french: "gloire éternelle,",
+        },
+        {
+          latin: "qui vitam sine termino",
+          french: "qui nous donne la vie sans fin",
+        },
+        {
+          latin: "nobis donet in patria.",
+          french: "dans la patrie céleste.",
+        },
+        {
+          latin: "Amen.",
+          french: "Ainsi soit-il.",
+        },
+      ],
+    },
+  ],
+
+  tags: ["eucharistie", "hostie", "thomas", "adoration"],
+};
+
+export const adoroTeDevote: Prayer = {
+  slug: "adoro-te-devote",
+  name: "Je vous adore avec dévotion (Adoro Te Devote)",
+  nameLatin: "Adoro te devote",
+  category: PrayerCategory.EUCHARISTIC,
+  origin: PrayerOrigin.MEDIEVAL,
+  author: "Saint Thomas d'Aquin (1225-1274)",
+
+  description:
+    "Prière eucharistique attribuée à saint Thomas d'Aquin, exprimant l'adoration de la présence réelle du Christ dans l'Eucharistie.",
+
+  sections: [
+    {
+      verses: [
+        {
+          latin: "Adoro te devote, latens Deitas,",
+          french: "Je vous adore avec dévotion, Divinité cachée,",
+        },
+        {
+          latin: "quæ sub his figuris vere latitas;",
+          french: "qui êtes vraiment cachée sous ces apparences;",
+        },
+        {
+          latin: "tibi se cor meum totum subiicit,",
+          french: "à vous mon cœur se soumet tout entier,",
+        },
+        {
+          latin: "quia te contemplans totum deficit.",
+          french: "car en vous contemplant il défaille tout entier.",
+        },
+      ],
+    },
+    {
+      verses: [
+        {
+          latin: "Visus, tactus, gustus in te fallitur,",
+          french: "La vue, le toucher, le goût en vous se trompent,",
+        },
+        {
+          latin: "sed auditu solo tuto creditur.",
+          french: "mais par l'ouïe seulement on croit avec certitude.",
+        },
+        {
+          latin: "Credo quidquid dixit Dei Filius:",
+          french: "Je crois tout ce qu'a dit le Fils de Dieu:",
+        },
+        {
+          latin: "nil hoc verbo Veritatis verius.",
+          french: "rien n'est plus vrai que cette parole de Vérité.",
+        },
+      ],
+    },
+    {
+      verses: [
+        {
+          latin: "In cruce latebat sola Deitas,",
+          french: "Sur la croix était cachée la seule Divinité,",
+        },
+        {
+          latin: "at hic latet simul et humanitas;",
+          french: "mais ici se cache aussi l'humanité;",
+        },
+        {
+          latin: "ambo tamen credens atque confitens,",
+          french: "cependant je crois l'une et l'autre, et je confesse",
+        },
+        {
+          latin: "peto quod petivit latro pœnitens.",
+          french: "je demande ce qu'a demandé le larron repentant.",
+        },
+      ],
+    },
+    {
+      verses: [
+        {
+          latin: "Plagas, sicut Thomas, non intueor:",
+          french: "Les plaies, comme Thomas, je ne les vois pas,",
+        },
+        {
+          latin: "Deum tamen meum te confiteor.",
+          french: "mais je vous confesse pour mon Dieu.",
+        },
+        {
+          latin: "Fac me tibi semper magis credere,",
+          french: "Faites-moi croire toujours davantage en vous,",
+        },
+        {
+          latin: "in te spem habere, te diligere.",
+          french: "avoir en vous mon espérance, vous aimer.",
+        },
+      ],
+    },
+    {
+      title: "Oraison",
+      verses: [
+        {
+          latin: "O memorial mortis Domini,",
+          french: "Ô mémorial de la mort du Seigneur,",
+        },
+        {
+          latin: "panis vivus, vitam præstans homini,",
+          french: "pain vivant donnant la vie à l'homme,",
+        },
+        {
+          latin: "præsta meæ menti de te vivere,",
+          french: "accordez à mon âme de vivre de vous,",
+        },
+        {
+          latin: "et te illi semper dulce sapere.",
+          french: "et qu'elle goûte toujours votre douceur.",
+        },
+        {
+          latin: "Amen.",
+          french: "Ainsi soit-il.",
+        },
+      ],
+    },
+  ],
+
+  tags: ["eucharistie", "adoration", "thomas", "presence-reelle"],
+};
+
+export const requiemAeternam: Prayer = {
+  slug: "requiem-aeternam",
+  name: "Donnez-leur le repos éternel (Requiem Æternam)",
+  nameLatin: "Requiem æternam dona eis, Domine",
+  category: PrayerCategory.OTHER,
+  origin: PrayerOrigin.MEDIEVAL,
+  source: "Liturgie des défunts",
+
+  description:
+    "Prière pour les défunts, demandant à Dieu de leur accorder le repos éternel et la lumière. Récitée pour les âmes du purgatoire.",
+
+  sections: [
+    {
+      verses: [
+        {
+          latin: "Requiem æternam dona eis, Domine,",
+          french: "Donnez-leur le repos éternel, Seigneur,",
+        },
+        {
+          latin: "et lux perpetua luceat eis.",
+          french: "et que la lumière sans fin les illumine.",
+        },
+        {
+          latin: "Requiescant in pace.",
+          french: "Qu'ils reposent en paix.",
+        },
+        {
+          latin: "Amen.",
+          french: "Ainsi soit-il.",
+        },
+      ],
+    },
+  ],
+
+  tags: ["morts", "purgatoire", "defunts", "repos", "lumiere"],
+};
+
+export const deProfundis: Prayer = {
+  slug: "de-profundis",
+  name: "Des profondeurs (De Profundis)",
+  nameLatin: "De Profundis (Psalmus 129)",
+  category: PrayerCategory.OTHER,
+  origin: PrayerOrigin.BIBLICAL,
+  source: "Psaume 129 (130)",
+
+  description:
+    "Psaume pénitentiel très récité pour les défunts. Il exprime l'espérance dans la miséricorde divine.",
+
+  sections: [
+    {
+      verses: [
+        {
+          latin: "De profundis clamavi ad te, Domine:",
+          french: "Du fond de l'abîme je crie vers vous, Seigneur:",
+        },
+        {
+          latin: "Domine, exaudi vocem meam.",
+          french: "Seigneur, écoutez ma voix.",
+        },
+        {
+          latin: "Fiant aures tuæ intendentes",
+          french: "Que vos oreilles soient attentives",
+        },
+        {
+          latin: "in vocem deprecationis meæ.",
+          french: "à la voix de ma supplication.",
+        },
+        {
+          latin: "Si iniquitates observaveris, Domine:",
+          french: "Si vous observez les iniquités, Seigneur:",
+        },
+        {
+          latin: "Domine, quis sustinebit?",
+          french: "Seigneur, qui subsistera?",
+        },
+        {
+          latin: "Quia apud te propitiatio est:",
+          french: "Car près de vous est la miséricorde:",
+        },
+        {
+          latin: "et propter legem tuam sustinui te, Domine.",
+          french: "et c'est en vue de votre loi que je vous attends, Seigneur.",
+        },
+        {
+          latin: "Sustinuit anima mea in verbo eius:",
+          french: "Mon âme a mis son espérance dans sa parole:",
+        },
+        {
+          latin: "speravit anima mea in Domino.",
+          french: "mon âme a espéré dans le Seigneur.",
+        },
+        {
+          latin: "A custodia matutina usque ad noctem:",
+          french: "Depuis la veille du matin jusqu'à la nuit:",
+        },
+        {
+          latin: "speret Israel in Domino.",
+          french: "qu'Israël espère dans le Seigneur.",
+        },
+      ],
+    },
+    {
+      title: "Gloire au Père",
+      verses: [
+        {
+          latin: "Gloria Patri, et Filio, et Spiritui Sancto.",
+          french: "Gloire au Père, au Fils, et au Saint-Esprit.",
+        },
+        {
+          latin: "Sicut erat in principio, et nunc, et semper, et in sæcula sæculorum. Amen.",
+          french: "Comme il était au commencement, maintenant et toujours, et dans les siècles des siècles. Amen.",
+        },
+      ],
+    },
+    {
+      title: "Oraison pour les défunts",
+      verses: [
+        {
+          latin: "V/: Requiem æternam dona eis, Domine.",
+          french: "V/: Donnez-leur le repos éternel, Seigneur.",
+        },
+        {
+          latin: "R/: Et lux perpetua luceat eis.",
+          french: "R/: Et que la lumière sans fin les illumine.",
+        },
+        {
+          latin: "V/: Requiescant in pace.",
+          french: "V/: Qu'ils reposent en paix.",
+        },
+        {
+          latin: "R/: Amen.",
+          french: "R/: Amen.",
+        },
+      ],
+    },
+  ],
+
+  tags: ["defunts", "purgatoire", "psaume", "penitence", "misericorde"],
+};
+
 export const prayers: Prayer[] = [
   ourFather,
   hailMary,
   gloryBe,
+  signOfTheCross,
   apostlesCreed,
   niceneCreed,
   actOfContrition,
@@ -1116,8 +1912,18 @@ export const prayers: Prayer[] = [
   actOfCharity,
   hailHolyQueen,
   memorare,
+  subTuumPraesidium,
+  angelus,
+  reginaCaeli,
   saintMichaelPrayer,
   animaChristi,
+  tantumErgo,
+  oSalutaris,
+  adoroTeDevote,
+  magnificat,
+  nuncDimittis,
+  requiemAeternam,
+  deProfundis,
   morningOffering,
   eveningPrayer,
   graceBeforeMeals,
