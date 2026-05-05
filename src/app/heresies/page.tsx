@@ -91,7 +91,7 @@ export default async function DoctrinePage({ searchParams }: DoctrinePageProps) 
               <Link
                 key={heresy.slug}
                 href={`/heresies/${heresy.slug}`}
-                className="group flex items-center gap-4 p-3 rounded-xs border border-transparent hover:border-gold-400/40 hover:bg-parchment-50/50 transition-all"
+                className="group flex items-center gap-4 p-3 rounded-xs border border-transparent hover:border-gold-400/40 hover:bg-parchment-50/50 card-lift btn-press"
               >
                 {/* Siècle */}
                 <span className="text-xs text-ink-500 w-20 flex-shrink-0">

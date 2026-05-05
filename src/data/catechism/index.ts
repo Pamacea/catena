@@ -1,7 +1,30 @@
 /**
  * Index des données de catéchisme
- * Système unifié utilisant CatechismMetadata
+ *
+ * Deux systèmes coexistent :
+ * - Lessons (CatechismMetadata) : articles structurés en parties, avec contenu détaillé
+ * - Q&A (Catechism) : questions-réponses format catéchisme traditionnel
+ *
+ * Les deux sont accessibles depuis ce module.
  */
+
+// --- Re-exports du système Q&A (questions-réponses) ---
+export {
+  catechisms,
+  getCatechismById,
+  getCatechismByType,
+  getQuestionById,
+  getQuestionsByCategory,
+  searchCatechisms,
+  CatechismType,
+  QuestionCategory,
+} from "../catechisms";
+
+export type {
+  Catechism,
+  CatechismQuestion,
+  QuestionReference,
+} from "../catechisms";
 
 import type { CatechismMetadata, CatechismArticle } from "../types/catechism";
 import { laguerieCatechism } from "./laguerie";

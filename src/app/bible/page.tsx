@@ -150,7 +150,7 @@ function BookLink({ book }: { book: (typeof bibleBooks)[number] }) {
   return (
     <Link
       href={`/bible/${book.id}`}
-      className="group flex items-center gap-3 px-4 py-3 border-l-2 border-gold-300 hover:border-gold-600 hover:bg-stone-50 transition-all"
+      className="group flex items-center gap-3 px-4 py-3 border-l-2 border-gold-300 hover:border-gold-600 hover:bg-stone-50 card-lift btn-press"
     >
       <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center text-xs font-medium text-stone-50 bg-gold-600 group-hover:bg-gold-700 transition-colors">
         {book.abbreviation}
@@ -179,7 +179,7 @@ function FeaturedPassageLink({
   return (
     <Link
       href={`/bible/${book}/${chapter}`}
-      className="group block p-6 border-l-2 border-gold-300 hover:border-gold-600 hover:bg-stone-50/50 transition-all"
+      className="group block p-6 border-l-2 border-gold-300 hover:border-gold-600 hover:bg-stone-50/50 card-lift btn-press"
     >
       <p className="font-serif text-lg text-ink-900 group-hover:text-gold-700 mb-2">{title}</p>
       <p className="text-sm text-ink-600 italic">{excerpt}</p>

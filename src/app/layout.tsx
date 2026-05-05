@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, EB_Garamond } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
+import { PageTransition } from "@/components/layout";
 import "./globals.css";
 
 const inter = Inter({
@@ -56,7 +57,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         className={`${inter.variable} ${ebGaramond.variable} font-sans antialiased bg-stone-200 text-ink-900`}
       >
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
         <Analytics mode="production" />
       </body>
     </html>

@@ -51,9 +51,8 @@ function getCouncilsByEra(eraId: string) {
 
 export default function TimelinePage() {
   return (
-    <div className="min-h-screen">
-      <main className="px-6 py-12">
-        <div className="max-w-2/3 mx-auto">
+    <div>
+      <div className="max-w-2/3 mx-auto">
           {/* Era navigation */}
           <nav className="flex flex-wrap gap-2 mb-12 justify-center items-center">
             <Link
@@ -89,7 +88,7 @@ export default function TimelinePage() {
                   </div>
 
                   {/* Councils */}
-                  <div className="space-y-12">
+                  <div className="space-y-12 stagger">
                     {eraCouncils.map(council => (
                       <CouncilItem
                         key={council.slug}
@@ -104,8 +103,6 @@ export default function TimelinePage() {
           </div>
 
         </div>
-      </main>
-
     </div>
   );
 }
@@ -121,7 +118,7 @@ function CouncilItem({
   return (
     <Link
       href={`/heresies/councils/${council.slug}`}
-      className="group block border border-gold-400/30 rounded-xs bg-stone-50 p-6 hover:border-gold-500/50 hover:shadow-md transition-all"
+      className="group block border border-gold-400/30 rounded-xs bg-stone-50 p-6 hover:border-gold-500/50 card-lift btn-press"
     >
       <div className="flex items-start gap-4">
         <span className={`flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xs text-white text-sm font-bold ${eraColor}`}>

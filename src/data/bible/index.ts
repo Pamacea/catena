@@ -4,6 +4,8 @@
  * Organisation des livres bibliques selon la Vulgate.
  */
 
+import { z } from "zod";
+
 export enum Testament {
   OLD = "OLD",
   NEW = "NEW",
@@ -37,6 +39,30 @@ export interface BibleChapter {
   verses: number;
   vulgateVerses?: number;
 }
+
+/**
+ * Zod schemas for runtime validation of Bible data at data boundaries.
+ */
+const testamentSchema = z.nativeEnum(Testament);
+const genreSchema = z.nativeEnum(Genre);
+
+export const bibleBookSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  nameLatin: z.string().min(1),
+  testament: testamentSchema,
+  genre: genreSchema,
+  chapters: z.number().int().positive(),
+  abbreviation: z.string().min(1),
+  vulgateChapters: z.array(z.number().int()).optional(),
+});
+
+export const bibleChapterSchema = z.object({
+  bookId: z.string().min(1),
+  chapter: z.number().int().positive(),
+  verses: z.number().int().positive(),
+  vulgateVerses: z.number().int().optional(),
+});
 
 /**
  * Liste des livres de la Bible (Vulgate)
@@ -732,3 +758,11 @@ export const getBooksByTestament = (testament: Testament): BibleBook[] =>
 
 export const getBooksByGenre = (genre: Genre): BibleBook[] =>
   bibleBooks.filter(book => book.genre === genre);
+
+/**
+ * Runtime validation — runs once at module load.
+ * Ensures all 73 books conform to the schema before any consumer reads them.
+ */
+for (const book of bibleBooks) {
+  bibleBookSchema.parse(book);
+}

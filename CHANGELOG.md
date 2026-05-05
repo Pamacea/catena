@@ -1,5 +1,41 @@
 # Changelog
 
+## [0.2.7] — 2026-05-05
+
+### Nouveautés
+
+- **Système d'animations** : animations CSS complètes — page transitions (slide-up/down), stagger de composition (apparition en cascade), card-lift (hover avec ombre), btn-press (scale au clic), link-underline
+- **PageTransition** : composant de transition de page avec détection de changement de route via pathname, animations d'entrée/sortie
+- **SectionLayout** : composant de layout unifié remplaçant 9 layouts dupliqués (bible, catéchisme, hérésies, conciles, dogmes, disputationes, chronologie, crise) — breadcrumb, header, stagger automatique
+
+### Modifications
+
+- **Navigation** : hérésies déplacées dans le dropdown Ressources, navigation hiérarchique (primaire + ressources)
+- **Mobile** : menu hamburger avec séparateur sections primaires/ressources, touch targets 44px minimum
+- **CSS** : animations dans `@layer components` (ordre correct Tailwind), fill-mode `both` (premier keyframe pendant délai)
+- **Données** : validation Zod runtime pour les livres bibliques, exports consolidés catéchisme
+- **Divers** : suppression double `min-h-screen`, suppression balise `</main>` orpheline
+
+### Fichiers
+
+- `src/components/layout/SectionLayout.tsx` — nouveau composant layout unifié
+- `src/components/layout/PageTransition.tsx` — nouveau composant transition de page
+- `src/components/layout/Header.tsx` — navigation hiérarchique + mobile
+- `src/components/layout/index.ts` — exports SectionLayout + PageTransition
+- `src/app/globals.css` — système d'animations (keyframes, stagger, card-lift, btn-press)
+- `src/app/layout.tsx` — wrapper PageTransition
+- `src/app/page.tsx` — classes d'animation sur sections et cartes
+- `src/app/bible/layout.tsx` — migration SectionLayout
+- `src/app/catechism/layout.tsx` — migration SectionLayout
+- `src/app/heresies/layout.tsx` — migration SectionLayout
+- `src/app/councils/layout.tsx` — migration SectionLayout
+- `src/app/dogmas/layout.tsx` — migration SectionLayout
+- `src/app/disputationes/layout.tsx` — migration SectionLayout
+- `src/app/chronologie/layout.tsx` — migration SectionLayout
+- `src/app/crise/layout.tsx` — migration SectionLayout
+- `src/data/bible/index.ts` — schémas Zod + validation runtime
+- `src/data/catechism/index.ts` — exports consolidés
+
 ## [0.2.6] — 2026-05-05
 
 ### Enrichissements

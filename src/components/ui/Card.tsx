@@ -55,7 +55,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
  <div
  ref={ref}
  className={cn(
- "rounded-lg border transition-shadow duration-200",
+ "rounded-lg border card-lift",
  variantStyles[variant],
  className
  )}

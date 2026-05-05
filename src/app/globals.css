@@ -21,8 +21,8 @@
   }
 }
 
-/* DIVINE LIGHT EFFECTS */
-@layer utilities {
+/* DIVINE LIGHT EFFECTS — in components layer so they override utilities */
+@layer components {
   .shadow-divine {
     box-shadow:
       0 4px 6px rgba(45, 41, 38, 0.08),
@@ -52,6 +52,144 @@
         transparent 51%
       );
     background-size: 40px 40px;
+  }
+}
+
+/* ========== ANIMATIONS ========== */
+@layer components {
+  /* --- Keyframes --- */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes shimmer {
+    from { background-position: -200% 0; }
+    to { background-position: 200% 0; }
+  }
+
+  /* --- Page transitions --- */
+  .page-enter {
+    animation: slideUp 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .page-exit {
+    animation: slideDown 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  /* --- Staggered composition --- */
+  .stagger > * {
+    opacity: 0;
+    animation: slideUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .stagger > *:nth-child(1) { animation-delay: 0ms; }
+  .stagger > *:nth-child(2) { animation-delay: 60ms; }
+  .stagger > *:nth-child(3) { animation-delay: 120ms; }
+  .stagger > *:nth-child(4) { animation-delay: 180ms; }
+  .stagger > *:nth-child(5) { animation-delay: 240ms; }
+  .stagger > *:nth-child(6) { animation-delay: 300ms; }
+  .stagger > *:nth-child(7) { animation-delay: 360ms; }
+  .stagger > *:nth-child(8) { animation-delay: 420ms; }
+
+  /* --- Card hover lift --- */
+  .card-lift {
+    transition:
+      transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .card-lift:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 8px 25px rgba(45, 41, 38, 0.1),
+      0 4px 10px rgba(212, 165, 56, 0.06);
+  }
+
+  .card-lift:active {
+    transform: translateY(-1px);
+    transition-duration: 0.1s;
+  }
+
+  /* --- Link underline grow --- */
+  .link-underline {
+    position: relative;
+  }
+
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #d97706;
+    transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .link-underline:hover::after {
+    width: 100%;
+  }
+
+  /* --- Button press --- */
+  .btn-press {
+    transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .btn-press:hover {
+    transform: scale(1.02);
+  }
+
+  .btn-press:active {
+    transform: scale(0.97);
+    transition-duration: 0.08s;
+  }
+
+  /* --- Fade-in on mount (for elements entering viewport) --- */
+  .fade-in {
+    animation: fadeIn 0.5s ease both;
+  }
+
+  .scale-in {
+    animation: scaleIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 }
 
