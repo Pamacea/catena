@@ -16,6 +16,7 @@ const resourcesNavItems = [
   { name: "Hérésies", href: "/heresies" },
   { name: "Conciles", href: "/councils" },
   { name: "Dogmes", href: "/dogmas" },
+  { name: "Versets", href: "/verses" },
   { name: "Vault", href: "/vault" },
   { name: "Disputationes", href: "/disputationes" },
   { name: "Crise", href: "/crise" },

@@ -15,13 +15,6 @@ export {
   getBacklinks,
 } from "./tanstack";
 
-export {
-  heresiesCollection,
-  councilsCollection,
-  catechismsCollection,
-  transformWikiLinks,
-  extractBacklinks,
-} from "./contentlayer";
 
 // Re-export types for convenience
 export type {
